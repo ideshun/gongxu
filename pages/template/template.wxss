@@ -1,0 +1,153 @@
+/* pages/template/template.wxss */
+.enterprise-tab {
+  position: fixed;
+  bottom:0;
+  left:0;
+  justify-content: space-around;
+  width: 100%;
+  height: 120rpx;
+  border-top: 1px solid #ddd;
+  background: #fff;
+  
+}
+.enterprise-tab .item {
+  width: 25%;
+  height: 100%;
+}
+.enterprise-tab .item image{
+  width: 54rpx;
+  height: 54rpx;
+  padding-bottom: 5rpx;
+
+}
+.enterprise-tab .item text {
+  font-size: 28rpx;
+  text-align: center;
+}
+.enterprise-authentication-tip {
+  width: 580rpx;
+  height: 520rpx;
+  margin: auto;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.content .cancel-box {
+  width: 100%;
+  padding-right: 17rpx;
+  height: 42rpx;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.content .cancel-box image {
+  width: 22rpx;
+  height: 22rpx;
+  display: block;
+}
+.enterprise-authentication-tip image{
+  width: 198rpx;
+  height: 164rpx;
+}
+.enterprise-authentication-tip .content {
+  justify-content: space-around
+}
+.enterprise-authentication-tip text {
+  width: 480rpx;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 28rpx;
+}
+.enterprise-authentication-tip .title {
+  font-size: 38rpx;
+  color:#333;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+  padding-top: 40rpx;
+}
+.enterprise-authentication-tip .button {
+  margin-top: 40rpx;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  color: #239fff;
+}
+.enterprise-authentication-tip .button view:nth-of-type(1) {
+  border-right: 1px solid #eee;
+  color:#999;
+
+}
+.enterprise-authentication-tip .button view {
+  width: 50%;
+  text-align: center;
+}
+
+/*加入会员  */
+
+.add-member-box {
+  width: 524rpx;
+  height: 524rpx;
+   margin: auto;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  color: #666;
+  justify-content: flex-start;
+  
+}
+.add-member-box .member-img{
+  width: 645rpx;
+  height: 242rpx;
+  position: absolute
+
+}
+.add-member-box .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40rpx;
+  height: 40rpx;
+}
+.add-member-box .word-info {
+  background: #fff;
+  border-radius: 10rpx;
+  width: 100%;
+  height: 376rpx;
+  margin-top: 150rpx;
+  justify-content: flex-end;
+}
+.add-member-box text {
+  margin-bottom: 20rpx;
+}
+.add-member-box text:nth-of-type(1) {
+  font-size: 38rpx;
+  color:#cf9d3e;
+}
+.add-member-box text:nth-of-type(2) {
+  font-size: 38rpx;
+  color:#333;
+  letter-spacing: 2rpx;
+}
+.add-member-box .button {
+  margin-top: 20rpx;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  color: #239fff;
+}

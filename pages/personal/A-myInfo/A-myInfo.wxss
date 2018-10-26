@@ -1,0 +1,109 @@
+/* pages/personal/A-myInfo/A-myInfo.wxss */
+
+page {
+  background-color: #eee;
+}
+
+.container {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.line {
+  height: 20rpx;
+  width: 100%;
+  background-color: #eee;
+}
+
+.head {
+  padding: 22rpx 45rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.head-img {
+  width: 154rpx;
+  height: 154rpx;
+  margin-right: 20rpx;
+}
+
+.top-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  width: 15rpx;
+  height: 23rpx;
+}
+
+.my-info {
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.my-info-in {
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.my-info-in:last-child {
+  border: none;
+}
+
+.info-r {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+
+.myName {
+  margin-right: 20rpx;
+}
+
+.upData {
+  padding: 20rpx 40rpx;
+  background-color: #fff;
+}
+
+.up-img {
+  padding: 57rpx 0 40rpx 0;
+  text-align: center;
+  box-sizing: border-box;
+  color: #1fd3ae
+}
+
+.up-img image {
+  width: 170rpx;
+  height: 140rpx;
+}
+
+.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 25rpx;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bottom .btn {
+  width: 100%;
+  /* background: linear-gradient(to right, #22a0ff, #007ae8); */
+  background: #0d4e69;
+  padding: 28rpx 0%;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center
+}

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/goods_introduce/goods_introduce",
+    "pages/index/index",
+    "pages/goods_order/goods_order",
+    "pages/list/list",
+    "pages/personal/personal",
+    "pages/personal/A-myInfo/A-myInfo",
+    "pages/personal/A-myInfo/A-changeInfo/A-changeInfo",
+    "pages/personal/A-mySetting/A-mySetting",
+    "pages/personal/A-mySetting/A-password/A-password",
+    "pages/personal/A-myMap/A-myMap",
+    "pages/personal/A-address/index",
+    "pages/personal/A-address/detail",
+    "pages/personal/A-address/create",
+    "pages/personal/A-myMessage/A-myMessage",
+    "pages/template/template",
+    "pages/activity/activity",
+    "pages/goods_show/goods_show",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0f3e52",
+    "navigationBarTitleText": "服务需求",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/sy_1.png",
+        "selectedIconPath": "icons/sy_2.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "发现",
+        "iconPath": "icons/fx_1.png",
+        "selectedIconPath": "icons/fx_2.png"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "text": "活动",
+        "iconPath": "icons/hd_1.png",
+        "selectedIconPath": "icons/hd_2.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "icons/wd_1.png",
+        "selectedIconPath": "icons/wd_2.png"
+      }
+    
+    ]
+  }
+}
+
+

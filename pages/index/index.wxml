@@ -1,0 +1,69 @@
+<!--pages/index/index.wxml-->
+<view class="header">
+  <view class="search">
+    <input type="text" placeholder="请搜寻你的需求" />
+  </view>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode="{{aspectFitMode}}" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='cate-line'>
+  <view class='cate-item' wx:for="{{topCate}}" wx:key="*this">
+    <image src='{{item.cateIcon}}'></image>
+    <text>{{item.text}}</text>
+  </view>
+</view>
+<view class='cate-wrap'>
+  <view class='cate-name'>
+    <text class='cate-title'>热门服务</text>
+    <text class='cate-more'>更多</text>
+  </view>
+  <scroll-view scroll-x scroll-with-animation="true">
+    <view class='cate-content'>
+      <view class='cate-item' wx:for='{{serviceItem}}' wx:key="*this">
+        <view bindtap='det' data-mid='{{item.moduleid}}' data-itemid='{{item.itemid}}'>
+          <image src='{{item.thumb_arr[index]}}' mode="{{aspectFitMode}}" onerror="this.src='serviceItem[0].thumb'"></image>
+          <view class="item-title">{{item.serviceTitle}}</view>
+          <view class="item-date">{{item.editdate}}</view>
+          <view class="item-star">{{item.serviceStars}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="reco-img">
+  <navigator url='/pages/goods_introduce/goods_introduce'>
+    <image mode="{{widthFix}}" src="{{recoImg}}"></image>
+  </navigator>
+</view>
+
+<scroll-view scroll-x scroll-with-animation="true">
+  <view class='cate-tab'>
+    <view class='cate-tab-item {{tabActive==index?"active":""}}' wx:for='{{cateTabItem}}' bindtap="tabClick" data-current="{{index}}" wx:key="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</scroll-view>
+<view wx:for="{{serviceList}}" class='cate-list {{tabActive==index?"show":"hidden"}}' wx:key="*this">
+  <view class='cate-list-item' wx:for="{{item}}" wx:for-item="items" wx:key="">
+    <view class='user-info'>
+      <image class='user-logo' src="{{items.logo}}"></image>
+      <text class='user-name'>{{items.editor}}</text>
+      <view class='like-box-fr'>
+        <image class='user-like' src='../../icons/like.png'></image>
+        <text class='like-num'>{{items.hits}}</text>
+      </view>
+    </view>
+    <view class='product-info'>
+      <view bindtap='det' data-mid='{{items.moduleid}}' data-itemid='{{items.itemid}}'>
+        <text class='info-clas'>#{{items.catname}}#</text>{{items.title}} {{items.introduce}}</view>
+      <block wx:for="{{items.thumb_arr}}" wx:if="{{items.thumb}}" wx:key="*this">
+        <image class='product-img' src='{{item}}' mode="widthFix"></image>
+      </block>
+    </view>
+  </view>
+</view>

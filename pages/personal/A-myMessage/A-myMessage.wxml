@@ -1,0 +1,44 @@
+<!--pages/B-centrality/B-myMessage/B-myMessage.wxml-->
+<view class='container'>
+  <view class='top'>
+    <view class="tab  {{classIndex==0?'active':''}}" data-index='{{0}}' catchtap='changeTab'>消息提醒</view>
+    <view class="tab  {{classIndex==1?'active':''}}" data-index='{{1}}' catchtap='changeTab'>消息通知</view>
+    <view class="tab  {{classIndex==2?'active':''}}" data-index='{{2}}' catchtap='changeTab'>系统消息</view>
+  </view>
+  
+  <view class='basic_info'>
+
+    <view class='basic_info_in' style='margin-top:20rpx'>
+      <view class='basic_title'>
+        <view class='basic_title_in'>
+          <image src='../../images/time-mes.png' class='basic_img'></image>
+          <view class='txt-in'>11月28日 17:00:00</view>
+        </view>
+        <image src='../../images/arrow.png' class='arrow'></image>
+      </view>
+      <view class='x-line'></view>
+      <view class='basic_txt'>
+        <view class='basic_txt_title'>最新投资人邀约通知</view>
+        <view class='basic_content'>您关注的投资人发布最新信息，点击查看更多详情~</view>
+      </view>
+    </view>
+  </view>
+    <view class='basic_info'>
+
+    <view class='basic_info_in' style='margin-top:20rpx'>
+      <view class='basic_title'>
+        <view class='basic_title_in'>
+          <image src='../../images/time-mes.png' class='basic_img'></image>
+          <view class='txt-in'>11月28日 17:00:00</view>
+        </view>
+        <image src='../../images/arrow.png' class='arrow'></image>
+      </view>
+      <view class='x-line'></view>
+      <view class='basic_txt'>
+        <view class='basic_txt_title'>最新投资人邀约通知</view>
+        <view class='basic_content'>您关注的投资人发布最新信息，点击查看更多详情~</view>
+      </view>
+    </view>
+  </view>
+
+</view>

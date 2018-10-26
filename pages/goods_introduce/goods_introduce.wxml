@@ -1,0 +1,32 @@
+<!--pages/goods_introduce/goods_introduce.wxml-->
+
+
+<view>
+  <text class='intro_top'>#企业服务#</text>
+</view>
+
+<view class='intro_user'>
+    <image class='user-logo' src="../../icons/tx.png"></image>
+    <text class='user-name'>admin</text>
+</view>
+
+<view>
+  <text class='intro_conter'>
+    这是一段内容，这是一段内容，这是一段内容，这是一段内容，这是一段内容，这是一段内容，这是一段内容，
+    这是一段内容，这是一段内容，这是一段内容，这是一段内容，这是一段内容，这是一段内容，这是一段内容，
+    这是一段内容，这是一段内容，这是一段内容，这是一段内容
+  </text>
+</view>
+
+<view>
+  <block wx:for-items="{{detailImg}}" wx:key="name">
+      <image class="image_detail" src="{{item}}" />
+  </block>
+</view>
+
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <image catchtap='tel' bindtap="toCar" src="../../icons/sy.png" />
+  <image catchtap='tel' bindtap="toCar" src="../../icons/fx.png" />
+  <button class="button-red" catchtap='tel' bindtap="toCar"  formType="submit" data-catid='{{goods.catid}}' data-itemid='{{goods.itemid}}' data-price='{{goods.price}}'>联系Ta</button>
+</view>

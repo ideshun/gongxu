@@ -1,0 +1,20 @@
+<!--pages/list.wxml-->
+<image src='{{listTopImg}}' class='listTopImg' mode="widthFix"></image>
+<view class='listTopText'>{{listTopText}}</view>
+<view class="cate-list">
+<block wx:for="{{serviceList}}" wx:key="*this">
+  <view class='cate-list-item' wx:for="{{item}}" wx:for-item="items" wx:key="">
+    <view class='user-info'>
+      <image class='user-logo' src="{{items.logo}}"></image>
+      <text class='user-name'>{{items.editor}}</text>
+      <view class='contact-box-fr'>
+        <text class='contact-info'>联系Ta</text>
+      </view>
+    </view>
+    <view class='product-info'>
+      <image class='product-timg' src='{{items.thumb}}' mode="widthFix" wx:if="{{items.thumb}}"></image>
+      <view><text class='info-clas'>#{{items.catname}}#</text>{{items.introduce}}</view>
+    </view>
+  </view>
+</block>
+</view>

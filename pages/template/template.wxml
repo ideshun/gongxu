@@ -1,0 +1,73 @@
+<!--pages/template/template.wxml-->
+<!--底部切换  -->
+<template name="enterprise-tab">
+  <view class="enterprise-tab flexR">
+    <view class="item flexC" data-index="0" catchtap='toTabPage'>
+      <image src="/pages/images/investment_over.png"></image>
+      <text>投资</text>
+    </view>
+    <view class="item flexC" data-index="1" catchtap='toTabPage'>
+      <image src="/pages/images/follow.png"></image>
+      <text>关注</text>
+    </view>
+    <view class="item flexC" data-index="2" catchtap='toTabPage'>
+      <image src="/pages/images/financing.png"></image>
+      <text>融资</text>
+    </view>
+    <view class="item flexC" data-index="3" catchtap='toTabPage'>
+      <image src="/pages/images/enterprise.png"></image>
+      <text>企业中心</text>
+    </view>
+  </view>
+</template>
+
+<template name="investment-tab" >
+  <view class="enterprise-tab flexR">
+    <navigator class="item flexC" url="/pages/B-project/B-project">
+      <image src="/pages/images/investment_over.png"></image>
+      <text>项目</text>
+    </navigator>
+    <navigator class="item flexC" url="/pages/B-follow/B-follow">
+      <image src="/pages/images/follow.png"></image>
+      <text>关注</text>
+    </navigator>
+   
+    <navigator class="item flexC" url="/pages/B-centrality/B-centrality">
+      <image src="/pages/images/enterprise.png"></image>
+      <text>个人中心</text>
+    </navigator>
+  </view>
+</template>
+<!--企业认证提示 -->
+<template name="enterprise-authentication-tip">
+  <view class="enterprise-authentication-tip content flexC">
+    <view class="cancel-box flexR">
+      <image src='/pages/images/cancel.png'></image>
+    </view>
+    <view class="flexC">
+      <image src="/pages/images/authentication_tip.png"></image>
+      <text class="title">当前企业尚未认证!</text>
+      <text>请先完成企业认证，认证完成后您可以管理企业信息、发布融资等需求。</text>
+    </view>
+    <view class="button flexR">
+      <view>稍后认证</view>
+      <view>去认证</view>
+    </view>
+  </view>
+</template>
+<!--加入会员  -->
+<template name="add-member">
+  <view class="add-member-box content flexC">
+    <image src="/pages/images/member.png" class="member-img" mode='widthFix'></image>
+    <image src='/pages/images/cancel.png' class="close"></image>
+
+    <view class="flexC word-info">
+      <text class="title">开通立享尊贵特权!</text>
+      <text>￥199/年</text>
+      <view class="button flexR">
+        开通会员
+      </view>
+    </view>
+
+  </view>
+</template>

@@ -1,0 +1,95 @@
+<!--pages/goods_order/goods_order.wxml-->
+<form bindsubmit="formSubmit">
+<view class="container">
+    <view class="order-title">
+       <!-- <text ><text class="font-color-333">订单号</text><text style="margin-left:40rpx;">{{order.order_no}}</text></text> -->
+       <text class="font-color-999">{{order.create_time}}</text>
+    </view>
+    <!--<view class="order-status">
+       <view class="group-hd">订单状态</view>
+       <view wx:for="{{ order.order_stauts}}" wx:for-item="status"  class="{{status==order.order_stauts[0] ? 'content font-color-c24e4e' :'content'}}" >
+            <text>{{status.update_time}}:</text>
+            <text style="margin-left:40rpx;">{{status.content}}</text>
+       </view>
+    </view>-->
+    <view class="order-group">
+       <view class="group-hd c_ys">商品</view>
+       <view class="group-bd  line-after-top ">
+           <view class="food-list line-before-bottom" wx:for="{{order.order_foods}}" wx:for-item="foodlist">
+              <image src="{{foodlist.foods_img}}" class="imgsize"></image>
+              <view class="food-text">
+                <text class="font-size-16 c_ys">{{foodlist.foods_name}}</text>
+                <text class="font-color-999">
+                  <text class="font-color-c24e4e" style="margin-left:24rpx;">¥{{foodlist.foods_price}}</text> 元
+                </text>
+              <view>
+              <view class='good_link'></view>
+              <view>
+                <text class="font-size-16 c_ys">数量：</text>
+                <text class="font-color-999">
+                  <text class="font-color-c24e4e" style="margin-left:24rpx;">{{foodlist.foods_num}}</text> {{foodlist.foods_weight}}
+                </text>
+              </view>
+              <view class='good_link'></view> 
+            </view>
+         </view>
+        </view>
+    </view>
+    <view class="group-ft">
+        <view>
+            <text class="font-size-16 c_ys">订单总额：</text>
+            <text class="font-color-999">
+              <text class="font-color-c24e4e" style="margin-left:24rpx;">¥{{order.order_sum}}</text>元
+            </text>
+          </view>
+        </view>
+        <view class='good_link'></view>
+    </view>
+    
+    <navigator  url="chooseCustomer" class="address-group arrow-right">
+         <view class="address-group-hd c_ys"><text>客户(收货信息)</text></view>
+    </navigator>    
+    <view class="address-group">
+         <view class="address-group-hd line-before-bottom">
+             <text class='marg2'>客户: {{order.customer.customer_name}}</text>  
+         </view>
+         <view class="address-group-bd">
+             <view class='marg2'>地址：{{order.customer.customer_address}}</view>
+             <text class='marg2'><text>收货人：{{order.customer.receiver}}\n</text><text class='marg2'>联系电话：{{order.customer.phone}}</text>\n</text>
+         </view>
+    </view>
+    <view class='good_link'></view> 
+    <view class="order-group ">
+       <view class="group-hd line-before-bottom c_ys">备注信息</view>
+      <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="请在此填写备注信息" style="height: 3.3em" name='note' />
+            
+        </view>
+    </view>  
+</view>
+<view style="width:100%;height:50rpx;"></view>
+<view class="fixed-ft foot-box">
+
+<!-- <view class="pay-box font-color-white" bindtap="wxPay">立即微信支付</view> -->
+
+</view>
+
+
+<!-- 底部悬浮栏 -->
+<!-- <view class="detail-nav">
+  <button class="pay-box font-color-white"  formType="submit">确认支付</button>
+</view> -->
+
+
+ <input id="price" name="price" class="login-input" type="hidden" value="{{order.order_foods[0].foods_price}}" hidden= 'true'/>
+<input id="title" name="title" class="login-input" type="hidden"  value="{{order.order_foods[0].foods_name}}" hidden= 'true'/>
+<input id="a" name="a" class="login-input" type="hidden" value='{{order.order_foods[0].foods_num}}' hidden= 'true'/>
+<input id="addr" name="addr" class="login-input" type="hidden" value='{{order.customer.customer_address}}' hidden= 'true'/>
+<input id="truename" name="truename" type="hidden" value='{{order.customer.receiver}}' hidden= 'true'/>
+<input id="mobile" name="mobile"  type="hidden" value='{{order.customer.phone}}' hidden= 'true'/>
+<input  name="itemid"  type="hidden" value='{{order.order_foods[0].itemid}}' hidden= 'true'/>
+<input  name="catid"  type="hidden" value='{{order.order_foods[0].catid}}' hidden= 'true'/>
+<input  name="mid"  type="hidden" value='{{order.order_foods[0].mid}}' hidden= 'true'/> 
+  <button class="pay-box font-color-white"  formType="submit">立即微信支付</button>
+</form>
+

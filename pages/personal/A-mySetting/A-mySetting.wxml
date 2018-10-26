@@ -1,0 +1,23 @@
+<!--pages/A-centrality/A-mySetting/A-mySetting.wxml-->
+<view class='container'>
+  <view class='list_set'>
+    <view class='set_in' catchtap='changePassword'>
+      <view>修改密码</view>
+      <image src='../../images/arrow.png' class='arrow'></image>
+    </view>
+    <!-- <view class='set_in' catchtap='clearData'>
+      <view>清除缓存</view>
+      <view class='clear'>
+        <view class='clear_txt'>21KB</view>
+        <image src='../../images/arrow.png' class='arrow'></image>
+      </view>
+    </view> -->
+    <view class='set_in'>
+      <view>分享给好友</view>
+      <image src='../../images/arrow.png' class='arrow'></image>
+      <button open-type="share" ></button>
+    </view>
+  </view>
+
+  <view class='login_out'>退出登录</view>
+</view>

@@ -1,0 +1,10 @@
+<!--pages/personal/A-myInfo/A-changeInfo/A-changeInfo.wxml-->
+<view class='container'>
+  <view class='my_info'>
+    <input placeholder='{{info}}'></input>
+    <!-- <view class='x'>✖</view> -->
+  </view>
+  <view class='btn'>确定</view>
+
+
+</view>

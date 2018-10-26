@@ -1,0 +1,10 @@
+/* pages/list.wxss */
+.listTopImg{
+  width: 100%
+}
+.listTopText{
+  padding: 30rpx 70rpx;
+  color: #353535;
+  line-height: 1.8;
+  text-align: center;
+}

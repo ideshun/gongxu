@@ -1,0 +1,103 @@
+/* pages/A-personal/A-personal.wxss */
+@import "/pages/template/template.wxss";
+
+.container {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.user-info {
+  width: 100%;
+  height: 400rpx;
+  /* background: linear-gradient(to left,#134b62, #093242); */
+  background: #093242;
+  box-sizing:border-box;
+  padding-top:60rpx;
+  color:#fff;
+  position:relative;
+  text-align:center;
+}
+.byname {
+  padding-top: 10rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.obtain {
+  padding-top:10rpx;
+  opacity: 0.8;
+}
+
+.userHead {
+  width: 158rpx;
+  height: 158rpx;
+  margin: 0 auto;
+}
+
+.mySetting {
+  width: 100%;
+  padding: 0 27rpx 0 27rpx;
+  box-sizing: border-box;
+}
+
+.mySetting .mySetting-in {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mine {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 100rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.mine:last-child {
+  border: none;
+}
+
+.mine-in {
+  display: flex;
+  align-items: center;
+}
+
+.tubiao {
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 20rpx;
+}
+
+.question {
+  width: 31rpx;
+  height: 31rpx;
+  margin: 0 8rpx;
+}
+
+.arrow {
+  width: 15rpx;
+  height: 23rpx;
+}
+
+.line {
+  height: 20rpx;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.system {
+  padding: 0 27rpx 0 27rpx;
+  box-sizing: border-box;
+}
+
+.system .system-in {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+
+.tel {
+  width: 60rpx;
+  height: 60rpx;
+}

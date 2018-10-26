@@ -1,0 +1,65 @@
+<!--pages/personal/A-myInfo/A-myInfo.wxml-->
+<view class='container'>
+  <view class='line'></view>
+  <view class='head'>
+    <view>头像</view>
+    <view class='top-img'>
+      <image src='../../images/a_girl.png' class='head-img'></image>
+      <image src='../../images/arrow.png' class='arrow'></image>
+    </view>
+  </view>
+  <view class='line'></view>
+
+  <view class='my-info'>
+    <view class='my-info-in' catchtap='changeInfo' data-title='姓名' data-myinfo='用户名' >
+      <view class=''>姓名</view>
+      <view class='info-r'>
+        <view class='myName'>用户名</view>
+        <image src='../../images/arrow.png' class='arrow'></image>
+      </view>
+    </view>
+    <view class='my-info-in'>
+      <view class=''>手机号</view>
+      <view class='info-r'>
+        <view class='tel'>18340087612</view>
+        <!-- <image src='../../images/arrow.png' class='arrow'></image> -->
+      </view>
+    </view>
+    <view class='my-info-in'>
+      <view class=''>微信号</view>
+      <view class='info-r'>
+        <view class='tel' >TongBao</view>
+        <!-- <image src='../../images/arrow.png' class='arrow'></image> -->
+      </view>
+    </view>
+    <view class='my-info-in' catchtap='changeInfo' data-title='邮箱' data-myinfo='填写邮箱'>
+      <view class=''>邮箱</view>
+      <view class='info-r'> 
+        <view class='myName'>1247142392@qq.com</view>
+        <image src='../../images/arrow.png' class='arrow'></image>
+      </view>
+    </view>
+    <view class='my-info-in' catchtap='changeInfo' data-title='职务' data-myinfo='你的职务'>
+      <view class=''>职务</view>
+      <view class='info-r'>
+        <view class='myName'>设计</view>
+        <image src='../../images/arrow.png' class='arrow'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='upData'>
+    <view class='upTitle'><text style='color:#ed3f14'>*</text>上传名片</view>
+    <view class='up-img'>
+      <image src='../../images/upData.png' ></image>
+      <view>点击上传名片</view>
+    </view>
+  </view>
+
+  <view class='bottom'>
+    <view class='btn'>提交认证</view>
+  </view>
+
+</view>

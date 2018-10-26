@@ -1,0 +1,48 @@
+/* pages/personal/A-myInfo/A-changeInfo/A-changeInfo.wxss */
+page{
+  background-color: #eee;
+}
+
+.container{
+  font-size: 28rpx;
+  color: #333;
+  padding: 40rpx 25rpx;
+  box-sizing: border-box
+}
+
+.container .my_info{
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+  border-radius: 15rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+.x {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  background-color: #999;
+  color: #fff;
+  text-align: center;
+  line-height: 34rpx;
+  font-size: 24rpx;
+}
+
+
+.btn {
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+  line-height: 90rpx;
+  color: #fff;
+  margin-top: 40rpx;
+  /* background: linear-gradient(to right, #22a0ff, #007ce7); */
+  background: #1fd3ae;
+  border-radius: 15rpx;
+  box-shadow: 0 10rpx 30rpx rgba(31, 211, 174, 0.4);
+}
