@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/goods_introduce/goods_introduce",
     "pages/index/index",
+    "pages/goods_introduce/goods_introduce",
     "pages/goods_order/goods_order",
     "pages/list/list",
     "pages/personal/personal",
@@ -18,6 +17,7 @@
     "pages/template/template",
     "pages/activity/activity",
     "pages/goods_show/goods_show",
+    "pages/login/login",
     "pages/logs/logs"
   ],
   "window": {
