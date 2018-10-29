@@ -15,7 +15,7 @@
   </view>
   <view class="separate"></view>
   <!-- sku选择 -->
-  <text bindtap="toggleDialog" class='d_left'>请选择购买数量</text>
+  <text bindtap="toggleDialog" class='d_left'>请选择购买数量1</text>
   <view class="separate d_left"></view>
   <text class='d_left'>商品评价</text>
   <text class="text-remark d_left">东西还可以，好评~</text>
