@@ -1,5 +1,6 @@
 <!--pages/A-personal/A-personal.wxml-->
 
+<<<<<<< Updated upstream
 <view class='user-info' catchtap='toMyInfo'>
   <view>
     <image src='{{avatarUrl}}' class='userHead'></image>
@@ -75,6 +76,86 @@
       </view>
     </view>
   </view>
+=======
+<view class='container'>
+  <view class='user-info' catchtap='toMyInfo'>
+    <view><image src='{{avatarUrl}}' class='userHead'></image></view>
+    <view class='byname'>{{byname}}</view>
+    <view class='obtain'>{{obtain}}</view>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='mySetting'>
+    <view class='mySetting-in'>
+      <view class='mine' catchtap='toMyData'>
+        <view class='mine-in'>
+          <image src='../images/sc1.png' class='tubiao'></image>
+          <view>我的收藏</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../images/arrow.png' class='arrow'></image>
+        </view>
+      </view>
+      <view class='mine' catchtap='toMyMessage'>
+        <view class='mine-in'>
+          <image src='../images/xx1.png' class='tubiao'></image>
+          <view>我的消息</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../images/arrow.png' class='arrow'></image>
+        </view>
+      </view>
+      <view class='mine' catchtap='toMyConsume'>
+        <view class='mine-in'>
+          <image src='../images/dd1.png' class='tubiao'></image>
+          <view>我的订单</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../images/arrow.png' class='arrow'></image>
+        </view>
+      </view>
+      <view class='mine' catchtap='toMyMap'>
+        <view class='mine-in'>
+          <image src='../images/dz1.png' class='tubiao'></image>
+          <view>我的收货地址</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../images/arrow.png' class='arrow'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='line'></view>
+
+  <view class='system'>
+    <view class='system-in'>
+      <view class='mine' catchtap='tel'>
+        <view class='mine-in'>
+          <image src='../images/kf1.png' class='tubiao'></image>
+          <view>联系客服</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../images/dh.png' class='tel'></image>
+        </view>
+        
+      </view>
+      <view class='mine' catchtap='toMySetting'>
+        <view class='mine-in'>
+          <image src='../images/sz1.png' class='tubiao'></image>
+          <view>系统设置</view>
+        </view>
+        <view class='mine-in'>
+          <image src='../images/arrow.png' class='arrow'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+>>>>>>> Stashed changes
 </view>
 
 
@@ -86,7 +167,10 @@
 
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 <!--tab切换  -->
 <!-- <import src="/pages/template/template.wxml" />
 <template is="enterprise-tab" data="{{userInfo}}" /> -->
