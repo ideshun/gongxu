@@ -145,10 +145,10 @@ Page({
                 wx.request({
                   url: url + 'Wx_AddOrder',
                   data: {
-                    uname: 1,
-                    goods: 1,
-                    price: 1,
-                    openid: 1,
+                    // uname: 1,
+                    // goods: 1,
+                    // price: 1,
+                    // openid: 1,
                   },
                   success: function (lastreturn) {
                     console.log("存取成功");
