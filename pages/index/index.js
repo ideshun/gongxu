@@ -10,30 +10,31 @@ Page({
       '/image/banner.png',
     ],
     topCate: [{
+      cateUrl: '/pages/activity/activity',
         cateIcon: '/icons/cate-icon1.png',
         text: '人才招聘'
       },
       {
+        cateUrl: '/pages/activity/activity',
         cateIcon: '/icons/cate-icon2.png',
-        text: '企业服务'
+        text: '热门活动'
       },
       {
+        cateUrl: '/pages/activity/activity',
         cateIcon: '/icons/cate-icon3.png',
         text: '二手闲置'
       },
       {
+        cateUrl: '/pages/activity/activity',
         cateIcon: '/icons/cate-icon4.png',
         text: '生活服务'
       }
     ],
     serviceItem: [],//热门服务
     cateTabItem: [
-      '全部',
       '人才招聘',
-      '企业服务',
       '二手闲置',
       '生活服务',
-      '企业需求'
     ],
     serviceList: [], //全部
     recoMode: 'aspectFit', //保持纵横比缩放图片，使图片的长边能完全显示出来

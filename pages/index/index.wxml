@@ -13,8 +13,10 @@
 </swiper>
 <view class='cate-line'>
   <view class='cate-item' wx:for="{{topCate}}" wx:key="*this">
-    <image src='{{item.cateIcon}}'></image>
-    <text>{{item.text}}</text>
+    <navigator url='{{item.cateUrl}}'>
+      <image src='{{item.cateIcon}}'></image>
+      <text>{{item.text}}</text>
+    </navigator>
   </view>
 </view>
 <view class='cate-wrap'>

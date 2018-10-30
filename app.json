@@ -41,12 +41,6 @@
         "selectedIconPath": "icons/fx_2.png"
       },
       {
-        "pagePath": "pages/activity/activity",
-        "text": "活动",
-        "iconPath": "icons/hd_1.png",
-        "selectedIconPath": "icons/hd_2.png"
-      },
-      {
         "pagePath": "pages/personal/personal",
         "text": "我的",
         "iconPath": "icons/wd_1.png",
