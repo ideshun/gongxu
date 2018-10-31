@@ -25,30 +25,56 @@ Page({
    */
   saveData: function (e) {
     let _this = this
-      , values = e.detail.value
-    values.region = this.data.region;
-
+    var values;
+    values = e.detail.value;
+    console.log(values);
+    // values.region = this.data.region;
     // 表单验证
-    if (!_this.validation(values)) {
-      App.showError(_this.data.error);
-      return false; 
-    }
+    // if (!_this.validation(values)) {
+    //   // App.showError(_this.data.error);
+    //   return false; 
+    // }
 
     // 按钮禁用
     _this.setData({ disabled: true });
 
     // 提交到后端
-    App._post_form('address/add', values, function (result) {
-      if (result.code === 1) {
-        App.showSuccess(result.msg, function () {
-          wx.navigateBack();
-        });
-      } else {
-        App.showError(result.msg);
+    // App._post_form('address/add', values, function (result) {
+    //   if (result.code === 1) {
+    //     App.showSuccess(result.msg, function () {
+    //       wx.navigateBack();
+    //     });
+    //   } else {
+    //     App.showError(result.msg);
+    //   }
+    //   // 解除禁用
+      // _this.setData({ disabled: false });
+    // });
+    wx.request({
+      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      data:{
+        'flag'     : 'wx',
+        'type_a'   : 'add_addr',
+        'truename' : values.detial,
+        // 'postcode' : e.detail.value.postcode,
+        'mobile'   : values.phone,
+        'addr'     : values.detail,
+        'username' : 'admin'
+      },
+      header:{
+        'content-type': 'application/json' // 默认值
+      },
+        success: function(res) {
+          console.log(res)
+          if (res.data.error !='' ) {
+            wx.showToast({
+              title: '添加成功',
+              icon: 'success',
+              duration: 2000
+            })
+          }
       }
-      // 解除禁用
-      _this.setData({ disabled: false });
-    });
+    })
   },
 
   /**
