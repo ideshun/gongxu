@@ -7,8 +7,7 @@
   </view>
   
   <view class='basic_info'>
-
-    <view class='basic_info_in' style='margin-top:20rpx'>
+    <view class='basic_info_in'>
       <view class='basic_title'>
         <view class='basic_title_in'>
           <image src='../../images/time-mes.png' class='basic_img'></image>
@@ -25,7 +24,7 @@
   </view>
     <view class='basic_info'>
 
-    <view class='basic_info_in' style='margin-top:20rpx'>
+    <view class='basic_info_in'>
       <view class='basic_title'>
         <view class='basic_title_in'>
           <image src='../../images/time-mes.png' class='basic_img'></image>
