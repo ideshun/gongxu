@@ -64,7 +64,7 @@
       <view bindtap='det' data-mid='{{items.moduleid}}' data-itemid='{{items.itemid}}'>
         <text class='info-clas'>#{{items.catname}}#</text>{{items.title}} {{items.introduce}}</view>
       <block wx:for="{{items.thumb_arr}}" wx:if="{{items.thumb}}" wx:key="*this">
-        <image class='product-img' src='{{item}}' mode="widthFix"></image>
+        <image class='product-img' wx:if="{{item}}" src='{{item}}' mode="widthFix"></image>
       </block>
     </view>
   </view>
