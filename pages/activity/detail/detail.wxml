@@ -1,19 +1,20 @@
 <view>
   <view class='ex-title'>
-    文章标题
+    {{res.title}}
     <view class="yh_hudong">
       <view class='ex_info'>
-        <image src='/image/boy.png' class='ex_icon u-avatar' mode='widthFix' />用户名</view>
+        <image src='/image/boy.png' class='ex_icon u-avatar' mode='widthFix' />{{res.truename}}</view>
       <view class='ex_info'>
-        <image src='/icons/fx.png' class='ex_icon' mode='widthFix' />浏览123</view>
+        <image src='/icons/fx.png' class='ex_icon' mode='widthFix' />{{res.hits}}</view>
       <view class='ex_info' bindtap=''>
-        <image class='ex_icon' src='/icons/dz.png' mode="widthFix" />123
+        <image class='ex_icon' src='/icons/dz.png' mode="widthFix" />36
       </view>
     </view>
   </view>
   <view class='informat'>
     <view class='ex-cover'>
-      <image src='/image/cate-img.png' mode='widthFix'></image>
+      <image src='{{res.thumb}}' mode='widthFix'></image>
+      <!-- <image src='/image/cate-img.png' mode='widthFix'></image> -->
     </view>
   </view>
   <view class='rule page__modules modules__shadow'>
@@ -21,11 +22,11 @@
       <view class='cont-title'>
         活动规则
       </view>
-      cnukbguo h
+      {{item.introduce}}
     </view>
     <view class='rule-cont'>
-      <view>发布时间：2018-10-31</view>
-      <view>截止时间：2018-11-31</view>
+      <view>发布时间：{{formdate}}</view>
+      <view>截止时间：{{totime}}</view>
     </view>
     <view class='ex-btn' bindtap='joinActivity'>参与活动</view>
     <view class='ex-btn' bindtap='go_Activity_Initiate'>发起活动</view>

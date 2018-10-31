@@ -2,13 +2,13 @@
   <image style='width:100%;height:260rpx' src='../images/hdxw.png'></image>
 </view>
 
-<view class="wrap">
+<view class="wrap" wx:for='{{res}}'>
   <view class='new-box'>
-    <navigator url='/pages/activity/detail/detail'>
+    <navigator url='/pages/activity/detail/detail?mid={{item.moduleid}}&itemid={{item.itemid}}'>
       <view class="new-info">
-        <text class="new-info-tile">服务商征集活动</text>
-        <image style="width:100%;height:500rpx" src="../images/hdt_1.png" class="new-info-img"></image>
-        <text class="new-info-summary">服务商征集活动由中华全国工商业联合会信息中心发起，目的是为提升对民营企业的服务能力和服务效果，帮助服务商拓展全国业务，及时有效地解决民营企业在转...</text>
+        <text class="new-info-tile">{{item.title}}</text>
+        <image style="width:100%;height:500rpx" src="{{item.thumb}}" class="new-info-img"></image>
+        <text class="new-info-summary">{{item.introduce}}</text>
       </view>
       <view class="new-img-num">
         <image src="../images/eye.png" class="new-img" mode='widthFix'></image>
