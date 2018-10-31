@@ -1,9 +1,11 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/personal/A-order/index",
+    "pages/personal/A-myMap/A-myMap",
+    "pages/goods_order/goods_order",
     "pages/activity/detail/detail",
     "pages/activity/activity",
-    "pages/goods_order/goods_order",
     "pages/show/show",
     "pages/goods_detail/goods_detail",
     "pages/goods_show/goods_show",
@@ -14,7 +16,6 @@
     "pages/personal/A-myInfo/A-changeInfo/A-changeInfo",
     "pages/personal/A-mySetting/A-mySetting",
     "pages/personal/A-mySetting/A-password/A-password",
-    "pages/personal/A-myMap/A-myMap",
     "pages/personal/A-address/index",
     "pages/personal/A-address/detail",
     "pages/personal/A-address/create",

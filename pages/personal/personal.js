@@ -67,10 +67,10 @@ Page({
   },
 
   //我的订单
-  toMyConsume: function () {
+  toMyOrder: function () {
     let that = this;
     wx.navigateTo({
-      url: `/pages/personal/A-address/index`,
+      url: `pages/personal/A-order/index`,
     })
   },
 

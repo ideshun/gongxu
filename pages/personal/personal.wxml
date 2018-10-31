@@ -30,7 +30,7 @@
         <image src='../images/arrow.png' class='arrow'></image>
       </view>
     </view>
-    <view class='mine' catchtap='toMyConsume'>
+    <view class='mine' catchtap='toMyOrder'>
       <view class='mine-in'>
         <image src='../images/dd1.png' class='tubiao'></image>
         <view>我的订单</view>
