@@ -19,7 +19,8 @@
     </navigator>
   </view>
 </view>
-<view class='cate-wrap'>
+
+<!-- <view class='cate-wrap'>
   <view class='cate-name'>
     <text class='cate-title'>热门服务</text>
     <text class='cate-more'>更多</text>
@@ -36,7 +37,9 @@
       </view>
     </view>
   </scroll-view>
-</view>
+</view> -->
+
+
 <view class="reco-img">
   <navigator url='/pages/goods_introduce/goods_introduce'>
     <image mode="{{widthFix}}" src="{{recoImg}}"></image>
