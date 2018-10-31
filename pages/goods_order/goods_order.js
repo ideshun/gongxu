@@ -128,38 +128,59 @@ Page({
       },
       success: function (res) {
         console.log(res);
+        //提示
+        wx.showToast({
+
+      title: res.data.msg,
+
+      icon: 'success',
+
+      duration: 1500
+
+    })
+    setTimeout(function () {
+
+      wx.hideToast()
+    }, 2000)
+
+      
+
+
+
+        //end
+
         //订单生成成功 未支付
-        wx.requestPayment({
-          timeStamp: 1,
-          nonceStr: 1,
-          package: 1,
-          signType: 'MD5',
-          paySign: 1,
-          'success': function (successret) {
-            console.log('支付成功');
-            //获取支付用户的信息
-            wx.getStorage({
-              key: 'userInfo',
-              success: function (getuser) {
-                //加入订单表做记录
-                wx.request({
-                  url: url + 'Wx_AddOrder',
-                  data: {
-                    // uname: 1,
-                    // goods: 1,
-                    // price: 1,
-                    // openid: 1,
-                  },
-                  success: function (lastreturn) {
-                    console.log("存取成功");
-                  }
-                })
-              },
-            })
-          }, 'fail': function (res) {
-            console.log('失败啦~~~~~');
-          }
-        })
+        // wx.requestPayment({
+        //   timeStamp: 1,
+        //   nonceStr: 1,
+        //   package: 1,
+        //   signType: 'MD5',
+        //   paySign: 1,
+        //   'success': function (successret) {
+        //     console.log('支付成功');
+        //     //获取支付用户的信息
+        //     wx.getStorage({
+        //       key: 'userInfo',
+        //       success: function (getuser) {
+        //         //加入订单表做记录
+        //         wx.request({
+        //           url: url + 'Wx_AddOrder',
+        //           data: {
+        //             // uname: 1,
+        //             // goods: 1,
+        //             // price: 1,
+        //             // openid: 1,
+        //           },
+        //           success: function (lastreturn) {
+        //             console.log("支付成功");
+        //           }
+        //         })
+        //       },
+        //     })
+        //   }, 'fail': function (res) {
+        //     console.log('失败啦~~~~~');
+        //   }
+        // })
 
       }
     })
