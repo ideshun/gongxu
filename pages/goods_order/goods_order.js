@@ -129,21 +129,23 @@ Page({
       success: function (res) {
         console.log(res);
         //提示
-        wx.showToast({
+        if(res.data.error == 0 ){
+            wx.showToast({
+            title: res.data.msg,
+            icon: 'success',
+            duration: 1500
+          })
+            setTimeout(function () {
+            wx.hideToast()
+          }, 2000)
+          wx.navigateTo({
+            url: '',
+          })
 
-      title: res.data.msg,
 
-      icon: 'success',
+        }
 
-      duration: 1500
 
-    })
-    setTimeout(function () {
-
-      wx.hideToast()
-    }, 2000)
-
-      
 
 
 
