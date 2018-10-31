@@ -12,21 +12,25 @@ Page({
     topCate: [{
       cateUrl: '/pages/activity/activity',
         cateIcon: '/icons/cate-icon1.png',
+        mid: 25,
         text: '人才招聘'
       },
       {
         cateUrl: '/pages/activity/activity',
         cateIcon: '/icons/cate-icon2.png',
+        mid:8,
         text: '热门活动'
       },
       {
         cateUrl: '/pages/activity/activity',
         cateIcon: '/icons/cate-icon3.png',
+        mid: 26,
         text: '二手闲置'
       },
       {
         cateUrl: '/pages/activity/activity',
         cateIcon: '/icons/cate-icon4.png',
+        mid: 24,
         text: '生活服务'
       }
     ],

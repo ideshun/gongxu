@@ -16,7 +16,7 @@ App({
           console.log(res);
           wx.getUserInfo({ //得到rawData, signatrue, encryptData
             success: function (data) {
-              console.log(data);
+              // console.log(data);
               var rawData = data.rawData;
               var signature = data.signature;
               var encryptedData = data.encryptedData;
@@ -38,7 +38,7 @@ App({
                   'content-type': 'application/json' // 默认值
                 },
                 success: function (res1) {
-                  console.log(res1);
+                  // console.log(res1);
                   e.globalData.Nickname = res1.data.nickName,
                     e.globalData.AvatarUrl = res1.data.avatarUrl,
                     e.globalData.Province = res1.data.province,

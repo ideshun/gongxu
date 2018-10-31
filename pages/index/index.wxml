@@ -12,8 +12,8 @@
   </block>
 </swiper>
 <view class='cate-line'>
-  <view class='cate-item' wx:for="{{topCate}}" wx:key="*this">
-    <navigator url='{{item.cateUrl}}'>
+  <view class='cate-item' wx:for="{{topCate}}" >
+    <navigator url='{{item.cateUrl}}?mid={{item.mid}}'>
       <image src='{{item.cateIcon}}'></image>
       <text>{{item.text}}</text>
     </navigator>
