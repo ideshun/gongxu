@@ -70,7 +70,7 @@ Page({
   toMyOrder: function () {
     let that = this;
     wx.navigateTo({
-      url: `pages/personal/A-order/index`,
+      url: `/pages/personal/A-order/index`,
     })
   },
 
