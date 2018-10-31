@@ -1,0 +1,58 @@
+<view>
+  <view class='ex-title'>
+    文章标题
+    <view class="yh_hudong">
+      <view class='ex_info'>
+        <image src='/image/boy.png' class='ex_icon u-avatar' mode='widthFix' />用户名</view>
+      <view class='ex_info'>
+        <image src='/icons/fx.png' class='ex_icon' mode='widthFix' />浏览123</view>
+      <view class='ex_info' bindtap=''>
+        <image class='ex_icon' src='/icons/dz.png' mode="widthFix" />123
+      </view>
+    </view>
+  </view>
+  <view class='informat'>
+    <view class='ex-cover'>
+      <image src='/image/cate-img.png' mode='widthFix'></image>
+    </view>
+  </view>
+  <view class='rule page__modules modules__shadow'>
+    <view class='rule-cont no-borderTop'>
+      <view class='cont-title'>
+        活动规则
+      </view>
+      cnukbguo h
+    </view>
+    <view class='rule-cont'>
+      <view>发布时间：2018-10-31</view>
+      <view>截止时间：2018-11-31</view>
+    </view>
+    <view class='ex-btn' bindtap='joinActivity'>参与活动</view>
+    <view class='ex-btn' bindtap='go_Activity_Initiate'>发起活动</view>
+  </view>
+  <view class='informat'>
+    <view class='ex-tit'>
+      推荐活动
+    </view>
+    <view class='ex-list'>
+      <view class='ex-cipate'>
+        <navigator url="">
+          <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1671610589,3126249869&fm=27&gp=0.jpg' mode='aspectFill'></image>
+          <view class='listInfo'>
+            <view>
+              标题
+            </view>
+            <image src='/image/boy.png' class='ex_icon ex_icon1' mode='widthFix' />
+            <text class='item-icnum'>用户名</text>
+            <view class='fr'>
+              <image src='/icons/fx.png' class='ex_icon ex_icon1' mode='widthFix' />
+              <text class='item-icnum'>123</text>
+              <image src='/icons/fx.png' class='ex_icon' mode='widthFix' />
+              <text class='item-icnum'>22</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
