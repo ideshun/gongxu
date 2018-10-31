@@ -4,6 +4,7 @@
     "pages/goods_introduce/goods_introduce",
     "pages/goods_order/goods_order",
     "pages/list/list",
+    "pages/show/show",
     "pages/personal/personal",
     "pages/personal/A-myInfo/A-myInfo",
     "pages/personal/A-myInfo/A-changeInfo/A-changeInfo",

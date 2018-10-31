@@ -31,10 +31,19 @@ Page({
         'res':res.data
           })
        }
-    })  
-
-
-
+    }) 
+  },
+  clk: function(e) {
+    var itemid;
+    var mid;
+   itemid =  e.currentTarget.dataset.itemid,
+   mid = e.currentTarget.dataset.mid
+   wx.navigateTo({
+     url: '../show/show',
+   })
+    
+  // url:'../show/show?itemid='+itemid+'&mid='+mid;
+   
   },
 
   /**
