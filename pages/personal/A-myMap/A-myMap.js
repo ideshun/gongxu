@@ -71,14 +71,14 @@ Page({
               'itemid' : address_id,
             },
             success:function(res){
-              // console.log(res)
-                if(res.data == 1){
+              console.log(res)
+              
                   wx.showToast({
                     title: '删除成功',
                     icon: 'success',
                     duration: 2000
                   })
-                }
+               
             }
 
           })
