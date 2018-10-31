@@ -1,0 +1,117 @@
+.informat{
+  margin: 10rpx 20rpx;background: #fff;
+}
+.ex-title{
+  position: relative;
+  font-size: 18px;
+  line-height: 60rpx;
+  font-weight: bold;
+  padding: 0 20rpx;
+  margin: 20rpx 0;
+}
+
+.ex-title::after{
+  position: absolute;
+  content: "";
+  top: 8rpx;
+  left: 0;
+  display: inline-block;
+  width: 10rpx;
+  height: 46rpx;
+  background: #dc4e40;
+}
+.yh_hudong {
+  margin: 20rpx 0 30rpx;
+  font-weight: normal;
+  font-size: 12px;
+  overflow: hidden;
+  line-height: 60rpx;
+  color: #888;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.yh_hudong .ex_info{
+  float: left;
+  margin-right: 30rpx;
+}
+
+.yh_hudong .ex_icon{
+  width: 30rpx;
+  line-height: 60rpx;
+  margin-right: 2rpx;
+  margin-top: -1rpx;
+  vertical-align: middle;
+  opacity: 0.8;
+  font-size: 13px;
+}
+.yh_hudong .u-avatar{
+  border-radius: 50%;
+  width: 45rpx;
+  margin-top: -3rpx;
+}
+
+.yh_hudong .like_on{
+  color: #dc4e40;
+}
+.ex-cover image{
+  margin: 20rpx 0;
+}
+.ex-list{
+  overflow: hidden;margin-bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.ex-cipate{
+  float: left;width: 48%;margin-bottom: 20rpx;
+  border: 1px solid #f2f2f2;
+}
+.ex-cipate .listInfo {
+  padding: 10rpx 20rpx;
+  color: gray;
+}
+.ex-cipate image{
+  width: 100%;height: 340rpx;
+}
+
+.ex-cipate .ex_icon {
+  width: 30rpx;
+  line-height: 32rpx;
+  vertical-align: middle;
+  margin-top: -1rpx;
+  margin-left: 10rpx;
+  margin-right: 2rpx;
+  opacity: 0.8
+}
+
+.ex-cipate .ex_icon1{
+  margin-left: -8rpx !important;
+}
+.ex-cipate .item-icnum {
+  line-height: 32rpx;
+  font-size: 12px;
+  color: gray;
+}
+
+.ex-btn{
+  float: left;width: 48%;background: #dc4e40;color: #fff;height: 80rpx;line-height: 80rpx ;text-align: center;font-size: 32rpx  ;border-radius: 15rpx;
+}
+.ex-btn:nth-child(even){
+  float: right;
+}
+.ex-btn view{
+  float: left;width: 48%;background: #dc4e40;color: #fff;height: 80rpx;line-height: 80rpx ;text-align: center;font-size: 32rpx  ;border-radius: 15rpx;
+}
+.rule{
+  margin: 30rpx 20rpx;padding: 30rpx 20rpx;background: #fff;border-radius: 15rpx;box-shadow: 2rpx 2rpx 2rpx 2rpx #ddd;overflow: hidden;
+}
+.rule-cont{
+  width:100%;line-height: 50rpx;padding: 20rpx 15rpx;overflow: hidden;
+}
+.no-borderTop{
+  padding: 0 15rpx;
+}
+.cont-title{
+  font-size: 16px;
+  font-weight: bold;
+}
