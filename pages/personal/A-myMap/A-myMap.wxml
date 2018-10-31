@@ -1,2 +1,14 @@
 <!--pages/personal/A-myMap/A-myMap.wxml-->
-<view>156163541654</view>
+<view>
+  <view>收货地址管理</view>
+  <view wx:for="{{res}}">
+   <view> 收货人姓名：{{item.truename}}</view>
+   <view> 收货地址：{{item.address}}</view>
+   <view> 编辑时间：{{item.editdate}}</view>
+   <view> 手机号：{{item.mobile}}</view>
+   <view> 邮编：{{item.postcode}}</view>
+   <view> 备注：{{item.note}}</view>
+   <view style='margin: 20rpx 10rpx 25rpx 10rpx'></view>
+  </view>  
+</view>
+<view >添加新地址</view>

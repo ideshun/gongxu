@@ -12,7 +12,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+   var e = this
+    wx.request({
+      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      method: 'GET',
+      data: {
+        flag: 'wx',
+        type_a: 'addr_list',
+        user: 'admin'
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+          console.log(res.data[0])
+          e.setData({
+            res:res.data[0]
+          })
+      }
+    })
   },
 
   /**
