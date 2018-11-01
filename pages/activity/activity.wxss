@@ -65,13 +65,12 @@ swiper swiper-item image{
 }
 
 .new-info-img {
-  width: 100%;
-  margin-top: 10px;
+  width: 210rpx;
+  margin: 10rpx;
 }
 
 .new-info-summary {
-  margin-left: 40rpx;
-  margin-right: 40rpx;
+  margin-left: 10rpx;
   line-height: 44rpx;
   font-size: 28rpx;
   color: #666;

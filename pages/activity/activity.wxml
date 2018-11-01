@@ -6,9 +6,9 @@
   <view class='new-box'>
     <navigator url='/pages/activity/detail/detail?mid={{item.moduleid}}&itemid={{item.itemid}}'>
       <view class="new-info">
-        <text class="new-info-tile">{{item.title}}</text>
-        <image style="width:100%;height:500rpx" src="{{item.thumb}}" class="new-info-img"></image>
-        <text class="new-info-summary">{{item.introduce}}</text>
+        <view class="new-info-tile">{{item.title}}</view>
+        <image src="{{item.thumb}}" mode='widthFix' class="new-info-img"></image>
+        <view class="new-info-summary">{{item.introduce}}</view>
       </view>
       <view class="new-img-num">
         <image src="../images/eye.png" class="new-img" mode='widthFix'></image>
