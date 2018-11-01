@@ -19,8 +19,8 @@ Page({
       });
     }, 3000);
   },
-  subEct: function () {
-    let _this = this
+  formSubmit: function (e) {
+    let _this = this 
     var values;
     values = e.detail.value;
     console.log(values);
@@ -29,21 +29,25 @@ Page({
       url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
       data: {
         'flag': 'wx',
-        'type_a': 'add_exhibit',
-        'truename': values.detial,
-        // 'postcode' : e.detail.value.postcode,
-        'mobile': values.phone,
-        'addr': values.detail,
-        'username': 'admin'
+        'type_a': 'sign',
+        'mid' : 8,
+        'title' : values.title,
+        'username': values.username,
+        'amount': values.amount,
+        'company': values.company,
+        'user': values.user,
+        'qq': values.qq,
+        'wx': values.wx, 
+        'itemid': values.itemid,    
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
         console.log(res)
-        if (res.data.error != '') {
+        if (res.data.error == 1) {
           wx.showToast({
-            title: '添加成功',
+            title: '报名成功',
             icon: 'success',
             duration: 2000
           })
@@ -55,7 +59,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var e = this
+    wx.request({
+      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      data: {
+        'flag': 'wx',
+        'type_a': 'show',
+        'itemid':2,
+        'mid' : 8,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        // console.log(res)
+        e.setData({
+          one:res.data
+        })
     
+      }
+    })
   },
 
   /**

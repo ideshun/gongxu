@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function (options) {
     var e = this
-    console.log(options.mid);
+    // console.log(options.mid);
     wx.request({
       url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
       method: 'GET',
@@ -28,7 +28,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res.data);
+        // console.log(res.data);
         e.setData({
           'res'     : res.data,
           'formdate': ss.formatTime(res.data.fromtime, 'Y/M/D'),
