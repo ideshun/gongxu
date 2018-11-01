@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+  box-sizing: border-box;
   height: 44px;
   border-bottom: 1rpx solid #e4e4e4;
   display: flex;

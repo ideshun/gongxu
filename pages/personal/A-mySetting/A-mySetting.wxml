@@ -1,5 +1,5 @@
 <!--pages/A-centrality/A-mySetting/A-mySetting.wxml-->
-<view class='container'>
+<view class=''>
   <view class='list_set'>
     <view class='set_in' catchtap='changePassword'>
       <view>修改密码</view>

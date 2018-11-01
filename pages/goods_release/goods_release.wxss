@@ -1,0 +1,61 @@
+/* pages/activity/release/release.wxss */
+
+.weui-select {
+  height: 1.58823529em;
+  min-height: 1.58823529em;
+  line-height: 1.58823529em;
+  border-right: 1rpx solid #d9d9d9;
+}
+
+.page__modules {
+  padding: 20rpx 10rpx;
+}
+
+.activityName {
+  padding-left: 20rpx;
+  width: 450rpx;
+}
+
+.activityType {
+  color: #b0b0b0;
+  border: 0;
+  padding-right: 20rpx;
+}
+
+.activityType .weui-select {
+  font-size: 16px;
+  border-left: 1px solid #ddd;
+  border-right: none;
+}
+
+textarea {
+  padding: 20rpx;
+}
+
+.uploadRuler {
+  float: right;
+  color: #da4e3f;
+  font-size: 14px;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+}
+
+.selectTime picker {
+  float: left;
+  margin-right: 10rpx;
+}
+
+.weui-btn-area {
+  margin-bottom: 50rpx;
+}
+
+.page__bd .weui-cellse {
+  position: relative;
+  background-color: #fff;
+  line-height: 1.41176471;
+  font-size: 17px;
+  margin: 0;
+}
+.select-time{
+  width: 100%;
+}
