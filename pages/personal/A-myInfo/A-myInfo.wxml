@@ -1,5 +1,5 @@
 <!--pages/personal/A-myInfo/A-myInfo.wxml-->
-<view class='container'>
+<view class=''>
   <view class='line'></view>
   <view class='head'>
     <view>头像</view>

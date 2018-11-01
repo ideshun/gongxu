@@ -135,8 +135,8 @@ page {
 }
 
 .user-info {
-  height: 100rpx;
-  line-height: 100rpx;
+  /* height: 100rpx; */
+  /* line-height: 100rpx; */
 }
 
 .user-info .user-logo {

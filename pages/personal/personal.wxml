@@ -1,5 +1,4 @@
 <!--pages/A-personal/A-personal.wxml-->
-
 <view class='user-info' catchtap='toMyInfo'>
   <view>
     <image src='{{avatarUrl}}' class='userHead'></image>
