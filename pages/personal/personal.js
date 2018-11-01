@@ -9,8 +9,9 @@ Page({
   data: {
     byname: '',
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    obtain: '获得了0次赞，发布了0条口碑',
-    avatarUrl: ''
+    obtain: '获得了0赞，发布了0条口碑',
+    avatarUrl: '',
+    location: '',
   },
 
   /**
