@@ -3,12 +3,11 @@
   <view>
     <image src='{{avatarUrl}}' class='userHead'></image>
   </view>
-  <view class='byname'>{{byname}}</view>
+  <view class='byname'><open-data type="userNickName"></open-data></view>
   <view class='obtain'>{{obtain}}</view>
 </view>
 
 <view class='line'></view>
-
 <view class='mySetting'>
   <view class='mySetting-in'>
     <view class='mine' catchtap='toMyData'>

@@ -10,7 +10,7 @@
           <view class="weui-label">姓名</view>
         </view>
         <view class="weui-cell__bd">
-          <input class="weui-input" placeholder="请输入您的姓名" />
+          <input class="weui-input" value='' placeholder="请输入您的姓名" />
         </view>
       </view>
       <view class="weui-cell weui-cell_input">
@@ -53,7 +53,7 @@
       </view>
     </view>
     <view class="weui-btn-area">
-      <button class="weui-btn" type="" bindtap="showTopTips">确定</button>
+      <button class="weui-btn" type="" bindtap="subEct">确定</button>
     </view>
   </view>
 </view>

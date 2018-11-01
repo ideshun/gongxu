@@ -1,6 +1,5 @@
 <view class="container p-bottom" wx:if="{{order.order_id}}">
   <scroll-view scroll-y="true">
-
     <!-- 收货地址 -->
     <view class="b-f">
       <view class="flow-checkout-header b-f dis-flex">
@@ -109,5 +108,4 @@
       <view bindtap="receipt">确认收货</view>
     </view>
   </view>
-
 </view>

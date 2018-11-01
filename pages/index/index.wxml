@@ -19,33 +19,11 @@
     </navigator>
   </view>
 </view>
-
-<!-- <view class='cate-wrap'>
-  <view class='cate-name'>
-    <text class='cate-title'>热门服务</text>
-    <text class='cate-more'>更多</text>
-  </view>
-  <scroll-view scroll-x scroll-with-animation="true">
-    <view class='cate-content'>
-      <view class='cate-item' wx:for='{{serviceItem}}' wx:key="*this">
-        <view bindtap='det' data-mid='{{item.moduleid}}' data-itemid='{{item.itemid}}'>
-          <image src='{{item.thumb_arr[index]}}' mode="{{aspectFitMode}}" onerror="this.src='serviceItem[0].thumb'"></image>
-          <view class="item-title">{{item.serviceTitle}}</view>
-          <view class="item-date">{{item.editdate}}</view>
-          <view class="item-star">{{item.serviceStars}}</view>
-        </view>
-      </view>
-    </view>
-  </scroll-view>
-</view> -->
-
-
 <view class="reco-img">
   <navigator url='/pages/goods_introduce/goods_introduce'>
     <image mode="{{widthFix}}" src="{{recoImg}}"></image>
   </navigator>
 </view>
-
 <scroll-view scroll-x scroll-with-animation="true">
   <view class='cate-tab'>
     <view class='cate-tab-item {{tabActive==index?"active":""}}' wx:for='{{cateTabItem}}' bindtap="tabClick" data-current="{{index}}" wx:key="{{index}}">
