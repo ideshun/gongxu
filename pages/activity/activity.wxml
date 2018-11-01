@@ -20,3 +20,7 @@
     <view class='line'></view>
   </view>
 </view>
+
+<navigator class='add-btn' url='pages/activity/release/release'>
+  <image src='/icons/add.png' mode='widthFix'></image>
+</navigator>

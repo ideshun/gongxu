@@ -1,15 +1,15 @@
 <!--pages/personal/A-myMap/A-myMap.wxml-->
 <view class='container'>
+  <view class='mapTitle'>收货地址管理</view>
   <view class='myMap'>
-    <view class='title'>收货地址管理</view>
     <view wx:for="{{res}}">
       <view>{{item.truename}} {{item.mobile}}</view>
       <view> 收货地址：{{item.address}}</view>
       <view style='display:none;'> 编辑时间：{{item.editdate}}</view>
       <view style='display:none;'> 邮编：{{item.postcode}}</view>
       <view> 备注：{{item.note}}</view>
-      <view style='margin: 20rpx 10rpx 25rpx 10rpx' bindtap="removeAddress" data-itemid='{{item.itemid}}'> 删除 </view>
+      <view class='del-address' bindtap="removeAddress" data-itemid='{{item.itemid}}'> 删除 </view>
     </view>
   </view>
-  <view bindtap="createAddress">添加新地址</view>
+  <view bindtap="createAddress" class='add-address'>添加新地址</view>
 </view>
