@@ -24,7 +24,8 @@
     "pages/login/login",
     "pages/logs/logs",
     "pages/activity/release/release",
-    "pages/goods_release/goods_release"
+    "pages/goods_release/goods_release",
+    "pages/activity/signUp/signUp"
   ],
   "window": {
     "backgroundTextStyle": "light",
