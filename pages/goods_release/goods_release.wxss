@@ -59,3 +59,7 @@ textarea {
 .select-time{
   width: 100%;
 }
+.gx-cate{
+  border: none;
+  padding-left: 30%;
+}

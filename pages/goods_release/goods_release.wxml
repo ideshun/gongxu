@@ -8,40 +8,68 @@
       </picker>
     </view>
   </view>
-
   <view class="page__modules modules__shadow">
     <view class="page__bd">
-        <view class="weui-cellse">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">
-                    <view class="weui-uploader">
-                        <view class="weui-uploader__hd">
-                            <view class="weui-uploader__title">添加图片</view>
-                            <view class="weui-uploader__info">{{files.length}}</view>
-                        </view>
-                        <view class="weui-uploader__bd">
-                            <view class="weui-uploader__files" id="uploaderFiles">
-                                <block wx:for="{{files}}" wx:key="*this">
-                                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
-                                        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
-                                    </view>
-                                </block>
-                            </view>
-                            <view class="weui-uploader__input-box">
-                                <view class="weui-uploader__input" bindtap="chooseImage"></view>
-                            </view>
-                        </view>
+      <view class="weui-cellse">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">添加图片</view>
+                <view class="weui-uploader__info">{{files.length}}</view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for="{{files}}" wx:key="*this">
+                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
                     </view>
+                  </block>
                 </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                </view>
+              </view>
             </view>
+          </view>
         </view>
+      </view>
     </view>
   </view>
 
   <view class="page__modules modules__shadow">
+    <view class="weui-cell weui-cell_select" style='width:100%;'>
+      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+        <view class="weui-label">选择分类</view>
+      </view>
+      <view class="weui-cell__bd gx-cate">
+        <picker bindchange="bindCateChange" value="{{cateIndex}}" range="{{cateries}}">
+          <view class="weui-select weui-select_in-select-after">{{cateries[cateIndex]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class="page__modules modules__shadow">
     <textarea placeholder="说明" name='rule' value='{{form_reset}}'></textarea>
   </view>
   <view class="page__modules modules__shadow">
+    <view class="weui-cell weui-cell_input select-time">
+      <view class="weui-cell__hd">
+        <view class="weui-label">单价</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='' type='number' placeholder="0.00" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input select-time">
+      <view class="weui-cell__hd">
+        <view class="weui-label">库存</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='' type='number' placeholder="0" />
+      </view>
+    </view>
+
     <view class="weui-cell weui-cell_input select-time">
       <view class="weui-cell__hd">
         <view class="weui-label">开始日期</view>
