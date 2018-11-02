@@ -47,14 +47,17 @@ Page({
         'mid': 8,
         'title': values.title,
         'username': values.username,
+        'truename': values.truename,
         'catid': values.catid,
         'fromtime': values.fromtime,
         'totime': values.totime,
         'hallname': values.hallname,
+        'telephone': values.telephone,
+        'address': values.address,
         'wx': values.wx,
         'qq': values.qq,
         'sponsor': values.sponsor,
-        'content':content,
+        'content': values.content,
         'user':'admin' //暂用
       },
       header: {
@@ -62,7 +65,7 @@ Page({
       },
       success: function (res) {
         console.log(res)
-        if (res.data.error == 1) {
+        if (res.data == 1) {
           wx.showToast({
             title: '报名成功',
             icon: 'success',

@@ -43,6 +43,7 @@
     <view> 地址：</view><input class="weui-input" name='address' placeholder="请输入活动地址" />
     <view> 展馆名称：</view><input class="weui-input" name='hallname' placeholder="请输入展馆名称" />
     <view> 主办单位：</view><input class="weui-input" name='sponsor' placeholder="请输入主办单位" />
+     <view> 联系人：</view><input class="weui-input" name='truename' placeholder="请输入联系人" />
     <view> 联系电话：</view><input class="weui-input" name='telephone' placeholder="请输入联系电话" />
     <view> QQ：</view><input class="weui-input" name='qq' placeholder="联系QQ号码" />
     <view> 微信：</view><input class="weui-input" name='wx' placeholder="联系的微信号码" />
