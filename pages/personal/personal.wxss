@@ -6,25 +6,46 @@
   color: #333;
 }
 
+.qd-btn {
+  width: 200rpx;
+  margin: 20rpx auto;
+  text-align: center;
+  padding: 10rpx 20rpx;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50rpx;
+  color: #1fd3ae;
+  opacity: 0.3;
+}
+
+.qd-btn.on {
+  opacity: 1;
+}
+
+.qd-btn image {
+  width: 50rpx;
+  margin-right: 10rpx;
+}
+
 .user-info {
   overflow: hidden;
   width: 100%;
-  height: 400rpx;
   /* background: linear-gradient(to left,#134b62, #093242); */
   background: #093242;
-  box-sizing:border-box;
-  padding-top:60rpx;
-  color:#fff;
-  position:relative;
-  text-align:center;
+  box-sizing: border-box;
+  padding-top: 60rpx;
+  color: #fff;
+  position: relative;
+  text-align: center;
 }
+
 .byname {
   padding-top: 10rpx;
   font-size: 32rpx;
   font-weight: bold;
 }
+
 .obtain {
-  padding-top:10rpx;
+  padding-top: 10rpx;
   opacity: 0.8;
 }
 

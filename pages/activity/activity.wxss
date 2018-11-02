@@ -92,3 +92,11 @@ swiper swiper-item image{
   font-size: 28rpx;
   color: #666;
 }
+.add-btn{
+  position: fixed;
+  bottom: 30rpx;
+  right: 30rpx;
+}
+.add-btn image{
+  width: 100rpx;
+}

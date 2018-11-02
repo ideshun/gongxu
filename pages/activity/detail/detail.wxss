@@ -18,7 +18,7 @@
   display: inline-block;
   width: 10rpx;
   height: 46rpx;
-  background: #dc4e40;
+  background: #0f3e52;
 }
 .yh_hudong {
   margin: 20rpx 0 30rpx;
@@ -51,7 +51,7 @@
 }
 
 .yh_hudong .like_on{
-  color: #dc4e40;
+  color: #0f3e52;
 }
 .ex-cover image{
   margin: 20rpx 0;
@@ -94,13 +94,13 @@
 }
 
 .ex-btn{
-  float: left;width: 48%;background: #dc4e40;color: #fff;height: 80rpx;line-height: 80rpx ;text-align: center;font-size: 32rpx  ;border-radius: 15rpx;
+  float: left;width: 48%;background: #0f3e52;color: #fff;height: 80rpx;line-height: 80rpx ;text-align: center;font-size: 32rpx  ;border-radius: 15rpx;
 }
 .ex-btn:nth-child(even){
   float: right;
 }
 .ex-btn view{
-  float: left;width: 48%;background: #dc4e40;color: #fff;height: 80rpx;line-height: 80rpx ;text-align: center;font-size: 32rpx  ;border-radius: 15rpx;
+  float: left;width: 48%;background: #0f3e52;color: #fff;height: 80rpx;line-height: 80rpx ;text-align: center;font-size: 32rpx  ;border-radius: 15rpx;
 }
 .rule{
   margin: 30rpx 20rpx;padding: 30rpx 20rpx;background: #fff;border-radius: 15rpx;box-shadow: 2rpx 2rpx 2rpx 2rpx #ddd;overflow: hidden;

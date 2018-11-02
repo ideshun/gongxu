@@ -1,10 +1,15 @@
 <!--pages/A-personal/A-personal.wxml-->
-<view class='user-info' catchtap='toMyInfo'>
-  <view>
+<view class='user-info'>
+  <view catchtap='toMyInfo'>
     <image src='{{avatarUrl}}' class='userHead'></image>
   </view>
-  <view class='byname'><open-data type="userNickName"></open-data></view>
+  <view class='byname'>
+    <open-data type="userNickName"></open-data>
+  </view>
   <view class='obtain'>{{obtain}}</view>
+  <view class='qd-btn {{isQd}}' bindtap='qdClick'>
+    <image src='/icons/qd.png' mode='widthFix' />签到
+  </view>
 </view>
 
 <view class='line'></view>
@@ -74,7 +79,6 @@
     </view>
   </view>
 </view>
-
 
 
 

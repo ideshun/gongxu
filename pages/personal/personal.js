@@ -1,6 +1,8 @@
 // pages/personal/personal.js
 var app = getApp();
-import { toTabPage } from "../../utils/common.js"
+import {
+  toTabPage
+} from "../../utils/common.js"
 Page({
 
   /**
@@ -12,19 +14,32 @@ Page({
     obtain: '获得了0赞，发布了0条口碑',
     avatarUrl: '',
     location: '',
+    isQd: '',
   },
-
+  qdClick: function(e) {
+    let click = this;
+    if (click.data.isQd.length<1){
+      click.setData({
+        isQd: 'on',
+      });
+      wx.showToast({
+        title: '已完成',
+        icon: 'success',
+        duration: 3000
+      });
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     var that = this;
     wx.getSetting({
       success(res) {
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称
           wx.getUserInfo({
-            success: function (res) {
+            success: function(res) {
               that.setData({
                 avatarUrl: res.userInfo.avatarUrl,
               })
@@ -39,23 +54,23 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
   // tab切换
-  toTabPage: function (e) {
+  toTabPage: function(e) {
     toTabPage(e)
   },
 
   //个人信息
-  toMyInfo: function () {
+  toMyInfo: function() {
     let that = this;
     wx.navigateTo({
       url: `/pages/personal/A-myInfo/A-myInfo`,
@@ -71,7 +86,7 @@ Page({
   // },
 
   //我的消息
-  toMyMessage: function () {
+  toMyMessage: function() {
     let that = this;
     wx.navigateTo({
       url: `/pages/personal/A-myMessage/A-myMessage`,
@@ -79,7 +94,7 @@ Page({
   },
 
   //我的订单
-  toMyOrder: function () {
+  toMyOrder: function() {
     let that = this;
     wx.navigateTo({
       url: `/pages/personal/A-order/index`,
@@ -87,7 +102,7 @@ Page({
   },
 
   //我的收获地址
-  toMyMap: function () {
+  toMyMap: function() {
     let that = this;
     wx.navigateTo({
       url: `/pages/personal/A-myMap/A-myMap`,
@@ -96,7 +111,7 @@ Page({
 
 
   //我的设置
-  toMySetting: function () {
+  toMySetting: function() {
     let that = this;
     wx.navigateTo({
       url: `/pages/personal/A-mySetting/A-mySetting`,
@@ -104,7 +119,7 @@ Page({
   },
 
   //联系客服
-  tel: function () {
+  tel: function() {
     let that = this;
     wx.makePhoneCall({
       phoneNumber: '18340087612',
@@ -118,35 +133,35 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

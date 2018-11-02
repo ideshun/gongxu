@@ -1,5 +1,26 @@
 /* pages/personal/A-myMap/A-myMap.wxss */
-.myMap .title{
+.myMap{
+  position: relative;
+  margin: 20rpx 0;
+  padding: 10rpx;
+  padding-right: 80rpx; 
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.mapTitle{
   font-size: 16px;
   font-weight: bold;
+  padding-bottom: 20rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.del-address{
+  position: absolute;
+  padding: 10rpx;
+  top: 50rpx;
+  right: 10rpx;
+  color: red;
+}
+.add-address{
+  text-align: center;
+  font-size: 18px;
+  color: #1fd3ae;
 }
