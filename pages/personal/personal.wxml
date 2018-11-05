@@ -8,7 +8,7 @@
   </view>
   <view class='obtain'>{{obtain}}</view>
   <view class='qd-btn {{isQd}}' bindtap='qdClick'>
-    <image src='/icons/qd.png' mode='widthFix' />签到
+    <image src='/icons/qd.png' mode='widthFix' />{{qdTxt}}
   </view>
 </view>
 

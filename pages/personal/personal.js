@@ -15,17 +15,19 @@ Page({
     avatarUrl: '',
     location: '',
     isQd: '',
+    qdTxt: '签到',
   },
   qdClick: function(e) {
     let click = this;
     if (click.data.isQd.length<1){
       click.setData({
         isQd: 'on',
+        qdTxt: '已签到',
       });
       wx.showToast({
-        title: '已完成',
+        title: '签到成功',
         icon: 'success',
-        duration: 3000
+        duration: 1000
       });
     }
   },
