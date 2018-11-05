@@ -7,20 +7,24 @@
     <navigator url='/pages/activity/detail/detail?mid={{item.moduleid}}&itemid={{item.itemid}}'>
       <view class="new-info">
         <view class="new-info-tile">{{item.title}}</view>
-        <image src="{{item.thumb}}" mode='widthFix' class="new-info-img"></image>
         <view class="new-info-summary">{{item.introduce}}</view>
-      </view>
-      <view class="new-img-num">
-        <image src="../images/looks.png" class="new-img" mode='widthFix'></image>
-        <text class="new-num">112</text>
-        <image src="../images/like.png" class="new-img" mode='widthFix'></image>
-        <text class="new-num">96</text>
+        <view>
+          <image src="{{item.thumb}}" mode='widthFix' class="new-info-img"></image>
+          <image src="{{item.thumb}}" mode='widthFix' class="new-info-img"></image>
+          <image src="{{item.thumb}}" mode='widthFix' class="new-info-img"></image>
+        </view>
+        <view class="new-img-num">
+          <image src="../images/looks.png" class="new-img" mode='widthFix'></image>
+          <text class="new-num">112</text>
+          <image src="../images/like.png" class="new-img" mode='widthFix'></image>
+          <text class="new-num">96</text>
+        </view>
       </view>
     </navigator>
     <view class='line'></view>
   </view>
 </view>
 
-<navigator class='add-btn' url='pages/activity/release/release'>
+<navigator class='add-btn' url='/pages/activity/release/release'>
   <image src='/icons/add.png' mode='widthFix'></image>
 </navigator>

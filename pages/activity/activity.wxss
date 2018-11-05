@@ -1,7 +1,7 @@
 /* pages/index/index.wxss */
 
-
 /* 轮播图wxcss */
+
 /* swiper{
     width:100%;
     height:500rpx
@@ -13,6 +13,7 @@ swiper swiper-item image{
 } */
 
 /* 新闻 */
+
 .wrap {
   display: flex;
   flex-direction: column;
@@ -21,12 +22,14 @@ swiper swiper-item image{
   /* border-top: solid 1px #ababab;
   border-bottom: solid 1px #ababab; */
 }
-.new-box{
+
+.new-box {
   padding: 0 30rpx;
   border-bottom: 15rpx solid #f2f2f2;
 }
 
 /* 头像 */
+
 /* 
 .new-author-date {
   margin-top: 10px;
@@ -48,9 +51,8 @@ swiper swiper-item image{
   color: #ababab;
   font-size: 25rpx;
 } */
+
 /* 头像 */
-
-
 
 .new-info {
   margin-top: 5px;
@@ -59,26 +61,26 @@ swiper swiper-item image{
 
 .new-info-tile {
   font-size: 16px;
-  margin-left: 10rpx;
   font-weight: 600;
   line-height: 50rpx;
 }
 
 .new-info-img {
-  width: 210rpx;
-  margin: 10rpx;
+  width: 30%;
+  margin-right: 3.3%;
+  margin-top: 20rpx;
+  border: 2rpx solid #f2f2f2;
+}
+
+.new-info-img:last-child {
+  margin-right: 0;
 }
 
 .new-info-summary {
-  margin-left: 10rpx;
   line-height: 44rpx;
   font-size: 28rpx;
   color: #666;
   letter-spacing: 3rpx;
-}
-
-.new-img-num {
-  margin-bottom: 10px;
 }
 
 .new-img {
@@ -93,11 +95,16 @@ swiper swiper-item image{
   color: #666;
   margin: 0 20rpx 0 6rpx;
 }
-.add-btn{
+
+.add-btn {
   position: fixed;
   bottom: 30rpx;
   right: 30rpx;
 }
-.add-btn image{
+
+.add-btn image {
   width: 100rpx;
+  background: #FFF;
+  border-radius: 50%;
+  border: 5rpx solid #FFF;
 }
