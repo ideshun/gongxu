@@ -28,8 +28,8 @@
       <view>发布时间：{{formdate}}</view>
       <view>截止时间：{{totime}}</view>
     </view>
-    <view class='ex-btn' bindtap='joinActivity'>报名</view>
-    <view class='ex-btn' bindtap='go_Activity_Initiate'>发起活动</view>
+    <navigator url='../signUp/signUp' class='ex-btn' bindtap='joinActivity'>报名</navigator>
+    <navigator url='../release/release' class='ex-btn' bindtap='go_Activity_Initiate'>发起活动</navigator>
   </view>
   <view class='informat'>
     <view class='ex-tit'>

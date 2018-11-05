@@ -1,7 +1,7 @@
 <!--pages/activity/release/release.wxml-->
 <form bindsubmit="formSubmit">
   <view class="page__modules modules__shadow">
-    <input class="activityName" name='catid' value='22' placeholder="暂定用22"></input>
+    <input class="activityName" name='catid' value='' placeholder="请输入活动名称"></input>
     <view class="activityType">
       <picker bindchange="bindAccountChange" name='type' value="" range="{{activityType}}">
         <view class="weui-select" style="">{{activityType[activityTypeIndex]}}</view>
@@ -11,43 +11,99 @@
 
   <view class="page__modules modules__shadow">
     <view class="page__bd">
-        <view class="weui-cellse">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">
-                    <view class="weui-uploader">
-                        <view class="weui-uploader__hd">
-                            <view class="weui-uploader__title">活动图片</view>
-                            <view class="weui-uploader__info">{{files.length}}</view>
-                        </view>
-                        <view class="weui-uploader__bd">
-                            <view class="weui-uploader__files" id="uploaderFiles">
-                                <block wx:for="{{files}}" wx:key="*this">
-                                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
-                                        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
-                                    </view>
-                                </block>
-                            </view>
-                            <view class="weui-uploader__input-box">
-                                <view class="weui-uploader__input" bindtap="chooseImage"></view>
-                            </view>
-                        </view>
+      <view class="weui-cellse">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">活动图片</view>
+                <view class="weui-uploader__info">{{files.length}}</view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for="{{files}}" wx:key="*this">
+                    <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                      <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
                     </view>
+                  </block>
                 </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                </view>
+              </view>
             </view>
+          </view>
         </view>
+      </view>
     </view>
   </view>
 
-<view class="page__modules modules__shadow"></view>
-    <view> 主题：</view><input class="weui-input" name='title' placeholder="请输入活动主题" />
-    <view> 地址：</view><input class="weui-input" name='address' placeholder="请输入活动地址" />
-    <view> 展馆名称：</view><input class="weui-input" name='hallname' placeholder="请输入展馆名称" />
-    <view> 主办单位：</view><input class="weui-input" name='sponsor' placeholder="请输入主办单位" />
-     <view> 联系人：</view><input class="weui-input" name='truename' placeholder="请输入联系人" />
-    <view> 联系电话：</view><input class="weui-input" name='telephone' placeholder="请输入联系电话" />
-    <view> QQ：</view><input class="weui-input" name='qq' placeholder="联系QQ号码" />
-    <view> 微信：</view><input class="weui-input" name='wx' placeholder="联系的微信号码" />
-
+  <view class="page__modules modules__shadow" style='display:block'>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">主题</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name='title' placeholder="请输入活动主题" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">地址</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name='address' placeholder="请输入活动地址" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">展馆名称</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name='hallname' placeholder="请输入展馆名称" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">主办单位</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name='sponsor' placeholder="请输入主办单位" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">联系人</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name='truename' placeholder="请输入联系人" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">联系电话</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name='telephone' placeholder="请输入联系电话" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">QQ</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name='qq' placeholder="联系QQ号码" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">微信</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name='wx' placeholder="联系的微信号码" />
+      </view>
+    </view>
+  </view>
   <view class="page__modules modules__shadow">
     <textarea placeholder="请输入活动内容" name='content' value='{{form_reset}}'></textarea>
   </view>
