@@ -79,13 +79,13 @@ Page({
     })
   },
 
-  // //完善资料
-  // toMyData: function () {
-  //   let that = this;
-  //   wx.navigateTo({
-  //     url: `/pages/personal/A-myData/A-myData`,
-  //   })
-  // },
+  //收藏
+  toMyFav: function () {
+    let that = this;
+    wx.navigateTo({
+      url: `/pages/personal/A-myFavour/A-myFavour`,
+    })
+  },
 
   //我的消息
   toMyMessage: function() {

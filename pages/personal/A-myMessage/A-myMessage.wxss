@@ -1,11 +1,11 @@
 /* pages/B-centrality/B-myMessage/B-myMessage.wxss */
 
-.container {
+.page_container {
   font-size: 28rpx;
   color: #333;
 }
 
-.container .top {
+.page_container .top {
   display: flex;
   justify-content: space-around;
   font-size: 32rpx;

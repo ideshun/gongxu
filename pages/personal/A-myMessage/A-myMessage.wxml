@@ -1,5 +1,5 @@
 <!--pages/B-centrality/B-myMessage/B-myMessage.wxml-->
-<view class='container'>
+<view class='page_container'>
   <view class='top'>
     <view class="tab  {{classIndex==0?'active':''}}" data-index='{{0}}' catchtap='changeTab'>消息提醒</view>
     <view class="tab  {{classIndex==1?'active':''}}" data-index='{{1}}' catchtap='changeTab'>消息通知</view>
