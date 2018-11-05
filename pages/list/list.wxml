@@ -5,15 +5,15 @@
 <block wx:for="{{serviceList}}" wx:key="*this">
   <view class='cate-list-item' wx:for="{{item}}" wx:for-item="items" wx:key="">
     <view class='user-info'>
-      <image class='user-logo' src="{{items.logo}}"></image>
+      <image class='user-logo' src="{{items.logo}}https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=858959453,1988929777&fm=27&gp=0.jpg"></image>
       <text class='user-name'>{{items.editor}}</text>
       <view class='contact-box-fr'>
         <text class='contact-info'>联系Ta</text>
       </view>
     </view>
     <view class='product-info'>
-      <image class='product-timg' src='{{items.thumb}}' mode="widthFix" wx:if="{{items.thumb}}"></image>
       <view><text class='info-clas'>#{{items.catname}}#</text>{{items.introduce}}</view>
+      <image class='product-timg' src='{{items.thumb}}' mode="aspectFit" wx:if="{{items.thumb}}"></image>
     </view>
   </view>
 </block>

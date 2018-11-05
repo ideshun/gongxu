@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    listTopImg: '/image/banner1.png',
+    listTopImg: '/image/banner.png',
     listTopText: '贯彻人才强省战略，建设网上人事管理和人才引进、人才开发平台。为各类专业技术和实用型人才提供培训指导、人事考试、技能鉴定、技能提升的全过程服务。',
     widthFix: 'widthFix',
 
