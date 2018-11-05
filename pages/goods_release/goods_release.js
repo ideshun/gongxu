@@ -22,6 +22,7 @@ Page({
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function(res) {
+        console.log(res);
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         that.setData({
           files: that.data.files.concat(res.tempFilePaths)
@@ -46,6 +47,50 @@ Page({
   onLoad: function(options) {
 
   },
+
+  formSubmit: function (e) {
+    console.log(e);
+    var values;
+    values = e.detail.value;
+    // console.log(values);
+    this.setData({ disabled: true });
+    wx.request({
+      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      data: {
+        'flag': 'wx',
+        'type_a': 'add_goods',
+        'mid': 26,
+        'title': values.title,
+        'price': values.price,
+        'truename': values.truename,
+        'catid': values.catid,
+        'unit': values.unit,
+        'amount': values.amount,
+        'brand': values.brand,
+        'address': values.address, //发货地
+        'company': values.company,
+        'content': values.content,
+        'user': 'admin' //暂用
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.data == 1) {
+          wx.showToast({
+            title: '上传成功',
+            icon: 'success',
+            duration: 2000
+          })
+        }
+      }
+    })
+  }
+  ,
+
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

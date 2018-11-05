@@ -67,7 +67,7 @@ Page({
         console.log(res)
         if (res.data == 1) {
           wx.showToast({
-            title: '报名成功',
+            title: '发布成功',
             icon: 'success',
             duration: 2000
           })
