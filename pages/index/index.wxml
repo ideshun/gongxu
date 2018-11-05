@@ -34,7 +34,7 @@
 <view wx:for="{{serviceList}}" class='cate-list {{tabActive==index?"show":"hidden"}}' wx:key="*this">
   <view class='cate-list-item' wx:for="{{item}}" wx:for-item="items" wx:key="">
     <view class='user-info'>
-      <image class='user-logo' src="{{items.logo}}"></image>
+      <image class='user-logo' src="{{items.logo}}https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1788562038,3472846301&fm=27&gp=0.jpg"></image>
       <text class='user-name'>{{items.editor}}</text>
       <view class='like-box-fr'>
         <image class='user-like' src='../../icons/like.png'></image>

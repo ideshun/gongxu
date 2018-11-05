@@ -11,9 +11,9 @@
         <view class="new-info-summary">{{item.introduce}}</view>
       </view>
       <view class="new-img-num">
-        <image src="../images/eye.png" class="new-img" mode='widthFix'></image>
+        <image src="../images/looks.png" class="new-img" mode='widthFix'></image>
         <text class="new-num">112</text>
-        <image src="../images/good.png" class="new-img" mode='widthFix'></image>
+        <image src="../images/like.png" class="new-img" mode='widthFix'></image>
         <text class="new-num">96</text>
       </view>
     </navigator>

@@ -48,7 +48,7 @@ page {
 .cate-line .cate-item {
   width: 25%;
   text-align: center;
-  padding: 30rpx 0;
+  padding: 20rpx 0;
 }
 
 .cate-line .cate-item image {
@@ -108,7 +108,6 @@ page {
 
 .reco-img image {
   width: 100%;
-  margin: 15rpx 0;
 }
 
 .cate-tab {
@@ -160,6 +159,7 @@ page {
 
 .like-box-fr {
   float: right;
+  margin-top: 30rpx;
 }
 
 .contact-box-fr {
@@ -185,14 +185,20 @@ page {
 }
 
 .product-info {
-  padding: 10rpx 20rpx 20rpx 120rpx;
+  padding: 0 20rpx 20rpx 120rpx;
   color: #999;
+  border-bottom: 2rpx solid #f2f2f2;
+  margin-bottom: 20rpx;
 }
 
 .product-info .product-img {
   width: 30%;
   margin-right: 3.3%;
   margin-top: 20rpx;
+  border: 2rpx solid #f2f2f2;
+}
+.product-img:last-child{
+  margin-right: 0;
 }
 
 .product-info .product-timg {
