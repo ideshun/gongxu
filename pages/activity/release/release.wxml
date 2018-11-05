@@ -1,7 +1,7 @@
 <!--pages/activity/release/release.wxml-->
 <form bindsubmit="formSubmit">
   <view class="page__modules modules__shadow">
-    <input class="activityName" name='title' value='' placeholder="请输入活动名称"></input>
+    <input class="activityName" name='catid' value='22' placeholder="暂定用22"></input>
     <view class="activityType">
       <picker bindchange="bindAccountChange" name='type' value="" range="{{activityType}}">
         <view class="weui-select" style="">{{activityType[activityTypeIndex]}}</view>
@@ -38,8 +38,18 @@
     </view>
   </view>
 
+<view class="page__modules modules__shadow"></view>
+    <view> 主题：</view><input class="weui-input" name='title' placeholder="请输入活动主题" />
+    <view> 地址：</view><input class="weui-input" name='address' placeholder="请输入活动地址" />
+    <view> 展馆名称：</view><input class="weui-input" name='hallname' placeholder="请输入展馆名称" />
+    <view> 主办单位：</view><input class="weui-input" name='sponsor' placeholder="请输入主办单位" />
+     <view> 联系人：</view><input class="weui-input" name='truename' placeholder="请输入联系人" />
+    <view> 联系电话：</view><input class="weui-input" name='telephone' placeholder="请输入联系电话" />
+    <view> QQ：</view><input class="weui-input" name='qq' placeholder="联系QQ号码" />
+    <view> 微信：</view><input class="weui-input" name='wx' placeholder="联系的微信号码" />
+
   <view class="page__modules modules__shadow">
-    <textarea placeholder="请输入活动规则" name='rule' value='{{form_reset}}'></textarea>
+    <textarea placeholder="请输入活动内容" name='content' value='{{form_reset}}'></textarea>
   </view>
   <view class="page__modules modules__shadow">
     <view class="weui-cell weui-cell_input select-time">
@@ -47,10 +57,10 @@
         <view class="weui-label">开始日期</view>
       </view>
       <view class="weui-cell__bd selectTime">
-        <picker mode="date" name='bdate' value="{{bdate}}" start="2018-09-01" end="2029-09-01" bindchange="bindDateChange">
+        <picker mode="date" name='fromtime' value="{{bdate}}" start="2018-09-01" end="2029-09-01" bindchange="bindDateChange">
           <view class="weui-input">{{bdate}}</view>
         </picker>
-        <picker mode="time" name='btime' value="{{btime}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+        <picker mode="time" name='totime' value="{{btime}}" start="09:01" end="21:01" bindchange="bindTimeChange">
           <view class="weui-input">{{btime}}</view>
         </picker>
       </view>
@@ -60,7 +70,7 @@
         <view class="weui-label">结束日期</view>
       </view>
       <view class="weui-cell__bd selectTime">
-        <picker name='edate' mode="date" value="{{edate}}" start="2018-09-01" end="2029-09-01" bindchange="bindeDateChange">
+        <picker name='totime' mode="date" value="{{edate}}" start="2018-09-01" end="2029-09-01" bindchange="bindeDateChange">
           <view class="weui-input">{{edate}}</view>
         </picker>
         <picker name='etime' mode="time" value="{{etime}}" start="09:01" end="21:01" bindchange="bindeTimeChange">

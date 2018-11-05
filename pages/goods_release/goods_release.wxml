@@ -1,7 +1,7 @@
 <!--pages/activity/release/release.wxml-->
 <form bindsubmit="formSubmit">
   <view class="page__modules modules__shadow">
-    <input class="activityName" name='title' value='' placeholder=""></input>
+    <input class="activityName" name='catid' value='10' placeholder=""></input>
     <view class="activityType">
       <picker bindchange="bindAccountChange" name='type' value="" range="{{activityType}}">
         <view class="weui-select" style="">{{activityType[activityTypeIndex]}}</view>
@@ -42,35 +42,98 @@
       <view class="weui-cell__hd weui-cell__hd_in-select-after">
         <view class="weui-label">选择分类</view>
       </view>
+
       <view class="weui-cell__bd gx-cate">
         <picker bindchange="bindCateChange" value="{{cateIndex}}" range="{{cateries}}">
           <view class="weui-select weui-select_in-select-after">{{cateries[cateIndex]}}</view>
         </picker>
       </view>
+
+
+      
     </view>
   </view>
-  <view class="page__modules modules__shadow">
-    <textarea placeholder="说明" name='rule' value='{{form_reset}}'></textarea>
-  </view>
+ 
   <view class="page__modules modules__shadow">
     <view class="weui-cell weui-cell_input select-time">
       <view class="weui-cell__hd">
         <view class="weui-label">单价</view>
       </view>
       <view class="weui-cell__bd">
-        <input class="weui-input" value='' type='number' placeholder="0.00" />
-      </view>
-    </view>
-    <view class="weui-cell weui-cell_input select-time">
-      <view class="weui-cell__hd">
-        <view class="weui-label">库存</view>
-      </view>
-      <view class="weui-cell__bd">
-        <input class="weui-input" value='' type='number' placeholder="0" />
+        <input class="weui-input" value='' name='price' type='number' placeholder="0.00" />
       </view>
     </view>
 
     <view class="weui-cell weui-cell_input select-time">
+     <view class="weui-cell__hd">
+        <view class="weui-label">库存</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='' name='amount' type='number' placeholder="0.00" />
+      </view>
+    </view>
+
+     <view class="weui-cell weui-cell_input select-time">
+     <view class="weui-cell__hd">
+        <view class="weui-label">单位</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='' type='text' name='unit' placeholder="请输入产品单位" />
+      </view>
+    </view>
+
+     <view class="weui-cell weui-cell_input select-time">
+     <view class="weui-cell__hd">
+        <view class="weui-label">名称</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='' name='title' placeholder="请输入商品名称" />
+      </view>
+    </view>
+
+     <view class="weui-cell weui-cell_input select-time">
+     <view class="weui-cell__hd">
+        <view class="weui-label">品牌</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='' name='brand' type='text' placeholder="产品品牌" />
+      </view>
+    </view>
+
+     <view class="weui-cell weui-cell_input select-time">
+     <view class="weui-cell__hd">
+        <view class="weui-label">所在公司</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='' name='company' placeholder="请输入所在公司" />
+      </view>
+    </view>
+    
+     <view class="weui-cell weui-cell_input select-time">
+     <view class="weui-cell__hd">
+        <view class="weui-label">发货地</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='' name='address' type='text' placeholder="请输入发货地" />
+      </view>
+    </view>
+
+
+
+    <view class="weui-cell weui-cell_input select-time">
+      <view class="weui-cell__hd">
+        <view class="weui-label">上传者</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='' name='truename' type='text' placeholder="请输入上传者" />
+      </view>
+    </view>
+  <view style='margin-left:30rpx'>商品详情：</view>
+     <view class="page__modules modules__shadow">
+          <textarea placeholder="说明" name='content' value='{{form_reset}}'></textarea>
+      </view>
+
+    <!-- <view class="weui-cell weui-cell_input select-time">
       <view class="weui-cell__hd">
         <view class="weui-label">开始日期</view>
       </view>
@@ -82,8 +145,8 @@
           <view class="weui-input">{{btime}}</view>
         </picker>
       </view>
-    </view>
-    <view class="weui-cell weui-cell_input select-time">
+    </view> -->
+    <!-- <view class="weui-cell weui-cell_input select-time">
       <view class="weui-cell__hd">
         <view class="weui-label">结束日期</view>
       </view>
@@ -95,7 +158,7 @@
           <view class="weui-input">{{etime}}</view>
         </picker>
       </view>
-    </view>
+    </view> -->
   </view>
   <view class="weui-btn-area">
     <button class="weui-btn" type="" formType="submit">提交</button>

@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    activityType: ["类别", "比赛", "排名", "互助"],
+    activityType: ["类别", "热门活动", "排名", "互助"],
     activityTypeIndex: 0,
     // 日期插件
     bdate: "2018-09-01",
@@ -33,6 +33,51 @@ Page({
       urls: this.data.files // 需要预览的图片http链接列表
     })
   },
+  formSubmit:function(e){
+    // console.log(e);
+    var values;
+    values = e.detail.value;
+    console.log(values);
+    this.setData({ disabled: true });
+    wx.request({
+      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      data: {
+        'flag': 'wx',
+        'type_a': 'add_exhibit',
+        'mid': 8,
+        'title': values.title,
+        'username': values.username,
+        'truename': values.truename,
+        'catid': values.catid,
+        'fromtime': values.fromtime,
+        'totime': values.totime,
+        'hallname': values.hallname,
+        'telephone': values.telephone,
+        'address': values.address,
+        'wx': values.wx,
+        'qq': values.qq,
+        'sponsor': values.sponsor,
+        'content': values.content,
+        'user':'admin' //暂用
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res)
+        if (res.data == 1) {
+          wx.showToast({
+            title: '发布成功',
+            icon: 'success',
+            duration: 2000
+          })
+        }
+      }
+  })
+  }
+  ,
+
+
   /**
    * 生命周期函数--监听页面加载
    */
