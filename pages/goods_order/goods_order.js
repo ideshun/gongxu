@@ -34,7 +34,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        // console.log(res.data);
+        console.log(res.data);
       
         //kaishi
         // 页面初始化 options为页面跳转所带来的参数
@@ -89,22 +89,6 @@ Page({
   formSubmit:function(e){
     console.log(e.detail.value);
     var order = e.detail.value;
-    // wx.showToast({
-
-    //   title: '手机号码或密码不得为空!',
-
-    //   icon: 'loading',
-
-    //   duration: 1500
-
-    // })
-
-    // setTimeout(function () {
-
-    //   wx.hideToast()
-
-    // }, 2000)
-   
 // kaishi
     var that = this;
     wx.request({
@@ -127,62 +111,72 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res);
-        //提示
-        if(res.data.error == 0 ){
-            wx.showToast({
-            title: res.data.msg,
-            icon: 'success',
-            duration: 1500
-          })
-            setTimeout(function () {
-            wx.hideToast()
-          }, 2000)
-          wx.navigateTo({
-            url: '',
-          })
-
-
-        }
-
-
-
-
-
+      //  console.log(res.data);      
         //end
-
         //订单生成成功 未支付
-        // wx.requestPayment({
-        //   timeStamp: 1,
-        //   nonceStr: 1,
-        //   package: 1,
-        //   signType: 'MD5',
-        //   paySign: 1,
-        //   'success': function (successret) {
-        //     console.log('支付成功');
-        //     //获取支付用户的信息
-        //     wx.getStorage({
-        //       key: 'userInfo',
-        //       success: function (getuser) {
-        //         //加入订单表做记录
-        //         wx.request({
-        //           url: url + 'Wx_AddOrder',
-        //           data: {
-        //             // uname: 1,
-        //             // goods: 1,
-        //             // price: 1,
-        //             // openid: 1,
-        //           },
-        //           success: function (lastreturn) {
-        //             console.log("支付成功");
-        //           }
-        //         })
-        //       },
-        //     })
-        //   }, 'fail': function (res) {
-        //     console.log('失败啦~~~~~');
-        //   }
-        // })
+      //aaaaaaaa
+        wx.request({
+          url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+          dataType: "json",
+          method: "get",
+          data: {
+            flag: 'wx',
+            mid: order.mid,
+            type_a: 'getSign',
+            'package': "prepay_id=" + res.data.prepay_id,
+           
+          },
+          success: function (resa) {
+            var signData = resa.data;
+            console.log(resa.data);
+            //bbbbbb
+        wx.requestPayment({
+          'timeStamp': signData.timeStamp,
+          'nonceStr': signData.nonceStr,
+          'package': signData.package,
+          'signType': 'MD5',
+          'paySign': signData.sign,
+          'success': function (successret) {
+            console.log('支付成功');
+            //获取支付用户的信息
+            wx.getStorage({
+              key: 'userInfo',
+              success: function (getuser) {
+                //加入订单表做记录
+                wx.request({
+                  url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+                  data: {
+                    flag: 'wx',
+                    price: order.price,
+                    "type_a": "success_order",
+                    "id": res.data.orderid
+                  },
+                  success: function (lastreturn) {
+                    console.log("支付成功");
+                      // 提示
+                        if(res.data.error == 0 ){
+                            wx.showToast({
+                            title: res.data.msg,
+                            icon: 'success',
+                            duration: 1500
+                          })
+                            setTimeout(function () {
+                            wx.hideToast()
+                          }, 2000)
+                          wx.navigateTo({
+                            url: '',
+                          })
+
+                        }
+                  }
+                })
+              },
+            })
+          }, 'fail': function (res) {
+            console.log(res);
+          }
+        })
+          }})  //cccc
 
       }
     })
