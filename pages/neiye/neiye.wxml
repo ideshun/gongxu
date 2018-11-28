@@ -1,0 +1,183 @@
+<!--pages/neiye/neiye.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='ind_hight'>
+                    <block wx:for="{{imgUrls}}">
+                      <swiper-item bindtap='swimage'  wx:if="{{item != ''}}">
+                      
+                        <image src="{{item}}" class="slide-image" width="100%" height="150"/>
+                  
+                      </swiper-item>
+                    </block>
+                  </swiper>
+                  <!-- 评价头部 -->
+                  <view class='pj_title'>
+                  <view class='pj_tlef'>￥{{detail.price}}</view>
+                    <view class='pj_titxt'>
+                      
+                      <view class='pj_tcen'>
+                        <view class='pj_throung'>专柜价：848</view>
+                        <view>库存：{{detail.amount}}件</view>
+                      </view>
+                      <view class='pj_trig'>
+                        <view class='pj_times'>活动时间：</view>
+                        <view>{{detail.adddate}}-{{detail.editdate}}</view>
+                      </view>
+                    </view>
+                  </view>
+                  <!-- 题目 -->
+                  <view class='timu_xq'>
+                    <view class='tm_xqleft'>七夕</view>
+                    <view class='tm_xqrg'>{{detail.title}}</view>
+                  </view>
+                  <!-- 题目下 -->
+                  <view class='tmx_con'>
+                    <view class='tmx_lf'>快递：<text>0.00</text></view>
+                    <view class='tmx_ce'>月销：<text>100</text>笔</view>
+                    <view class='tmx_rg'>山东济南</view>
+                  </view>
+                  <!-- xuanzeqi -->
+                  <view class='clo_or'>
+                    <view class='clo_text'>
+                      <view class='clo_telf'>物流</view><view class='clo_terg'>次日达23：00前付款</view>
+                    </view>
+                    <view class='clo_text'>
+                      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                        <view class='clo_telf'>颜色</view><view class='clo_terg'>{{array[index]}}</view><view class='clo_tentt'> > </view>
+                      </picker>
+                    </view>
+                  </view>
+                  <!-- pingjia -->
+                  <view class='pingjia'>
+                    <view class='pj_left'>宝贝评价(<text>20</text>)</view>
+                  </view>
+
+
+
+                  <!-- 评价 分类 -->
+                  <view class="body">
+                    <view class="nav bc_white">
+                      <view class="{{selected?'red':'default'}}" bindtap="selected">好评</view>
+                      <view class="{{selected1?'red':'default'}}" bindtap="selected1">中评</view>
+                      <view class="{{selected2?'red':'default'}}" bindtap="selected2">差评</view>
+                    </view>
+                    <view class="{{selected?'show':'hidden'}}">
+                    <!-- 列表 -->
+                      <view class='sele_ted'>
+                        <image src='../images/timg@2x.png'></image>
+                        <view class='sele_name'>C罗****优</view>
+                        <view class='sele_time'>
+                          <image wx:if="{{collection}}" src="../images/zanzan.png"  bindtap="toCollect"></image>
+                          <image wx:else src="../images/buzan.png" bindtap="toCollect"></image>
+                          <text>2018-5-20</text>
+                          
+                        </view>
+                        
+                      </view>
+                      <view class='sele_more'>喜欢的点波推荐啊，关注投币收藏一条龙啊。如果你此刻需要什么或者你有什么好玩的都可以来我们的QQ群一起分享1</view>
+                    <!-- 列表 -->
+                      <view class='sele_ted'>
+                        <image src='../images/timg@2x.png'></image>
+                        <view class='sele_name'>C罗****优</view>
+                        <view class='sele_time'>
+                          <image wx:if="{{collection}}" src="../images/zanzan.png"  bindtap="toCollect"></image>
+                          <image wx:else src="../images/buzan.png" bindtap="toCollect"></image>
+                          <text>2018-5-20</text>
+                        </view>
+                        
+                      </view>
+                      <view class='sele_more'>喜欢的点波推荐啊，关注投币收藏一条龙啊。如果你此刻需要什么或者你有什么好玩的都可以来我们的QQ群一起分享
+     
+    
+    
+                      </view>
+                    </view>
+                    <view class="{{selected1?'show':'hidden'}}">
+                    <!-- 列表 -->
+                      <view class='sele_ted'>
+                        <image src='../images/timg@2x.png'></image>
+                        <view class='sele_name'>淅沥淅沥——定级赛</view>
+                        <view class='sele_time'>2018-5-21</view>
+                        
+                      </view>
+                      <view class='sele_more'>这个东西很一般，用的时候也是不行。掉毛，一份钱一份货，反正则恶魔涉及到韩国大护法个多岁案件佛黑山谷发的穗花费高洁丝</view>
+                      <!-- 列表 -->
+                      <view class='sele_ted'>
+                        <image src='../images/timg@2x.png'></image>
+                        <view class='sele_name'>淅沥淅沥——定级赛</view>
+                        <view class='sele_time'>2018-5-21</view>
+                        
+                      </view>
+                      <view class='sele_more'>这个东西很一般，用的时候也是不行。掉毛，一份钱一份货，反正则恶魔涉及到韩国大护法个多岁案件佛黑山谷发的穗花费高洁丝</view>
+                    </view>
+                    <view class="{{selected2?'show':'hidden'}}">
+                    <!-- 列表 -->
+                      <view class='sele_ted'>
+                        <image src='../images/timg@2x.png'></image>
+                        <view class='sele_name'>沌河的撒回归</view>
+                        <view class='sele_time'>2018-5-20</view>
+                        
+                      </view>
+                      <view class='sele_more'>一点都不好啊，别买，买了就后悔，真的，你得信的撒回归都干哈好的归属干会闪电发货的撒回归渔对国会大厦</view>
+                      <!-- 列表 -->
+                       <view class='sele_ted'>
+                        <image src='../images/timg@2x.png'></image>
+                        <view class='sele_name'>沌河的撒回归</view>
+                        <view class='sele_time'>2018-5-20</view>
+                        
+                      </view>
+                      <view class='sele_more'>一点都不好啊，别买，买了就后悔，真的，你得信的撒回归都干哈好的归属干会闪电发货的撒回归渔对国会大厦</view>
+                    </view>
+                  </view>
+                  <!--  -->
+
+                </view>
+                <!-- 详情页 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                  <view>
+                     <image wx:for="{{xqimg}}" src='{{item}}' mode='widthFix'></image>
+                    <!-- <template is="wxParse" data="{{wxParseData:article.content}}"/> -->
+                  </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- dibu远程的 -->
+    <view class='footer'> 
+    <!---<view class='footer_list' wx:for="{{listInfo}}" data-current="{{index}}" wx:key="this" bindtap="chooseImg"> 
+    <image class="footer-image" hidden='{{curIdx===index}}' src="{{item.imgUrl}}"></image> 
+    <image class="footer-image" hidden='{{curIdx!==index}}' bindtap="onshow" src="{{item.curUrl}}"></image> 
+    <view class="footer-text" bindtap="onshow" data-id="{{detail.itemid}}" data-img="{{detail.thumb1}}" data-title="{{detail.title}}" data-price="{{detail.price}}" data-num="1">{{item.title}}</view> 
+    </view>--->
+    <button open-type="contact" class='footer_list' data-current="0">
+    
+      
+      <image class='footer-image' src='../../img/home.png'></image>
+      <!---<contact-button class="button-image" size="22" />--->
+      <view class='footer-text'>联系客服</view>
+     
+      </button>
+
+      <view class='footer_list' data-current="1" bindtap="onshow" data-itemid="{{detail.itemid}}" data-img="{{detail.thumb1}}" data-title="{{detail.title}}" data-price="{{detail.price}}" data-openid="" data-num="1"> 
+      <image class='footer-image' src='../../img/car.png'></image>
+      <view class='footer-text'>加入购物车</view>
+      </view> 
+      <view class='footer_list' data-current="2"> 
+      <image class='footer-image' src='../../img/user.png'></image>
+      <view class='footer-text'>立即购买</view>
+      </view>
+    </view>
+</view>
+

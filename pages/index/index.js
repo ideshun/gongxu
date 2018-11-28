@@ -22,10 +22,10 @@ Page({
         text: '热门活动'
       },
       {
-        cateUrl: '/pages/activity/activity',
+        cateUrl: '/pages/mallindex/index',
         cateIcon: '/icons/cate-icon3.png',
-        mid: 26,
-        text: '二手闲置'
+        mid: 24,
+        text: '在线商城'
       },
       {
         cateUrl: '/pages/activity/activity',
