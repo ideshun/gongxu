@@ -26,7 +26,9 @@
     "pages/activity/release/release",
     "pages/goods_release/goods_release",
     "pages/activity/signUp/signUp",
-    "pages/personal/A-myFavour/A-myFavour"
+    "pages/personal/A-myFavour/A-myFavour",
+    "pages/mallindex/index",
+    "pages/neiye/neiye"
   ],
   "window": {
     "backgroundTextStyle": "light",
