@@ -45,7 +45,7 @@ App({
                     e.globalData.City = res1.data.city,
                     e.globalData.Openid = res1.data.openId
                   // console.log(res1);
-
+                   wx.setStorageSync('openid', e.globalData.Openid);
                 }
               })
 

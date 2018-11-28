@@ -28,7 +28,8 @@
     "pages/activity/signUp/signUp",
     "pages/personal/A-myFavour/A-myFavour",
     "pages/mallindex/index",
-    "pages/neiye/neiye"
+    "pages/neiye/neiye",
+    "pages/fenlei/fenlei"
   ],
   "window": {
     "backgroundTextStyle": "light",
