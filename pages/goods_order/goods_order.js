@@ -12,6 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    var val = wx.getStorageSync('openid')
+    console.log(val);
+   
     var e = this;
     // console.log(options);
     var itemid = options.itemid;
@@ -147,9 +151,8 @@ Page({
                   url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
                   data: {
                     flag: 'wx',
-                    price: order.price,
                     "type_a": "success_order",
-                    "id": res.data.orderid
+                    "orderid": res.data.orderid
                   },
                   success: function (lastreturn) {
                     console.log("支付成功");
