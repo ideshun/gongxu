@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/personal/A-order/index",
     "pages/personal/A-myMap/A-myMap",
@@ -21,7 +22,7 @@
     "pages/personal/A-address/create",
     "pages/personal/A-myMessage/A-myMessage",
     "pages/template/template",
-    "pages/login/login",
+    
     "pages/logs/logs",
     "pages/activity/release/release",
     "pages/goods_release/goods_release",

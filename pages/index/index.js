@@ -72,6 +72,10 @@ Page({
    */
   onLoad: function(options) {
     var e = this;
+    e.setData({
+      is_login: wx.getStorageSync('is_login')
+    }),
+      // console.log(wx.getStorageSync('openid'));
     // 热门服务
     wx.request({
       url: 'http://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址

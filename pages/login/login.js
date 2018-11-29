@@ -6,7 +6,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
@@ -14,17 +13,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var is_login = wx.getStorageSync('is_login');
     // 用完后删除 2018.9.25
-    // wx.switchTab({
-    //   url: '/pages/index/index'
-    // })
+    if (is_login == 1){
+      wx.switchTab({
+        url: '/pages/index/index'
+      })
+    }
 // end
-
-    // console.log(app.globalData.Nickname);
   },
   //授权申请
   bindGetUserInfo: function (e) {
     if (e.detail.userInfo) {
+      // console.log(app);
       //用户按了允许授权按钮
       var that = this;
       //插入登录的用户的相关信息到数据库
@@ -44,7 +45,8 @@ Page({
         success: function (res) {
           //从数据库获取用户信息
           // that.queryUsreInfo();
-          console.log(res);
+          // console.log(res);
+          // console.log(wx.getStorageSync('is_login'));
           console.log("插入小程序登录用户信息成功！");
         }
       });
