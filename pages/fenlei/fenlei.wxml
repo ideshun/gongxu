@@ -1,0 +1,53 @@
+<!--pages/fenlei/fenlei.wxml-->
+<!-- 搜索框 -->
+<view class='con_left'>
+    <input type='text' placeholder='请输入想搜索的内容'></input>
+    <view class='but_sousuo'>搜索</view>
+  </view>
+<!-- 内容栏 -->
+<view class='index_con'>
+<!-- 左边栏 -->
+  <view class='int_left'>
+    <view class='backcol' bindtap="onLoad">热门推荐</view>
+    <view wx:for="{{catlist}}" wx:key="{{item}}" data-index="{{index}}" data-id="{{item.catid}}" bindtap="switchRightTab">{{item.catname}}</view>
+  </view>
+<!-- 右边栏 -->
+  <view class='int_right'>
+    <view class='img_bai'><image src='https://img10.360buyimg.com/mobilecms/s350x128_jfs/t17446/35/468069858/468253/cb1b538d/5a81a5f4N3b8e099b.png!q90!cc_350x128.webp'></image></view>
+    <!-- 模块 -->
+      <view class='rig_hight'>
+        <view class='mk_til'>热门推荐</view>
+        <view class='mokuai'>  
+          <view class='mk_lb {{mk_rts.classname}}'  wx:for="{{taglist}}" wx:for-item='taglist' wx:key='taglist.itemid'>
+            <view>
+              <navigator url="/pages/neiye/neiye?mid={{taglist.itemid}}"><image src='{{taglist.thumb1}}' class='mk_img'></image></navigator>
+              <view class='mk_text'>{{taglist.title}}</view>
+              <view class='mk_manei'><view class='mk_mn1'></view><view class='mk_mn2'>{{taglist.price}}</view><view class='mk_mn3'>包邮</view></view>
+            </view>
+          </view>
+         
+        </view>
+      </view>
+      <!-- 分割线
+      <view class='fenge'></view>
+       -->
+
+<!-- 模块
+      <view class='rig_hight'>
+        <view class='mk_til'>众质小品</view>
+        <view class='mokuai'>  
+          <view class='mk_lb {{mk_zxs.classname}}'  wx:for="{{mk_zx}}" wx:for-item='mk_zxs' wx:key='index'>
+            <view>
+              <image src='{{mk_zxs.mkimg}}' class='mk_img'></image>
+              <view class='mk_text'>{{mk_zxs.mktext}}</view>
+              <view class='mk_manei'><view class='mk_mn1'>{{mk_zxs.shoujia}}</view><view class='mk_mn2'>{{mk_zxs.jiage}}</view><view class='mk_mn3'>{{mk_zxs.baoyou}}</view></view>
+            </view>
+          </view>
+         
+        </view>
+      </view>
+      
+     -->
+  </view>
+  
+</view>

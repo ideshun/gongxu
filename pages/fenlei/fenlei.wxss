@@ -1,0 +1,144 @@
+/* pages/fenlei/fenlei.wxss */
+/* 搜索框 */
+.con_left{
+  width:90%;
+margin-left:5%;
+margin-top:10rpx;
+height:80rpx;
+border-radius:40rpx;
+box-shadow:0px 0px 10px 2px #ccc;
+
+}
+.con_left input{
+  float:left;
+background:#fff;
+width:70%;
+height:70rpx;
+line-height:70rpx;
+margin-left:20rpx;
+margin-top:5rpx;
+font-size:30rpx;
+color:#666;
+
+}
+.but_sousuo{
+float:left;
+width:25%;
+height:70rpx;
+font-size:30rpx;
+line-height:70rpx;
+margin-top:5rpx;
+margin-left:1%;
+text-align:center;
+color:#666;
+border-left:1px solid #ccc;
+}
+/* 搜索框 */
+/* 左边栏 */
+.index_con{
+  width:90%;
+margin-left:5%;
+margin-top:25rpx;
+display:flex;
+
+}
+.int_left{
+ width:23%;
+font-size:30rpx;
+text-align:center;
+background: #e5e5e5;
+}
+.int_left view{
+  height:50rpx;
+line-height:50rpx;
+color:#333;
+padding:20rpx 0;
+
+}
+.int_left .backcol{
+  background:#fff;
+color:rgb(232,137,82);
+font-weight: bold;
+}
+/* 右边栏 */
+.int_right{
+  width:75%;
+margin-left:2%;
+height:950rpx;
+overflow-y:scroll;
+
+
+}
+.img_bai image{
+  width:100%;
+height:250rpx;
+
+}
+.mokuai{
+  width: 100%;
+
+}
+.mk_lb{
+  width: 31%;
+  display:inline-block;
+  margin-top: 20rpx;
+}
+.mk_til{
+  margin:20rpx 0;
+color:rgb(232,137,82);
+font-size:30rpx;
+font-weight:bold;
+
+}
+.mokuai .mk_lb:nth-child(3n+2){
+  margin-left:3.5%;
+  margin-right:3.5%;
+}
+.mk_lb .mk_img{
+  width: 100%;
+  height: 200rpx;
+}
+.mk_text{
+  width:100%;
+font-size:20rpx;
+overflow:hidden;
+text-overflow:ellipsis;
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+word-break:break-all;
+color:#666;
+
+}
+.mk_manei{
+  height:30rpx;
+line-height:30rpx;
+
+}
+.mk_mn1{
+  float:left;
+font-size:16rpx;
+font-weight:bold;
+
+}
+.mk_mn2{
+  float:left;
+font-size:20rpx;
+color:rgb(232,137,82);
+
+}
+.mk_mn3{
+  float: right;
+  font-size:20rpx;
+  color:rgb(232,137,82);
+}
+.rig_hight{
+
+}
+.fenge{
+  background:#ddd;
+width:100%;
+height:10rpx;
+margin:10rpx 0;
+
+}
