@@ -5,9 +5,8 @@ App({
     AvatarUrl: "https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELpXkiaVqqXSicaQvOjOLaCaS3NnCFPqLyLq7GREWvVImPjJtql8EI2ibps0yDKRbPmztYxyIibDicUXKg/132",
     City: '',
     Openid: "",
-    Province: '',
+    Province: ''
   },
-  is_login : '',
 
   bindGetUserInfo(e) {
     // console.log(e.detail.userInfo)
@@ -26,7 +25,7 @@ App({
               var signature = data.signature;
               var encryptedData = data.encryptedData;
               var iv = data.iv;
-    
+
               //发起网络请求
               wx.request({
                 url: 'http://mall.zdcom.net.cn/api/weixin/login.php',
@@ -44,14 +43,13 @@ App({
                 },
                 success: function (res1) {
                   // console.log(res1);
-                    e.globalData.Nickname = data.userInfo.nickName,
+                  e.globalData.Nickname = data.userInfo.nickName,
                     e.globalData.AvatarUrl = data.userInfo.avatarUrl,
                     e.globalData.Province = data.userInfo.province,
                     e.globalData.City = data.userInfo.city,
-                    e.globalData.Openid = res1.data.openid,
-                    e.globalData.is_login = 1,
-                    wx.setStorageSync('openid', res1.data.openid);
-                    wx.setStorageSync('is_login', '1'); 
+                    e.globalData.Openid = res1.data.openid
+                  wx.setStorageSync('openid', res1.data.openid);
+                  wx.setStorageSync('is_login', '1');
                 }
               })
 
@@ -65,5 +63,5 @@ App({
   }
 
 
-  
+
 })
