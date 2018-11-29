@@ -168,7 +168,7 @@ Page({
                             wx.hideToast()
                           }, 2000)
                           wx.navigateTo({
-                            url: '',
+                            url: 'pages/personal/A-order/index',
                           })
 
                         }

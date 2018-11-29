@@ -7,11 +7,6 @@ App({
     Openid: "",
     Province: ''
   },
-
-  bindGetUserInfo(e) {
-    // console.log(e.detail.userInfo)
-  },
-
   onLaunch: function () {
     var e = this
     wx.login({
@@ -52,7 +47,6 @@ App({
                   wx.setStorageSync('is_login', '1');
                 }
               })
-
             }
           })
         } else {

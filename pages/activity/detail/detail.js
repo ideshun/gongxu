@@ -32,7 +32,7 @@ Page({
         e.setData({
           'res'     : res.data,
           'formdate': ss.formatTime(res.data.fromtime, 'Y/M/D'),
-          'totime'  :   ss.formatTime(res.data.totime, 'Y/M/D'),
+          'totime'  : ss.formatTime(res.data.totime, 'Y/M/D'),
         })
       }
     }) 

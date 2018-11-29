@@ -1,5 +1,5 @@
-let App = getApp();
-
+var app = getApp();
+const ss = require('../../../utils/time.js');
 Page({
 
   /**
@@ -14,8 +14,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var e = this;
+    var openid = wx.getStorageSync('openid');
+    console.log(openid);
+    wx.request({
+      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      data: {
+        flag: 'wx',
+        mid : 26,
+        "type_a": "order_list",
+        "openid": openid,
+        "status": 2 //支付完成的
+      },
+      success: function (res) {
+        e.setData({ list: res.data });
+            console.log(res);
+      }
+    }),
+
     this.data.dataType = options.type || 'all';
-    this.setData({ dataType: this.data.dataType });
+    this.setData({ dataType1: this.data.dataType });
   },
 
   /**
@@ -31,16 +49,16 @@ Page({
    */
   getOrderList: function (dataType) {
     let _this = this;
-    App._get('user.order/lists', { dataType }, function (result) {
-      if (result.code === 1) {
-        _this.setData(result.data);
-        result.data.list.length && wx.pageScrollTo({
-          scrollTop: 0
-        });
-      } else {
-        App.showError(result.msg);
-      }
-    });
+    // App._get('user.order/lists', { dataType }, function (result) {
+    //   if (result.code === 1) {
+    //     _this.setData(result.data);
+    //     result.data.list.length && wx.pageScrollTo({
+    //       scrollTop: 0
+    //     });
+    //   } else {
+    //     App.showError(result.msg);
+    //   }
+    // });
   },
 
   /**
