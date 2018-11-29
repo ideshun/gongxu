@@ -1,4 +1,5 @@
  // pages/goods_order/goods_order.js
+var app = getApp();
 Page({
 
   /**
@@ -13,9 +14,7 @@ Page({
    */
   onLoad: function (options) {
 
-    var val = wx.getStorageSync('openid')
-    console.log(val);
-   
+    var val = wx.getStorageSync('openid');  
     var e = this;
     // console.log(options);
     var itemid = options.itemid;
@@ -91,7 +90,7 @@ Page({
   },
   // 订单提交
   formSubmit:function(e){
-    console.log(e.detail.value);
+    // console.log(e.detail.value);
     var order = e.detail.value;
 // kaishi
     var that = this;
@@ -109,7 +108,8 @@ Page({
         truename: order.truename ,
         note: order.note ,
         mobile: order.mobile,
-        a: order.a 
+        a: order.a ,
+        openid: app.globalData.Openid,
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -132,7 +132,7 @@ Page({
           },
           success: function (resa) {
             var signData = resa.data;
-            console.log(resa.data);
+            // console.log(resa.data);
             //bbbbbb
         wx.requestPayment({
           'timeStamp': signData.timeStamp,
@@ -141,11 +141,11 @@ Page({
           'signType': 'MD5',
           'paySign': signData.sign,
           'success': function (successret) {
-            console.log('支付成功');
+            console.log('支付成功1111');
             //获取支付用户的信息
-            wx.getStorage({
-              key: 'userInfo',
-              success: function (getuser) {
+            // wx.getStorage({
+            //   key: 'userInfo',
+            //   success: function (getuser) {
                 //加入订单表做记录
                 wx.request({
                   url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
@@ -155,9 +155,10 @@ Page({
                     "orderid": res.data.orderid
                   },
                   success: function (lastreturn) {
-                    console.log("支付成功");
+                    // console.log(lastreturn);
+                    // console.log("支付成功222");
                       // 提示
-                        if(res.data.error == 0 ){
+                        if(res.data == 1){
                             wx.showToast({
                             title: res.data.msg,
                             icon: 'success',
@@ -171,8 +172,8 @@ Page({
                           })
 
                         }
-                  }
-                })
+                //   }
+                // })
               },
             })
           }, 'fail': function (res) {
