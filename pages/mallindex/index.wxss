@@ -228,14 +228,15 @@ display:flex;
 background: #fff;
 }
 .footer_list{
-width:25%;
+width:33.3%;
 height:100%;
 text-align:center;
 padding-top:8rpx;
 }
 .footer-image{
-   width:30%;
-   height:50%;
+   width:55rpx;
+height:50rpx;
+
 }
 .footer-text{
     font-size: 20rpx;

@@ -101,10 +101,23 @@
 </view>
 <!-- dibu -->
     <view class='footer'>  
-      <view class='footer_list' wx:for="{{listInfo}}" data-current="{{index}}" wx:key="this" bindtap="chooseImg">    
-        <image class="footer-image" hidden='{{curIdx===index}}' src="{{item.imgUrl}}"></image>    
-        <image class="footer-image" hidden='{{curIdx!==index}}' src="{{item.curUrl}}"></image>    
-        <view class="footer-text">{{item.title}}</view>  
+    <!-- 首页 -->
+      <view class='footer_list' data-current="0">    
+        <image class="footer-image" hidden='{{curIdx===index}}' src="../../img/home.png"></image>    
+        <image class="footer-image" hidden='{{curIdx!==index}}' src="../../img/home.png"></image>    
+        <view class="footer-text">首页</view>  
+      </view>
+      <!-- 分类 -->
+      <view class='footer_list' data-current="1" bindtap='fenLei'>    
+        <image class="footer-image" hidden='{{curIdx===index}}' src="../../img/feilei.png"></image>    
+        <image class="footer-image" hidden='{{curIdx!==index}}' src="../../img/home.png"></image>    
+        <view class="footer-text">分类</view>  
+      </view>
+      <!-- 购物车 -->
+      <view class='footer_list' data-current="2" bindtap='gouWuChe'>    
+        <image class="footer-image" hidden='{{curIdx===index}}' src="../../img/car.png"></image>    
+        <image class="footer-image" hidden='{{curIdx!==index}}' src="../../img/home.png"></image>    
+        <view class="footer-text">购物车</view>  
       </view>
     </view>
 
