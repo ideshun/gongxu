@@ -92,11 +92,20 @@
 <!-- 横条 -->
 <view class='bn_hent'></view>
 <!-- 内容4 -->
-<view class='nr_contan'>
+<view class='nr_contan' style='margin-bottom:250rpx;'>
   <view class='nr_four {{index_nrs.classname}}' wx:for="{{taglist}}" wx:for-item='index_nrs' wx:key='index' data-id='{{index_nrs.itemid}}'>
     <view class='nrf_iam'><navigator url="/pages/neiye/neiye?mid={{index_nrs.itemid}}"><image src='{{index_nrs.thumb1}}'></image></navigator></view>
     <view class='nrf_more'>{{index_nrs.title}}</view>
     <view class='nrf_manei'>{{index_nrs.price}}</view>
   </view>
 </view>
+<!-- dibu -->
+    <view class='footer'>  
+      <view class='footer_list' wx:for="{{listInfo}}" data-current="{{index}}" wx:key="this" bindtap="chooseImg">    
+        <image class="footer-image" hidden='{{curIdx===index}}' src="{{item.imgUrl}}"></image>    
+        <image class="footer-image" hidden='{{curIdx!==index}}' src="{{item.curUrl}}"></image>    
+        <view class="footer-text">{{item.title}}</view>  
+      </view>
+    </view>
+
 

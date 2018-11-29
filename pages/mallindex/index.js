@@ -24,6 +24,14 @@ Page({
       ch_more:'更多 > '
       }
     ],
+    // dibu
+    curIdx: 0,
+    listInfo: [
+      { title: '首页', imgUrl: '../../img/home.png', curUrl: '../../img/home.png', },
+      { title: '分类', imgUrl: '../../img/feilei.png', curUrl: '../../img/feilei.png', },
+      { title: '购物车', imgUrl: '../../img/car.png', curUrl: '../../img/car.png', },
+      { title: '我的', imgUrl: '../../img/user.png', curUrl: '../../img/user.png', }
+    ],
     // 猜你喜欢
     index_nr:[
       {
