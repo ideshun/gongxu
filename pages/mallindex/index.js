@@ -4,7 +4,7 @@ Page({
     inputVal: "",
     imgUrls: [
       '../../img/banner.png',
-      '../../img/banner.png',
+      '../../img/banner.png',444
       '../../img/banner.png'
     ],
     indicatorDots: false,
