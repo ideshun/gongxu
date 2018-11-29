@@ -25,7 +25,7 @@ App({
               var signature = data.signature;
               var encryptedData = data.encryptedData;
               var iv = data.iv;
-    
+
               //发起网络请求
               wx.request({
                 url: 'http://mall.zdcom.net.cn/api/weixin/login.php',
@@ -43,23 +43,13 @@ App({
                 },
                 success: function (res1) {
                   // console.log(res1);
-<<<<<<< Updated upstream
-                  e.globalData.Nickname = res1.data.nickName,
-                    e.globalData.AvatarUrl = res1.data.avatarUrl,
-                    e.globalData.Province = res1.data.province,
-                    e.globalData.City = res1.data.city,
-                    e.globalData.Openid = res1.data.openId
-                  // console.log(res1);
-                   wx.setStorageSync('openid', e.globalData.Openid);
-=======
-                    e.globalData.Nickname = data.userInfo.nickName,
+                  e.globalData.Nickname = data.userInfo.nickName,
                     e.globalData.AvatarUrl = data.userInfo.avatarUrl,
                     e.globalData.Province = data.userInfo.province,
                     e.globalData.City = data.userInfo.city,
                     e.globalData.Openid = res1.data.openid
-                    wx.setStorageSync('openid', res1.data.openid);
-                    wx.setStorageSync('is_login', '1'); 
->>>>>>> Stashed changes
+                  wx.setStorageSync('openid', res1.data.openid);
+                  wx.setStorageSync('is_login', '1');
                 }
               })
 
@@ -73,5 +63,5 @@ App({
   }
 
 
-  
+
 })
