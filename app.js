@@ -43,15 +43,6 @@ App({
                 },
                 success: function (res1) {
                   // console.log(res1);
-<<<<<<< Updated upstream
-                  e.globalData.Nickname = res1.data.nickName,
-                    e.globalData.AvatarUrl = res1.data.avatarUrl,
-                    e.globalData.Province = res1.data.province,
-                    e.globalData.City = res1.data.city,
-                    e.globalData.Openid = res1.data.openId
-                  // console.log(res1);
-                   wx.setStorageSync('openid', e.globalData.Openid);
-=======
                     e.globalData.Nickname = data.userInfo.nickName,
                     e.globalData.AvatarUrl = data.userInfo.avatarUrl,
                     e.globalData.Province = data.userInfo.province,
@@ -59,7 +50,6 @@ App({
                     e.globalData.Openid = res1.data.openid
                     wx.setStorageSync('openid', res1.data.openid);
                     wx.setStorageSync('is_login', '1'); 
->>>>>>> Stashed changes
                 }
               })
 
