@@ -5,8 +5,9 @@ App({
     AvatarUrl: "https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELpXkiaVqqXSicaQvOjOLaCaS3NnCFPqLyLq7GREWvVImPjJtql8EI2ibps0yDKRbPmztYxyIibDicUXKg/132",
     City: '',
     Openid: "",
-    Province: ''
+    Province: '',
   },
+  is_login : '',
 
   bindGetUserInfo(e) {
     // console.log(e.detail.userInfo)
@@ -47,7 +48,8 @@ App({
                     e.globalData.AvatarUrl = data.userInfo.avatarUrl,
                     e.globalData.Province = data.userInfo.province,
                     e.globalData.City = data.userInfo.city,
-                    e.globalData.Openid = res1.data.openid
+                    e.globalData.Openid = res1.data.openid,
+                    e.globalData.is_login = 1,
                     wx.setStorageSync('openid', res1.data.openid);
                     wx.setStorageSync('is_login', '1'); 
                 }
