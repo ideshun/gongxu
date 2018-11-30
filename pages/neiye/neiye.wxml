@@ -156,11 +156,6 @@
     </view>
     <!-- dibu远程的 -->
     <view class='footer'> 
-    <!---<view class='footer_list' wx:for="{{listInfo}}" data-current="{{index}}" wx:key="this" bindtap="chooseImg"> 
-    <image class="footer-image" hidden='{{curIdx===index}}' src="{{item.imgUrl}}"></image> 
-    <image class="footer-image" hidden='{{curIdx!==index}}' bindtap="onshow" src="{{item.curUrl}}"></image> 
-    <view class="footer-text" bindtap="onshow" data-id="{{detail.itemid}}" data-img="{{detail.thumb1}}" data-title="{{detail.title}}" data-price="{{detail.price}}" data-num="1">{{item.title}}</view> 
-    </view>--->
     <button open-type="contact" class='footer_list' data-current="0">
     
       
@@ -174,10 +169,12 @@
       <image class='footer-image' src='../../img/car.png'></image>
       <view class='footer-text'>加入购物车</view>
       </view> 
-      <view class='footer_list' data-current="2"> 
+
+      <view class='footer_list' data-current="2"  bindtap='pay' data-price="{{detail.price}}"> 
       <image class='footer-image' src='../../img/user.png'></image>
       <view class='footer-text'>立即购买</view>
       </view>
+
     </view>
 </view>
 

@@ -30,7 +30,7 @@ Page({
       var that = this;
       //插入登录的用户的相关信息到数据库
       wx.request({
-        url: 'http://mall.zdcom.net.cn/api/weixin/login.php',
+        url: 'https://mall.zdcom.net.cn/api/weixin/login.php',
         data: {
           'wx_login':1,
           openid: app.globalData.Openid,

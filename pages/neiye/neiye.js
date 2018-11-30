@@ -1,6 +1,7 @@
 var sliderWidth = 80;
 var WxParse = require('../../wxParse/wxParse.js');
 // pages/neiye/neiye.js
+const app = getApp()
 Page({
 
   /**
@@ -90,7 +91,7 @@ Page({
     // console.log(mdata);
      console.log(mdata); 
      wx.request({
-        url: 'http://mall.zdcom.net.cn/mall/wxapi.php',
+        url: 'https://mall.zdcom.net.cn/mall/wxapi.php',
         method: 'POST',
         header: {
           //'content-type': 'application/json'
@@ -168,7 +169,7 @@ Page({
       }
     });
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/wxapp/mall.php', //仅为示例，并非真实的接口地址 
+      url: 'https://mall.zdcom.net.cn/api/wxapp/mall.php', //仅为示例，并非真实的接口地址 
       method: 'GET',
       data: {
         flag:'wx',
@@ -254,6 +255,75 @@ Page({
             collection: currentCache
           })
         }
+      }
+    })
+  },
+  pay:function(res){
+    var randa = new Date().getTime().toString();
+    var randb = Math.round(Math.random() * 10000).toString();
+    var that = res.currentTarget.dataset;
+    wx.request({
+      url: 'https://mall.zdcom.net.cn/api/pay/wxapp/GetSth.php',
+      dataType: "json",
+      method: "post",
+      data: {
+        action: "unifiedOrder",
+        out_trade_no: randa + randb, //商户订单号
+        body: "正大商城支付", //商品描述
+        total_fee: that.price, //金额 单位:分
+        trade_type: "JSAPI", //交易类型
+        openId: app.globalData.Openid
+      },
+      success: function (res) {
+        console.log(res.data);
+        var data = res.data;
+
+        //生成签名
+        wx.request({
+          url: 'https://mall.zdcom.net.cn/api/pay/wxapp/GetSth.php',
+          dataType: "json",
+          method: "post",
+          data: {
+            "action": "getSign",
+            'package': "prepay_id=" + data.prepay_id
+          },
+          success: function (res) {
+            var signData = res.data;
+            console.log(res.data);
+            wx.requestPayment({
+              'timeStamp': signData.timeStamp,
+              'nonceStr': signData.nonceStr,
+              'package': signData.package,
+              'signType': "MD5",
+              'paySign': signData.sign,
+              success: function (res) {
+                console.log(res);
+                // 添加数据库信息
+                wx.request({
+                  url: 'https://mall.zdcom.net.cn/api/pay/wxapp/GetSth.php',
+                  dataType: "json",
+                  method: "post",
+                  data: {
+                    "action": "AddUserData",
+                    "total_fee": that.data.money / 100,
+                    "type": 'user',
+                    "id": app.globalData.Openid
+                  },
+                  success: function (res) {
+                    console.log(res);
+                    wx.showToast({
+                      title: '充值成功',
+                    })
+                  }
+                })
+
+              },
+              fail: function (res) {
+                console.log(res);
+              }
+            })
+          }
+        })
       }
     })
   },

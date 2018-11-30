@@ -22,7 +22,7 @@ Page({
     var price = options.price;
     var a = options.a;
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
       method: 'GET',
       data: {
         flag: 'wx',
@@ -95,7 +95,7 @@ Page({
 // kaishi
     var that = this;
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
       method: 'GET',
       data: {
         flag: 'wx',
@@ -120,7 +120,7 @@ Page({
         //订单生成成功 未支付
       //aaaaaaaa
         wx.request({
-          url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+          url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
           dataType: "json",
           method: "get",
           data: {
@@ -148,7 +148,7 @@ Page({
             //   success: function (getuser) {
                 //加入订单表做记录
                 wx.request({
-                  url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+                  url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
                   data: {
                     flag: 'wx',
                     "type_a": "success_order",

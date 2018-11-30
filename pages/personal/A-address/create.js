@@ -51,7 +51,7 @@ Page({
       // _this.setData({ disabled: false });
     // });
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
       data:{
         'flag'     : 'wx',
         'type_a'   : 'add_addr',

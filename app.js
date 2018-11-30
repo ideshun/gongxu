@@ -23,8 +23,6 @@ App({
 
               //发起网络请求
               wx.request({
-                url: 'http://mall.zdcom.net.cn/api/weixin/login.php',
-                method: 'GET',
                 data: {
                   'flag': 'wx',
                   'code': res.code,
@@ -38,13 +36,6 @@ App({
                 },
                 success: function (res1) {
                   // console.log(res1);
-                  e.globalData.Nickname = data.userInfo.nickName,
-                    e.globalData.AvatarUrl = data.userInfo.avatarUrl,
-                    e.globalData.Province = data.userInfo.province,
-                    e.globalData.City = data.userInfo.city,
-                    e.globalData.Openid = res1.data.openid
-                  wx.setStorageSync('openid', res1.data.openid);
-                  wx.setStorageSync('is_login', '1');
                 }
               })
             }

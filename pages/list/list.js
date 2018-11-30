@@ -19,7 +19,7 @@ Page({
     var e = this;
     // 热门服务
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址
       data: {
         flag: 'wx',
         mid: e.mid,
@@ -37,7 +37,7 @@ Page({
     });
     //最新服务列表 全部
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址
       data: {
         flag: 'wx',
         mid: 24,
@@ -84,7 +84,7 @@ Page({
   onUnload: function() {
     var fuwu = this;
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址
       data: {
         flag: 'wx',
         mid: 27

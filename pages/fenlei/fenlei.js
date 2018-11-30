@@ -14,7 +14,7 @@ Page({
       index = parseInt(e.target.dataset.index);
     console.log(id);
     wx.request({
-      url: 'http://mall.zdcom.net.cn/mall/wxapi.php',
+      url: 'https://mall.zdcom.net.cn/mall/wxapi.php',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -48,7 +48,7 @@ Page({
   onLoaddata:function(){
     var that = this;
     wx.request({
-      url: 'http://mall.zdcom.net.cn/mall/wxapi.php',
+      url: 'https://mall.zdcom.net.cn/mall/wxapi.php',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -65,7 +65,7 @@ Page({
       }
     }),
       wx.request({
-        url: 'http://mall.zdcom.net.cn/mall/wxapi.php',
+        url: 'https://mall.zdcom.net.cn/mall/wxapi.php',
         method: 'POST',
         header: {
           'content-type': 'application/x-www-form-urlencoded'

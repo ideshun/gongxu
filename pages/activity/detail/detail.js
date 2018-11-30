@@ -16,7 +16,7 @@ Page({
     var e = this
     // console.log(options.mid);
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
       method: 'GET',
       data: {
         flag: 'wx',

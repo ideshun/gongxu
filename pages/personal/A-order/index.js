@@ -18,7 +18,7 @@ Page({
     var openid = wx.getStorageSync('openid');
     console.log(openid);
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
       data: {
         flag: 'wx',
         mid : 26,

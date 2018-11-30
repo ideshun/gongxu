@@ -176,7 +176,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://mall.zdcom.net.cn/mall/wxapi.php',
+      url: 'https://mall.zdcom.net.cn/mall/wxapi.php',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
@@ -230,6 +230,8 @@ Page({
     })
   },
   gouWuChe: function () {
-    console.log('购物车')
+    wx.navigateTo({
+      url: "../logs/logs"
+    })
   }
 });

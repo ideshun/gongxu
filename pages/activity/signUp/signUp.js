@@ -26,7 +26,7 @@ Page({
     console.log(values);
     _this.setData({ disabled: true });
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
       data: {
         'flag': 'wx',
         'type_a': 'sign',
@@ -61,7 +61,7 @@ Page({
   onLoad: function (options) {
     var e = this
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
       data: {
         'flag': 'wx',
         'type_a': 'show',

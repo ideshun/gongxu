@@ -14,7 +14,7 @@ Page({
   onLoad: function (options) {
    var e = this
     wx.request({
-      url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
       method: 'GET',
       data: {
         flag: 'wx',
@@ -60,7 +60,7 @@ Page({
       content: "您确定要移除当前收货地址吗?",
       success: function (t) {
           wx.request({
-            url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+            url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
             method:'GET',
             header: {
               'content-type': 'application/json' // 默认值
