@@ -1,4 +1,5 @@
 // pages/activity/release/release.js
+var app = getApp();
 Page({
 
   /**
@@ -20,6 +21,7 @@ Page({
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
+        console.log(res);
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         that.setData({
           files: that.data.files.concat(res.tempFilePaths)
@@ -37,18 +39,21 @@ Page({
     // console.log(e);
     var values;
     values = e.detail.value;
-    console.log(values);
+    console.log(e);
+    return false;
     this.setData({ disabled: true });
     wx.request({
       url: 'http://mall.zdcom.net.cn/api/weixin/mall.php',
+      method:'GET',
       data: {
         'flag': 'wx',
         'type_a': 'add_exhibit',
         'mid': 8,
+        'catid': 22,
         'title': values.title,
         'username': values.username,
         'truename': values.truename,
-        'catid': values.catid,
+        // 'catid': values.catid,
         'fromtime': values.fromtime,
         'totime': values.totime,
         'hallname': values.hallname,
@@ -58,7 +63,7 @@ Page({
         'qq': values.qq,
         'sponsor': values.sponsor,
         'content': values.content,
-        'user':'admin' //暂用
+        'openid': app.globalData.Openid, //暂用
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -74,9 +79,40 @@ Page({
         }
       }
   })
-  }
-  ,
-
+  },
+  // /shangchuan
+  fileSubmit:function(){
+      let file = this.data.file;
+      if(file == '') {
+      wx.showToast({
+        title: '请上传活动封面！',
+        icon: 'none'
+      });
+       return false;
+      } else {
+        // console.log(file);
+        this.fileUpload(file, post);
+      }
+  },
+  /**
+    * 图片上传
+    */
+  fileUpload: function (path, post) {
+    let that = this;
+    wx.uploadFile({
+      url: config.uploadUrl,
+      filePath: path,
+      name: 'file',
+      formData: {
+        action: 'upload_file'
+      },
+      success: function (res) {
+        // console.log(res.data);
+        post['file'] = res.data;
+        that.formSubmitDo(post);
+      }
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载

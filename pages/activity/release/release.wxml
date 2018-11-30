@@ -1,5 +1,5 @@
 <!--pages/activity/release/release.wxml-->
-<form bindsubmit="formSubmit">
+<form bindsubmit="formSubmit" >
   <view class="page__modules modules__shadow">
     <input class="activityName" name='catid' value='' placeholder="请输入活动名称"></input>
     <view class="activityType">
@@ -24,11 +24,12 @@
                   <block wx:for="{{files}}" wx:key="*this">
                     <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
                       <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                       <input name='files' value='{{files}}' hidden />
                     </view>
                   </block>
                 </view>
                 <view class="weui-uploader__input-box">
-                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                  <view class="weui-uploader__input" bindtap="chooseImage" name='bbb'></view>
                 </view>
               </view>
             </view>
