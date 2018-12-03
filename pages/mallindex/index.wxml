@@ -51,7 +51,7 @@
 <view class='bn_hent'></view>
 
 <!-- 图片 -->
-<view  class='photo_img'><image src='../../img/banner.png'></image></view>
+<view  class='photo_img'><image src='https://mall.zdcom.net.cn/file/upload/img/banner.png'></image></view>
 <!-- 内容2 -->
 
 <view class='nr_contan'>

@@ -3,9 +3,9 @@ Page({
     inputShowed: false,
     inputVal: "",
     imgUrls: [
-      '../../img/banner.png',
-      '../../img/banner.png',
-      '../../img/banner.png'
+      'https://mall.zdcom.net.cn/file/upload/img/banner.png',
+      'https://mall.zdcom.net.cn/file/upload/img/banner.png',
+      'https://mall.zdcom.net.cn/file/upload/img/banner.png'
     ],
     indicatorDots: false,
     autoplay: false,
