@@ -114,7 +114,7 @@ Page({
         e.setData({ //此时OK
           serviceList: res.data
         })
-        // console.log(res.data)
+        console.log(res.data)
       }
     });
   },
