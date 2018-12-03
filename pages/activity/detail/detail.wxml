@@ -3,11 +3,11 @@
     {{res.title}}
     <view class="yh_hudong">
       <view class='ex_info'>
-        <image src='/image/boy.png' class='ex_icon u-avatar' mode='widthFix' />{{res.truename}}</view>
+        <image src='http://mall.zdcom.net.cn/file/upload/image/boy.png' class='ex_icon u-avatar' mode='widthFix' />{{res.truename}}</view>
       <view class='ex_info'>
-        <image src='/icons/fx.png' class='ex_icon' mode='widthFix' />{{res.hits}}</view>
+        <image src='http://mall.zdcom.net.cn/file/upload/icons/fx.png' class='ex_icon' mode='widthFix' />{{res.hits}}</view>
       <view class='ex_info' bindtap=''>
-        <image class='ex_icon' src='/icons/dz.png' mode="widthFix" />36
+        <image class='ex_icon' src='http://mall.zdcom.net.cn/file/upload/icons/dz.png' mode="widthFix" />36
       </view>
     </view>
   </view>
@@ -43,12 +43,12 @@
             <view>
               标题
             </view>
-            <image src='/image/boy.png' class='ex_icon ex_icon1' mode='widthFix' />
+            <image src='http://mall.zdcom.net.cn/file/upload/image/boy.png' class='ex_icon ex_icon1' mode='widthFix' />
             <text class='item-icnum'>用户名</text>
             <view class='fr'>
-              <image src='/icons/fx.png' class='ex_icon ex_icon1' mode='widthFix' />
+              <image src='http://mall.zdcom.net.cn/file/upload/icons/fx.png' class='ex_icon ex_icon1' mode='widthFix' />
               <text class='item-icnum'>123</text>
-              <image src='/icons/fx.png' class='ex_icon' mode='widthFix' />
+              <image src='http://mall.zdcom.net.cn/file/upload/icons/fx.png' class='ex_icon' mode='widthFix' />
               <text class='item-icnum'>22</text>
             </view>
           </view>
