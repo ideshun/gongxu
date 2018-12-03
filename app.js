@@ -15,7 +15,7 @@ App({
         if (res.code) {
           wx.getUserInfo({ //得到rawData, signatrue, encryptData
             success: function (data) {
-              // console.log(data);
+            //  console.log(data);
               var rawData = data.rawData;
               var signature = data.signature;
               var encryptedData = data.encryptedData;
@@ -35,7 +35,7 @@ App({
                   'content-type': 'application/json' // 默认值
                 },
                 success: function (res1) {
-                  // console.log(res1);
+                  //console.log(res1);
                 }
               })
             }
