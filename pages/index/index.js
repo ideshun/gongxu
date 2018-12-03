@@ -7,29 +7,29 @@ Page({
   data: {
     widthFix: 'widthFix',
     imgUrls: [
-      '/image/banner.png',
+      'https://mall.zdcom.net.cn/file/upload/image/banner.png',
     ],
     topCate: [{
       cateUrl: '/pages/activity/activity',
-        cateIcon: '/icons/cate-icon1.png',
+      cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon1.png',
         mid: 25,
         text: '人才招聘'
       },
       {
         cateUrl: '/pages/activity/activity',
-        cateIcon: '/icons/cate-icon2.png',
+        cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon2.png',
         mid:8,
         text: '热门活动'
       },
       {
         cateUrl: '/pages/mallindex/index',
-        cateIcon: '/icons/cate-icon3.png',
+        cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon3.png',
         mid: 24,
         text: '在线商城'
       },
       {
         cateUrl: '/pages/activity/activity',
-        cateIcon: '/icons/cate-icon4.png',
+        cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon4.png',
         mid: 24,
         text: '生活服务'
       }
@@ -42,7 +42,7 @@ Page({
     ],
     serviceList: [], //全部
     recoMode: 'aspectFit', //保持纵横比缩放图片，使图片的长边能完全显示出来
-    recoImg: '/image/reco.png',
+    recoImg: 'https://mall.zdcom.net.cn/file/upload/image/reco.png',
     indicatorDots: true, //是否显示指示点
     indicatorColor: 'rgba(255,255,255,0.5)', //指示点颜色
     indicatorActiveColor: '#FFF', //当前选中的指示点颜色

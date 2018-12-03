@@ -50,7 +50,7 @@ App({
                     e.globalData.Country = res1.data.country,
                     e.globalData.Gender = res1.data.gender,
                     e.globalData.Language = res1.data.language,
-                    e.globalData.Timestamp = res1.data.watermark.timestamp
+                    // e.globalData.Timestamp = res1.data.watermark.timestamp
                   //console.log(e);
                   wx.setStorageSync('openid', e.globalData.Openid);
                 }

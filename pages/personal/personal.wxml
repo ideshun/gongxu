@@ -8,7 +8,7 @@
   </view>
   <view class='obtain'>{{obtain}}</view>
   <view class='qd-btn {{isQd}}' bindtap='qdClick'>
-    <image src='/icons/qd.png' mode='widthFix' />{{qdTxt}}
+    <image src='https://mall.zdcom.net.cn/file/upload/icons/qd.png' mode='widthFix' />{{qdTxt}}
   </view>
 </view>
 
@@ -17,38 +17,38 @@
   <view class='mySetting-in'>
     <view class='mine' catchtap='toMyFav'>
       <view class='mine-in'>
-        <image src='../images/sc1.png' class='tubiao'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/sc1.png' class='tubiao'></image>
         <view>我的收藏</view>
       </view>
       <view class='mine-in'>
-        <image src='../images/arrow.png' class='arrow'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/arrow.png' class='arrow'></image>
       </view>
     </view>
     <view class='mine' catchtap='toMyMessage'>
       <view class='mine-in'>
-        <image src='../images/xx1.png' class='tubiao'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/xx1.png' class='tubiao'></image>
         <view>我的消息</view>
       </view>
       <view class='mine-in'>
-        <image src='../images/arrow.png' class='arrow'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/arrow.png' class='arrow'></image>
       </view>
     </view>
     <view class='mine' catchtap='toMyOrder'>
       <view class='mine-in'>
-        <image src='../images/dd1.png' class='tubiao'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/dd1.png' class='tubiao'></image>
         <view>我的订单</view>
       </view>
       <view class='mine-in'>
-        <image src='../images/arrow.png' class='arrow'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/arrow.png' class='arrow'></image>
       </view>
     </view>
     <view class='mine' catchtap='toMyMap'>
       <view class='mine-in'>
-        <image src='../images/dz1.png' class='tubiao'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/dz1.png' class='tubiao'></image>
         <view>我的收货地址</view>
       </view>
       <view class='mine-in'>
-        <image src='../images/arrow.png' class='arrow'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/arrow.png' class='arrow'></image>
       </view>
     </view>
   </view>
@@ -60,21 +60,21 @@
   <view class='system-in'>
     <view class='mine' catchtap='tel'>
       <view class='mine-in'>
-        <image src='../images/kf1.png' class='tubiao'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/kf1.png' class='tubiao'></image>
         <view>联系客服</view>
       </view>
       <view class='mine-in'>
-        <image src='../images/dh.png' class='tel'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/dh.png' class='tel'></image>
       </view>
 
     </view>
     <view class='mine' catchtap='toMySetting'>
       <view class='mine-in'>
-        <image src='../images/sz1.png' class='tubiao'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/sz1.png' class='tubiao'></image>
         <view>系统设置</view>
       </view>
       <view class='mine-in'>
-        <image src='../images/arrow.png' class='arrow'></image>
+        <image src='https://mall.zdcom.net.cn/file/upload/images/arrow.png' class='arrow'></image>
       </view>
     </view>
   </view>
