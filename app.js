@@ -40,7 +40,7 @@ App({
                   'content-type': 'application/json' // 默认值
                 },
                 success: function (res1) {
-                 // console.log(6666);
+                  // console.log(6666);
                   //console.log(res1);
                   e.globalData.Nickname = res1.data.nickName,
                     e.globalData.AvatarUrl = res1.data.avatarUrl,
