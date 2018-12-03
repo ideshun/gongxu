@@ -34,7 +34,7 @@ Page({
     var that = this;
     var openid = wx.getStorageSync('openid');
     wx.request({
-      url: 'http://mall.zdcom.net.cn/mall/wxapi.php',
+      url: 'https://mall.zdcom.net.cn/mall/wxapi.php',
       method: 'POST',
       header: {
         'content-type': 'application/x-www-form-urlencoded'
