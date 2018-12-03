@@ -7,8 +7,8 @@
         <view class='fav-titele'>活动标题</view>
         <view class='fav-sum'>z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要</view>
         <view class='fav-num'>
-          <image src='/pages/images/looks.png' mode='widthFix' /><text class=''>100</text>
-          <image src='/pages/images/like.png' mode='widthFix'/><text class=''>200</text>
+          <image src='http://mall.zdcom.net.cn/file/upload/images/looks.png' mode='widthFix' /><text class=''>100</text>
+          <image src='http://mall.zdcom.net.cn/file/upload/images/like.png' mode='widthFix'/><text class=''>200</text>
         </view>
       </view>
     </view>
@@ -18,8 +18,8 @@
         <view class='fav-titele'>活动标题</view>
         <view class='fav-sum'>z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要</view>
         <view class='fav-num'>
-          <image src='/pages/images/looks.png' mode='widthFix' /><text class=''>100</text>
-          <image src='/pages/images/like.png' mode='widthFix'/><text class=''>200</text>
+          <image src='http://mall.zdcom.net.cn/file/upload/images/looks.png' mode='widthFix' /><text class=''>100</text>
+          <image src='http://mall.zdcom.net.cn/file/upload/images/like.png' mode='widthFix'/><text class=''>200</text>
         </view>
       </view>
     </view>
