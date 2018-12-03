@@ -1,7 +1,7 @@
 var sliderWidth = 80;
 var WxParse = require('../../wxParse/wxParse.js');
 // pages/neiye/neiye.js
-const app = getApp()
+const app = getApp();
 Page({
 
   /**
@@ -258,7 +258,7 @@ Page({
       }
     })
   },
-  pay:function(res){
+  pay1:function(res){
     var randa = new Date().getTime().toString();
     var randb = Math.round(Math.random() * 10000).toString();
     var that = res.currentTarget.dataset;
@@ -326,6 +326,103 @@ Page({
         })
       }
     })
+  },
+  pay:function(res){
+    var order = res.currentTarget.dataset;
+   // console.log(app.globalData);
+    // kaishi
+    var that = this;
+    wx.request({
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall16.php',
+      method: 'GET',
+      data: {
+        flag: 'wx',
+        mid: 16,
+        itemid: order.itemid,
+        type_a: 'wx_pay',
+        addr: app.globalData.City,
+        price: order.price,
+        title: order.title,
+        truename: app.globalData.Nickname,
+        //note: order.note,
+        mobile: order.mobile,
+        a: 1,
+        openid: app.globalData.Openid,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        //  console.log(res.data);      
+        //end
+        //订单生成成功 未支付
+        //aaaaaaaa
+        wx.request({
+          url: 'https://mall.zdcom.net.cn/api/weixin/mall16.php',
+          dataType: "json",
+          method: "get",
+          data: {
+            flag: 'wx',
+            mid: 16,
+            type_a: 'getSign',
+            'package': "prepay_id=" + res.data.prepay_id,
+
+          },
+          success: function (resa) {
+            var signData = resa.data;
+            // console.log(resa.data);
+            //bbbbbb
+            wx.requestPayment({
+              'timeStamp': signData.timeStamp,
+              'nonceStr': signData.nonceStr,
+              'package': signData.package,
+              'signType': 'MD5',
+              'paySign': signData.sign,
+              'success': function (successret) {
+                //console.log('支付成功1111');
+                //获取支付用户的信息
+                // wx.getStorage({
+                //   key: 'userInfo',
+                //   success: function (getuser) {
+                //加入订单表做记录
+                wx.request({
+                  url: 'https://mall.zdcom.net.cn/api/weixin/mall16.php',
+                  data: {
+                    flag: 'wx',
+                    "type_a": "success_order",
+                    "orderid": res.data.orderid
+                  },
+                  success: function (lastreturn) {
+                    if (lastreturn.data == '1') {
+                      wx.showToast({
+                       // title: res.data.msg,
+                        title: '下单成功',
+                        icon: 'success',
+                        duration: 1500
+                      })
+                      setTimeout(function () {
+                        wx.hideToast()
+                      }, 2000)
+                      wx.navigateTo({
+                        url: '/pages/personal/A-order/index'
+                      })
+
+                    }
+                    //   }
+                    // })
+                  },
+                })
+              }, 'fail': function (res) {
+                console.log(res);
+              }
+            })
+          }
+        })  //cccc
+
+      }
+    })
+    //end
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

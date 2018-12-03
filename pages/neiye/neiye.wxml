@@ -170,7 +170,7 @@
       <view class='footer-text'>加入购物车</view>
       </view> 
 
-      <view class='footer_list' data-current="2"  bindtap='pay' data-price="{{detail.price}}"> 
+      <view class='footer_list' data-current="2"  bindtap='pay' data-price="{{detail.price}}"  data-itemid="{{detail.itemid}}   " data-title="{{detail.title}}"> 
       <image class='footer-image' src='../../img/user.png'></image>
       <view class='footer-text'>立即购买</view>
       </view>
