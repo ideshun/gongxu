@@ -13,7 +13,8 @@ Page({
     btime: "12:01",
     edate: "2018-09-01",
     etime: "12:01",
-    files: []
+    files: [],
+    db_files:'',
   },
   chooseImage: function (e) {
     var that = this;
@@ -21,7 +22,7 @@ Page({
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
-        console.log(res);
+        // console.log(res);
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         that.setData({
           files: that.data.files.concat(res.tempFilePaths)
@@ -36,11 +37,23 @@ Page({
     })
   },
   formSubmit:function(e){
-    // console.log(e);
+    //上传图片
+    let file = this.data.files;
+  //  console.log(file);
+    if (file == '') {
+      wx.showToast({
+        title: '请上传活动封面！',
+        icon: 'none'
+      });
+    } else {
+      // console.log(file);
+      this.fileUpload('image',file); 
+    }
+    // 、、结束
     var values;
     values = e.detail.value;
-    console.log(e);
-    return false;
+    console.log(this.data);
+    // return false;
     this.setData({ disabled: true });
     wx.request({
       url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
@@ -59,6 +72,7 @@ Page({
         'hallname': values.hallname,
         'telephone': values.telephone,
         'address': values.address,
+        'thumb': this.data.db_files,
         'wx': values.wx,
         'qq': values.qq,
         'sponsor': values.sponsor,
@@ -69,7 +83,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res)
+        // console.log(res)
         if (res.data == 1) {
           wx.showToast({
             title: '发布成功',
@@ -80,36 +94,31 @@ Page({
       }
   })
   },
-  // /shangchuan
-  fileSubmit:function(){
-      let file = this.data.file;
-      if(file == '') {
-      wx.showToast({
-        title: '请上传活动封面！',
-        icon: 'none'
-      });
-       return false;
-      } else {
-        // console.log(file);
-        this.fileUpload(file, post);
-      }
-  },
   /**
     * 图片上传
     */
-  fileUpload: function (path, post) {
+  fileUpload: function (path,file) {
     let that = this;
+    // console.log(file);
+    // return false;
     wx.uploadFile({
-      url: config.uploadUrl,
-      filePath: path,
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
+      filePath: 'mall.zdcom.net.cn/file/upload/',
       name: 'file',
-      formData: {
-        action: 'upload_file'
+      method: 'GET',
+      filePath: file[0],
+      data: {
+        flag : 'wx',
+        type_a: 'upload_file',
       },
       success: function (res) {
-        // console.log(res.data);
-        post['file'] = res.data;
-        that.formSubmitDo(post);
+        // console.log(111111)
+        // console.log(res);
+        that.setData({
+          db_files : res.data
+        })
+        
+        // that.formSubmitDo(post);
       }
     });
   },
