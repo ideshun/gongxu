@@ -14,7 +14,7 @@ Page({
     edate: "2018-09-01",
     etime: "12:01",
     files: [],
-    db_files:'',
+    // db_files:'',
   },
   chooseImage: function (e) {
     var that = this;
@@ -37,6 +37,7 @@ Page({
     })
   },
   formSubmit:function(e){
+    var that = this; 
     //上传图片
     let file = this.data.files;
   //  console.log(file);
@@ -47,60 +48,75 @@ Page({
       });
     } else {
       // console.log(file);
-      this.fileUpload('image',file); 
-    }
-    // 、、结束
-    var values;
-    values = e.detail.value;
-    console.log(this.data);
-    // return false;
-    this.setData({ disabled: true });
-    wx.request({
-      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
-      method:'GET',
-      data: {
-        'flag': 'wx',
-        'type_a': 'add_exhibit',
-        'mid': 8,
-        'catid': 22,
-        'title': values.title,
-        'username': values.username,
-        'truename': values.truename,
-        // 'catid': values.catid,
-        'fromtime': values.fromtime,
-        'totime': values.totime,
-        'hallname': values.hallname,
-        'telephone': values.telephone,
-        'address': values.address,
-        'thumb': this.data.db_files,
-        'wx': values.wx,
-        'qq': values.qq,
-        'sponsor': values.sponsor,
-        'content': values.content,
-        'openid': app.globalData.Openid, //暂用
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        // console.log(res)
-        if (res.data == 1) {
-          wx.showToast({
-            title: '发布成功',
-            icon: 'success',
-            duration: 2000
-          })
+      // this.fileUpload('image',file); 
+      // 上传
+      wx.uploadFile({
+        url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
+        filePath: 'mall.zdcom.net.cn/file/upload/',
+        name: 'file',
+        method: 'GET',
+        filePath: file[0],
+        data: {
+          flag: 'wx',
+          type_a: 'upload_file',
+        },
+        success: function (resa) {
+
+                var values;
+                values = e.detail.value; 
+                that.setData({ disabled: true });
+                wx.request({
+                  url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
+                  method:'GET',
+                  data: {
+                    'flag': 'wx',
+                    'type_a': 'add_exhibit',
+                    'mid': 8,
+                    'catid': 22,
+                    'title': values.title,
+                    'username': values.username,
+                    'truename': values.truename,
+                    // 'catid': values.catid,
+                    'fromtime': values.fromtime,
+                    'totime': values.totime,
+                    'hallname': values.hallname,
+                    'telephone': values.telephone,
+                    'address': values.address,
+                    'thumb': resa.data,
+                    'wx': values.wx,
+                    'qq': values.qq,
+                    'sponsor': values.sponsor,
+                    'content': values.content,
+                    'openid': app.globalData.Openid, //暂用
+                  },
+                  header: {
+                    'content-type': 'application/json' // 默认值
+                  },
+                  success: function (res) {
+                    console.log(res)
+                    if (res.data == 1) {
+                      wx.showToast({
+                        title: '发布成功',
+                        icon: 'success',
+                        duration: 2000
+                      })
+                    }
+                  }
+              })
+
         }
-      }
-  })
+      });
+
+
+      //结束
+    }
+
   },
   /**
     * 图片上传
     */
   fileUpload: function (path,file) {
     let that = this;
-    // console.log(file);
-    // return false;
     wx.uploadFile({
       url: 'https://mall.zdcom.net.cn/api/weixin/mall.php',
       filePath: 'mall.zdcom.net.cn/file/upload/',
@@ -112,11 +128,10 @@ Page({
         type_a: 'upload_file',
       },
       success: function (res) {
-        // console.log(111111)
         // console.log(res);
-        that.setData({
-          db_files : res.data
-        })
+        // that.setData({
+        //   db_files : res.data
+        // })
         
         // that.formSubmitDo(post);
       }
