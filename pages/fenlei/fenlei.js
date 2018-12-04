@@ -129,6 +129,18 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  // 底部导航 
 
+  shouYe: function () {
+    wx.navigateTo({
+      url: "../mallindex/index"
+    })
+  },
+  gouWuChe: function () {
+    wx.navigateTo({
+      url: "../logs/logs"
+    })
+
+  }
 })

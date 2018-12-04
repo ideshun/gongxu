@@ -142,3 +142,34 @@ height:10rpx;
 margin:10rpx 0;
 
 }
+/*自定义底部导航  */
+
+.footer {
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #ddd;
+  display: flex;
+  background: #fff;
+}
+
+.footer_list {
+  width: 33.3%;
+  height: 100%;
+  text-align: center;
+  padding-top: 8rpx;
+}
+
+.footer-image {
+  width: 55rpx;
+  height: 50rpx;
+}
+
+.footer-text {
+  font-size: 20rpx;
+  color: #888;
+}
+
+/*底部导航  */

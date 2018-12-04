@@ -243,7 +243,7 @@ font-size: 32rpx;
 }
 .sele_more{
 line-height:50rpx;
-font-size:35rpx;
+font-size:30rpx;
 margin-left:0rpx;
 text-indent:50rpx;
 text-align: left;

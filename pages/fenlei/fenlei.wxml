@@ -51,3 +51,24 @@
   </view>
   
 </view>
+<!-- dibu -->
+    <view class='footer'>  
+    <!-- 首页 -->
+      <view class='footer_list' data-current="0" bindtap='shouYe'>    
+        <image class="footer-image" hidden='{{curIdx===index}}' src="https://mall.zdcom.net.cn/file/upload/img/home.png"></image>    
+        <image class="footer-image" hidden='{{curIdx!==index}}' src="https://mall.zdcom.net.cn/file/upload/img/home.png"></image>    
+        <view class="footer-text">首页</view>  
+      </view>
+      <!-- 分类 -->
+      <view class='footer_list' data-current="1">    
+        <image class="footer-image" hidden='{{curIdx===index}}' src="https://mall.zdcom.net.cn/file/upload/img/feilei.png"></image>    
+        <image class="footer-image" hidden='{{curIdx!==index}}' src="https://mall.zdcom.net.cn/file/upload/img/home.png"></image>    
+        <view class="footer-text">分类</view>  
+      </view>
+      <!-- 购物车 -->
+      <view class='footer_list' data-current="2" bindtap='gouWuChe'>    
+        <image class="footer-image" hidden='{{curIdx===index}}' src="https://mall.zdcom.net.cn/file/upload/img/car.png"></image>    
+        <image class="footer-image" hidden='{{curIdx!==index}}' src="https://mall.zdcom.net.cn/file/upload/img/home.png"></image>    
+        <view class="footer-text">购物车</view>  
+      </view>
+    </view>
