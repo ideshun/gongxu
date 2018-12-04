@@ -1,5 +1,5 @@
 <!-- 最外层视图pages -->
-<view class="pages">
+<view class="pages" style='margin-bottom:115rpx;'>
  
   <view wx:if="{{list}}">
   <!-- 编辑 -->
@@ -46,22 +46,7 @@
         <!-- 删除 -->
         <!-- <text class="list_del" bindtap="deleteList" data-index="{{index}}">×</text> -->
     </view>
-<!-- 固定底部 -->
-    <view class="cont_bot">
-    <!-- 全选ICON -->
-    <image wx:if="{{selectAllStatus}}"  class="total-select" bindtap="selectAll" src='https://mall.zdcom.net.cn/file/upload/images/check_icon_true.png'></image>
- 
-      <!-- <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#999" class="total-select" bindtap="selectAll" /> -->
-      <!-- else -->
-          <image  wx:else  class="total-select" bindtap="selectAll"src='https://mall.zdcom.net.cn/file/upload/images/check_icon_false.png'></image>
-      <!-- <icon wx:else type="circle" color="#999" class="total-select" bindtap="selectAll" /> -->
-         <!-- 全选标题 -->
-      <text class='sel_count_name'>全选</text>
-      <!-- 合计金额 -->
-      <lable class="count_price">合计：<text>￥{{totalPrice}}</text></lable>
-      <!-- 提交订单 -->
-      <label class='submit' bindtap='btn_submit_order'>提交订单</label>
-      </view>
+
      
   </view>
   <view wx:else>
@@ -70,3 +55,19 @@
  
 </view>
  
+<!-- 固定底部 -->
+    <view class="cont_bot">
+    <!-- 全选ICON -->
+    <image wx:if="{{selectAllStatus}}"  class="total-select" bindtap="selectAll" src='https://mall.zdcom.net.cn/file/upload/images/check_icon_true.png'></image>
+ 
+      <!-- <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#999" class="total-select" bindtap="selectAll" /> -->
+      <!-- else -->
+          <image  wx:else  class="total-select" bindtap="selectAll" src='https://mall.zdcom.net.cn/file/upload/images/check_icon_false.png'></image>
+      <!-- <icon wx:else type="circle" color="#999" class="total-select" bindtap="selectAll" /> -->
+         <!-- 全选标题 -->
+      <text class='sel_count_name'>全选</text>
+      <!-- 合计金额 -->
+      <lable class="count_price">合计：<text>￥{{totalPrice}}</text></lable>
+      <!-- 提交订单 -->
+      <label class='submit' bindtap='btn_submit_order'>提交订单</label>
+      </view>
