@@ -14,7 +14,7 @@ Page({
     // 金额
     totalPrice: 0, // 总价，初始为0
     // 全选状态
-    selectAllStatus: true, // 全选状态，默认全选
+    selectAllStatus: false, // 全选状态，默认全选
   },
   onLoad() {
     wx.showToast({
