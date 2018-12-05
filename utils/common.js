@@ -24,3 +24,5 @@ let toTabPage= function (e) {
 module.exports = {
   toTabPage
 }
+var http = 'https://mall.zdcom.net.cn/api/weixin/';
+module.exports.url_mall = http + 'mall.php'

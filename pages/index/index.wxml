@@ -37,7 +37,7 @@
       <image class='user-logo' src="{{items.logo}}https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1788562038,3472846301&fm=27&gp=0.jpg"></image>
       <text class='user-name'>{{items.editor}}</text>
       <view class='like-box-fr'>
-        <image class='user-like' src='https://mall.zdcom.net.cn/file/upload/icons/like.png'></image>
+        <image class='user-like' src='https://mall.zdcom.net.cn/file/upload/icons/like.png' bindtap='is_fav' data-mid='{{items.moduleid}}' data-itemid='{{items.itemid}}'></image>
         <text class='like-num'>{{items.hits}}</text>
       </view>
     </view>

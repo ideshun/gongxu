@@ -1,4 +1,5 @@
 // pages/index/index.js
+var common = require('../../utils/common.js');
 Page({
 
   /**
@@ -60,7 +61,29 @@ Page({
       url: '../goods_show/goods_show?mid=' + mid + '&itemid=' + itemid
     })
   },
+  is_fav:function(e){
+    console.log(common.url_mall)
+    wx.request({
+      url: common.url_mall, //仅为示例，并非真实的接口地址
+      method: 'GET',
+      data: {
+        // flag: 'wx',
+        mid: 24,
+        type_a: 'list_a______'
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        e.setData({ //此时OK
+          serviceItem: res.data
+        })
 
+        // console.log(res.data)
+      }
+    })
+    
+  },
 
   tabClick: function(e) { //点击tab 设置 tabActive 的值
     this.setData({
