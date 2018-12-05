@@ -5,7 +5,8 @@ App({
     AvatarUrl: "https://wx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELpXkiaVqqXSicaQvOjOLaCaS3NnCFPqLyLq7GREWvVImPjJtql8EI2ibps0yDKRbPmztYxyIibDicUXKg/132",
     City: '',
     Openid: "",
-    Province: ''
+    Province: '',
+    url:'https://mall.zdcom.net.cn/api/weixin/'
   },
   onLaunch: function () {
     //let that = this;

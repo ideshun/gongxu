@@ -1,5 +1,5 @@
-let App = getApp();
-
+let app = getApp();
+var common = require('../../../utils/common.js');
 Page({
 
   /**
@@ -14,8 +14,47 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.data.order_id = options.order_id;
+    var e = this;
+    this.data.order_id = options.itemid;
     this.getOrderDetail(options.order_id);
+    var url = app.globalData.url +'mall.php';
+    var type_a = 'order_details'
+    var openid = wx.getStorageSync('openid');
+    var orderid = options.itemid;
+    console.log(openid)
+    wx.request({
+      url: url, //仅为示例，并非真实的接口地址
+      data: {
+        flag: 'wx',
+        mid: 26,
+        type_a: type_a,
+        openid: openid,
+        orderid: orderid
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+       var resd = res.data; 
+        e.setData({
+          'orderid': resd.itemid,
+          'number': resd.number,
+          'amount': resd.amount,
+          'price' : resd.price,
+          'amount': resd.amount,
+          'buyer_address': resd.buyer_address,
+          'timeDate': resd.timeDate,
+          'buyer_mobile': resd.buyer_mobile
+         
+
+        })
+      }
+    });
+
+
+    // console.log(common.toRequest(url, 26, type_a, openid,396));
   },
 
   /**
@@ -23,13 +62,13 @@ Page({
    */
   getOrderDetail: function (order_id) {
     let _this = this;
-    App._get('user.order/detail', { order_id }, function (result) {
-      if (result.code === 1) {
-        _this.setData(result.data);
-      } else {
-        App.showError(result.msg);
-      }
-    });
+    // App._get('user.order/detail', { order_id }, function (result) {
+    //   if (result.code === 1) {
+    //     _this.setData(result.data);
+    //   } else {
+    //     App.showError(result.msg);
+    //   }
+    // });
   },
 
   /**

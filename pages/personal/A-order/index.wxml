@@ -11,11 +11,11 @@
         <view wx:if="{{list.length}}">
           <view class="plist-info" wx:for="{{list}}" wx:key="this">
             <view class="order-num">
-              <text>订单：{{item.itemid}}</text>
+              <text>订单：{{item.itemid}}++</text>
               <text class='cate-fr sm-gray'>{{item.addtimeDate}}</text>
             </view>
             <navigator url='detail?itemid={{item.itemid}}'>
-              <view bindtap="detail" class='list-pro' data-id="{{item.order_id}}">
+              <view bindtap="detail" class='list-pro' data-id="{{item.itemid}}">
                 <image class='product-img' src="{{item.thumb}}"></image>
                 <text class='product-alt'>{{item.alt}}</text>
               </view>
