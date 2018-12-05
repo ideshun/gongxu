@@ -53,6 +53,7 @@ App({
                     // e.globalData.Timestamp = res1.data.watermark.timestamp
                   //console.log(e);
                   wx.setStorageSync('openid', e.globalData.Openid);
+                  wx.setStorageSync('is_login',1);
                 }
               })
 

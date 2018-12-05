@@ -155,12 +155,12 @@ Page({
                     "orderid": res.data.orderid
                   },
                   success: function (lastreturn) {
-                    // console.log(lastreturn);
+                    console.log(lastreturn);
                     // console.log("支付成功222");
                       // 提示
-                        if(res.data == 1){
+                    if (lastreturn.data == 1){
                             wx.showToast({
-                            title: res.data.msg,
+                            title: '支付成功',
                             icon: 'success',
                             duration: 1500
                           })
@@ -168,7 +168,7 @@ Page({
                             wx.hideToast()
                           }, 2000)
                           wx.navigateTo({
-                            url: '',
+                            url: '../personal/A-order/index',
                           })
 
                         }
