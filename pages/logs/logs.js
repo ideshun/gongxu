@@ -14,7 +14,7 @@ Page({
     // 金额
     totalPrice: 0, // 总价，初始为0
     // 全选状态
-    selectAllStatus: true, // 全选状态，默认全选
+    selectAllStatus: false, // 全选状态，默认全选
   },
   onLoad() {
     wx.showToast({
@@ -337,7 +337,7 @@ Page({
     var openid = wx.getStorageSync('openid');
     var mdata = event.target.dataset;
     wx.request({
-      url: 'http://mall.zdcom.net.cn/mall/wxapi.php',
+      url: 'https://mall.zdcom.net.cn/mall/wxapi.php',
       method: 'POST',
       header: {
         //'content-type': 'application/json'
@@ -402,14 +402,13 @@ Page({
       // 判断选中计算价格
       if (list[i].selected) {
         // 所有价格加起来 count_money
-        total += list[i].num * list[i].price;
+        total += 1 * list[i].price;
       }
     }
     // 最后赋值到data中渲染到页面
-    /**this.setData({
-      list: list,
-      totalPrice: total.toFixed(2)
-    });**/
+   this.setData({
+     totalPrice: total
+    });
   },
   // 下拉刷新
   // onPullDownRefresh: function () {
