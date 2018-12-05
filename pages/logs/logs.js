@@ -102,41 +102,52 @@ Page({
   // 删除
   deletes: function (e) {
     var that = this;
+    var openid = wx.getStorageSync('openid');
     // 获取索引
-    const index = e.currentTarget.dataset.index;
+    const index = e.currentTarget.dataset;
+    console.log(index);
     // 获取商品列表数据
-    let list = this.data.list;
-    console.log(that);
-    //console.log(123456);
-    //console.log(list);
-    wx.showModal({
-      title: '提示',
-      content: '确认删除吗',
-      success: function (res) {
-        if (res.confirm) {
-          // 删除索引从1
-          list.splice(index, 1);
-          // 页面渲染数据
-          that.setData({
-            list: list
-          });
-          // 如果数据为空
-          if (!list.length) {
-            that.setData({
-              hasList: false
-            });
-          } else {
-            // 调用金额渲染数据
-            that.count_price();
-          }
-        } else {
-          console.log(res);
-        }
+    wx.request({
+      url: 'https://mall.zdcom.net.cn/mall/wxapi.php',
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
       },
-      fail: function (res) {
-        console.log(res);
+      data: {
+        delcar: "1",
+        id: index.id,
+        openid: openid
+      },
+      success: function (rese) {
+        console.log(88888);
+        if (rese.data=='ok'){
+          /**wx.showToast({
+            title: "删除成功",
+            icon: "success",
+            durantion: 2000
+          })**/
+          wx.showToast({
+            title: '删除成功',
+            icon: 'success',
+            duration: 2000,
+            success: function () {
+              /**setTimeout(function () {
+                //要延时执行的代码
+                wx.switchTab({
+                  url: '/pages/logs/logs'
+                })
+              }, 2000) //延迟时间**/
+              if (getCurrentPages().length != 0) {
+                //刷新当前页面的数据
+                getCurrentPages()[getCurrentPages().length - 1].onLoad()
+              }
+
+            }
+          })
+        }
       }
     })
+
   },
 
 
@@ -326,7 +337,7 @@ Page({
     var openid = wx.getStorageSync('openid');
     var mdata = event.target.dataset;
     wx.request({
-      url: 'http://mall.zdcom.net.cn/mall/wxapi.php',
+      url: 'https://mall.zdcom.net.cn/mall/wxapi.php',
       method: 'POST',
       header: {
         //'content-type': 'application/json'
@@ -391,14 +402,13 @@ Page({
       // 判断选中计算价格
       if (list[i].selected) {
         // 所有价格加起来 count_money
-        total += list[i].num * list[i].price;
+        total += 1 * list[i].price;
       }
     }
     // 最后赋值到data中渲染到页面
-    /**this.setData({
-      list: list,
-      totalPrice: total.toFixed(2)
-    });**/
+   this.setData({
+     totalPrice: total
+    });
   },
   // 下拉刷新
   // onPullDownRefresh: function () {
