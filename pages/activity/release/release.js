@@ -100,6 +100,9 @@ Page({
                         icon: 'success',
                         duration: 2000
                       })
+                      wx.navigateTo({ 
+                      url: '../activity?mid=8'
+                      })
                     }
                   }
               })
