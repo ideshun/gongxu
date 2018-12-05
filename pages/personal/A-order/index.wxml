@@ -23,7 +23,7 @@
                 <view class="cate-fr">
                   <view class="order-num ">
                     <text class="">共{{item.number}}件商品</text>
-                    <text class="col-m">实付：<text class='bold'>￥{{item.amount}}</text></text>
+                    <text class="col-m">实付: <text class='bold'>￥{{item.amount}}</text></text>
                   </view>
                   <view class="order-right">
                     <view class="dis-flex">
