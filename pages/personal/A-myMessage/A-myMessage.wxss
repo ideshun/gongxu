@@ -71,7 +71,7 @@
 .basic_txt {
   padding: 20rpx;
   box-sizing: border-box;
-  min-height: 250rpx;
+  /* min-height: 250rpx; */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;

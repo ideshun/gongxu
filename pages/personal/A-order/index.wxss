@@ -24,6 +24,11 @@
   margin-top: 54px;
 }
 
+.title{
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .order-box {
   padding: 0 15px;
 }
@@ -152,4 +157,14 @@
   width: 100%;
   margin-top: -46rpx;
   line-height: 1.6;
+}
+
+.product-bar{
+  padding: 0 30rpx;
+}
+.product-num{
+  float: right;
+}
+.product-info{
+  padding: 20rpx 30rpx;
 }
