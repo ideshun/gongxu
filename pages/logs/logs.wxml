@@ -1,5 +1,5 @@
 <!-- 最外层视图pages -->
-<view class="pages" style='margin-bottom:115rpx;'>
+<view class="pages">
  
   <view wx:if="{{list}}">
   <!-- 编辑 -->
@@ -46,15 +46,6 @@
         <!-- 删除 -->
         <!-- <text class="list_del" bindtap="deleteList" data-index="{{index}}">×</text> -->
     </view>
-
-     
-  </view>
-  <view wx:else>
-    <view class="list_none">购物车是空的哦~</view>
-  </view>
- 
-</view>
- 
 <!-- 固定底部 -->
     <view class="cont_bot">
     <!-- 全选ICON -->
@@ -62,7 +53,7 @@
  
       <!-- <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#999" class="total-select" bindtap="selectAll" /> -->
       <!-- else -->
-          <image  wx:else  class="total-select" bindtap="selectAll" src='https://mall.zdcom.net.cn/file/upload/images/check_icon_false.png'></image>
+          <image  wx:else  class="total-select" bindtap="selectAll"src='https://mall.zdcom.net.cn/file/upload/images/check_icon_false.png'></image>
       <!-- <icon wx:else type="circle" color="#999" class="total-select" bindtap="selectAll" /> -->
          <!-- 全选标题 -->
       <text class='sel_count_name'>全选</text>
@@ -71,3 +62,11 @@
       <!-- 提交订单 -->
       <label class='submit' bindtap='btn_submit_order'>提交订单</label>
       </view>
+     
+  </view>
+  <view wx:else>
+    <view class="list_none">购物车是空的哦~</view>
+  </view>
+ 
+</view>
+ 
