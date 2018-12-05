@@ -21,16 +21,7 @@
 }
 
 .wrapper {
-  margin-top: 54px;
-}
-
-.title{
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.order-box {
-  padding: 0 15px;
+  margin-top: 88rpx;
 }
 
 .order-header {
@@ -54,10 +45,6 @@
   justify-content: space-between;
 }
 
-.order-cont .order-num text, .order-cont .order-time text {
-  color: #777;
-  font-size: 26rpx;
-}
 
 .order-shop {
   padding: 16rpx 0 16rpx 0;
@@ -159,12 +146,43 @@
   line-height: 1.6;
 }
 
-.product-bar{
-  padding: 0 30rpx;
+.plist-info{
+  padding: 20rpx 0;
+  border-bottom: 1px solid #f2f2f2;
 }
-.product-num{
+.list-pro{
+  overflow: hidden;
+  padding: 20rpx 20rpx;
+  background: #f8f8f8;
+  margin-bottom: 20rpx;
+}
+.order-num{
+  padding: 0 20rpx 10rpx;
+}
+.product-img{
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+}
+.product-alt{
+  display: inline-block;
+  padding: 10rpx 20rpx;
+}
+
+.sm-gray{
+  font-size: 12px;
+  color: gray;
+}
+.order-box{
+  overflow: hidden;
+}
+.cate-fr{
   float: right;
+  text-align: right;
 }
-.product-info{
-  padding: 20rpx 30rpx;
+.col-m{
+  margin-left: 10rpx;
+}
+.bold{
+  font-weight: bold;
 }
