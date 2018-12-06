@@ -118,7 +118,6 @@ Page({
         e.setData({ //此时OK
           serviceItem: res.data
         })
-
         // console.log(res.data)
       }
     });
@@ -130,7 +129,8 @@ Page({
         mid: 24,
         order: 'edittime',
         type_a: 'all',
-        pagesize : 4
+        pagesize : 4,
+        openid: wx.getStorageSync('openid')
   
       },
       header: {
@@ -140,7 +140,7 @@ Page({
         e.setData({ //此时OK
           serviceList: res.data
         })
-        // console.log(res.data)
+        console.log(res.data)
       }
     });
   },
