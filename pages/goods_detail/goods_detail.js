@@ -14,7 +14,8 @@ Page({
     autoplay: true, //是否自动切换
     interval: 3000, //自动切换时间间隔,3s
     duration: 1000, //  滑动动画时长1s
-
+    // 购买数量
+    payNum: 1,
     // 商品详情介绍
     detailImg: [
       "//goss1.vcg.com/creative/vcg/800/version3/c1e24465966b493cb9248c1746611503.jpg",
@@ -26,12 +27,27 @@ Page({
     ],
   },
   //预览图片
-  previewImage: function (e) {
+  previewImage: function(e) {
     var current = e.target.dataset.src;
 
     wx.previewImage({
       current: current, // 当前显示图片的http链接  
       urls: this.data.imgUrls // 需要预览的图片http链接列表  
+    })
+  },
+  // 购买数量
+  payNumd: function() {
+    let that = this;
+    if (that.data.payNum>1){
+      that.setData({
+        payNum: that.data.payNum - 1,
+      })
+    }
+  },
+  payNumu: function () {
+    let that = this;
+    that.setData({
+      payNum: that.data.payNum + 1,
     })
   },
   // 收藏
