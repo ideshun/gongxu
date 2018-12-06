@@ -1,7 +1,18 @@
 <!--pages/personal/A-myFavour/A-myFavour.wxml-->
 <view class='page_container'>
-  <view class='fav-list'>
+  <view class='fav-list' wx:for="{{favList}}" >
     <view class='fav-item'>
+      <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3266320382,1596044228&fm=200&gp=0.jpg' class='fav-img' mode='aspectFull' />
+      <view class='fav-info'>
+        <view class='fav-titele'>{{item.title}}</view>
+        <view class='fav-sum'>{{item.introduce}}</view>
+        <view class='fav-num'>
+          <image src='http://mall.zdcom.net.cn/file/upload/images/looks.png' mode='widthFix' /><text class=''>{{item.hits}}</text>
+          <image src='http://mall.zdcom.net.cn/file/upload/images/like.png' mode='widthFix'/><text class=''>200</text>
+        </view>
+      </view>
+    </view>
+    <!-- <view class='fav-item'>
       <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3266320382,1596044228&fm=200&gp=0.jpg' class='fav-img' mode='aspectFull' />
       <view class='fav-info'>
         <view class='fav-titele'>活动标题</view>
@@ -11,17 +22,6 @@
           <image src='http://mall.zdcom.net.cn/file/upload/images/like.png' mode='widthFix'/><text class=''>200</text>
         </view>
       </view>
-    </view>
-    <view class='fav-item'>
-      <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3266320382,1596044228&fm=200&gp=0.jpg' class='fav-img' mode='aspectFull' />
-      <view class='fav-info'>
-        <view class='fav-titele'>活动标题</view>
-        <view class='fav-sum'>z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要z摘要</view>
-        <view class='fav-num'>
-          <image src='http://mall.zdcom.net.cn/file/upload/images/looks.png' mode='widthFix' /><text class=''>100</text>
-          <image src='http://mall.zdcom.net.cn/file/upload/images/like.png' mode='widthFix'/><text class=''>200</text>
-        </view>
-      </view>
-    </view>
-  </view>
+    </view>-->
+  </view> 
 </view>
