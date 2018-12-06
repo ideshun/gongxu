@@ -4,7 +4,7 @@
 
 <view class="wrap" wx:for='{{res}}'>
   <view class='new-box'>
-    <navigator url='/pages/activity/detail/detail?mid={{item.moduleid}}&itemid={{item.itemid}}'>
+    <navigator url='/pages{{clurl}}?mid={{item.moduleid}}&itemid={{item.itemid}}'>
       <view class="new-info">
         <view class="new-info-tile">{{item.title}}</view>
         <view class="new-info-summary">{{item.introduce}}</view>
