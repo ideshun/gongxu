@@ -27,9 +27,9 @@
 </scroll-view>
 <!-- 底部悬浮栏 -->
 <view class="detail-nav">
-  <image bindtap="toCar" src="../../icons/dz.png" />
+  <image bindtap="toCar" src="https://mall.zdcom.net.cn/file/upload/icons/dz.png" />
   <view class="line_nav"></view>
-  <image class='like' bindtap="addLike" src="{{isLike?'../../icons/like.png':'../../icons/like.png'}}" />
+  <image class='like' bindtap="addLike" src="{{isLike?'https://mall.zdcom.net.cn/file/upload/icons/like.png':'https://mall.zdcom.net.cn/file/upload/icons/like.png'}}" />
   <button class="button-green" bindtap="addCar" formType="submit">加入购物车</button>
   <button class="button-red" bindtap="immeBuy" formType="submit">立即购买</button>
 </view>

@@ -11,12 +11,12 @@ Page({
       'https://mall.zdcom.net.cn/file/upload/image/banner.png',
     ],
     topCate: [{
-      cateUrl: '/pages/activity/activity',
-      cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon1.png',
-        mid: 25,
-        text: '人才招聘'
-      },
-      {
+      // cateUrl: '/pages/activity/activity',
+      // cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon1.png',
+      //   mid: 25,
+      //   text: '人才招聘'
+      // },
+      // {
         cateUrl: '/pages/activity/activity',
         cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon2.png',
         mid:8,
@@ -32,14 +32,14 @@ Page({
         cateUrl: '/pages/activity/activity',
         cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon4.png',
         mid: 24,
-        text: '生活服务'
+        text: '供需服务'
       }
     ],
     serviceItem: [],//热门服务
     cateTabItem: [
-      '人才招聘',
-      '二手闲置',
-      '生活服务',
+      // '人才招聘',
+      '热门产品',
+      '供需服务',
     ],
     serviceList: [], //全部
     recoMode: 'aspectFit', //保持纵横比缩放图片，使图片的长边能完全显示出来
