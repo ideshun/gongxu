@@ -129,9 +129,12 @@ page {
 .cate-tab-item.active {
   border-bottom: 5rpx solid #083343;
 }
-
 .cate-list {
-  padding: 30rpx;
+  padding: 0 30rpx;
+}
+.cate-list-item{
+  padding: 20rpx 0;
+  border-top: 2rpx solid #f2f2f2;
 }
 
 .user-info {
@@ -188,7 +191,6 @@ page {
 .product-info {
   padding: 0 20rpx 20rpx 120rpx;
   color: #999;
-  border-bottom: 2rpx solid #f2f2f2;
   margin-bottom: 20rpx;
 }
 

@@ -7,8 +7,8 @@
     <navigator url='/pages{{clurl}}?mid={{item.moduleid}}&itemid={{item.itemid}}'>
       <view class="new-info">
         <view class="new-info-tile">{{item.title}}</view>
-        <view class="new-info-summary">{{item.introduce}}</view>
-        <view>
+        <view class='new-desc'>
+          <view class="new-info-summary">{{item.introduce}}</view>
           <image src="{{item.thumb}}" mode='widthFix' class="new-info-img"></image>
           <image src="{{item.thumb}}" mode='widthFix' class="new-info-img"></image>
           <image src="{{item.thumb}}" mode='widthFix' class="new-info-img"></image>

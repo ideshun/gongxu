@@ -60,15 +60,20 @@ swiper swiper-item image{
 }
 
 .new-info-tile {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 50rpx;
+  line-height: 38rpx;
+  border-left: 8rpx solid #0d4f69;
+  padding-left : 10rpx; 
+  margin-bottom: 10rpx;
 }
-
+.new-desc{
+  padding: 0 10rpx;
+}
 .new-info-img {
   width: 30%;
   margin-right: 3.3%;
-  margin-top: 20rpx;
+  margin-top: 5rpx;
   border: 2rpx solid #f2f2f2;
 }
 
