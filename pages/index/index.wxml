@@ -31,13 +31,13 @@
     </view>
   </view>
 </scroll-view>
-<view wx:for="{{serviceList}}" class='cate-list {{tabActive==index?"show":"hidden"}}' wx:key="*this">
-  <view class='cate-list-item' wx:for="{{item}}" wx:for-item="items" wx:key="">
+<view wx:for="{{serviceList}}" class='cate-list {{tabActive==index?"show":"hidden"}}' >
+  <view class='cate-list-item' wx:for="{{item}}" wx:for-item="items" wx:key="*this">
     <view class='user-info'>
       <image class='user-logo' src="{{items.logo}}https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1788562038,3472846301&fm=27&gp=0.jpg"></image>
       <text class='user-name'>{{items.editor}}</text>
       <view class='like-box-fr'>
-        <image class='user-like' src='https://mall.zdcom.net.cn/file/upload/icons/like.png' bindtap='is_fav' data-mid='{{items.moduleid}}' data-itemid='{{items.itemid}}'></image>
+        <image class='user-like' src='https://mall.zdcom.net.cn/file/upload/icons/like.png' bindtap='is_fav' data-mid='{{items.moduleid}}' data-itemid='{{items.itemid}}' data-fav_status='0'></image>
         <text class='like-num'>{{items.hits}}</text>
       </view>
     </view>
