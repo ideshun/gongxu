@@ -17,23 +17,23 @@ Page({
       //   text: '人才招聘'
       // },
       // {
-        cateUrl: '/pages/activity/activity',
-        cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon2.png',
-        mid:8,
-        text: '热门活动'
-      },
-      {
-        cateUrl: '/pages/mallindex/index',
-        cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon3.png',
-        mid: 24,
-        text: '在线商城'
-      },
-      {
-        cateUrl: '/pages/activity/activity',
-        cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon4.png',
-        mid: 24,
-        text: '供需服务'
-      }
+      cateUrl: '/pages/activity/activity',
+      cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon2.png',
+      mid: 8,
+      text: '热门活动'
+    },
+    {
+      cateUrl: '/pages/mallindex/index',
+      cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon3.png',
+      mid: 24,
+      text: '在线商城'
+    },
+    {
+      cateUrl: '/pages/activity/activity',
+      cateIcon: 'https://mall.zdcom.net.cn/file/upload/icons/cate-icon4.png',
+      mid: 24,
+      text: '供需服务'
+    }
     ],
     serviceItem: [],//热门服务
     cateTabItem: [
@@ -53,15 +53,15 @@ Page({
     circular: true, //是否采用衔接划动
     tabActive: 0, //先设置第一个是active
   },
-  det:function(e){
-    var mid =e.currentTarget.dataset.mid;
+  det: function (e) {
+    var mid = e.currentTarget.dataset.mid;
     var itemid = e.currentTarget.dataset.itemid;
     // console.log(mid+'---'+catid);
     wx.navigateTo({
       url: '../goods_show/goods_show?mid=' + mid + '&itemid=' + itemid
     })
   },
-  is_fav:function(e){
+  is_fav: function (e) {
     // console.log(e);
     // return false;
     var tab_data = e.currentTarget.dataset;
@@ -74,20 +74,20 @@ Page({
         itemid: tab_data.itemid,
         mid: tab_data.mid,
         type_a: 'is_fav',
-        openid:wx.getStorageSync('openid'),
+        openid: wx.getStorageSync('openid'),
         fav_status: tab_data.fav_status,
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-    console.log(res)
+        console.log(res)
       }
     })
-    
+
   },
 
-  tabClick: function(e) { //点击tab 设置 tabActive 的值
+  tabClick: function (e) { //点击tab 设置 tabActive 的值
     this.setData({
       tabActive: e.currentTarget.dataset.current
     })
@@ -95,33 +95,34 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     var e = this;
     e.setData({
       is_login: wx.getStorageSync('is_login')
     }),
       // console.log(wx.getStorageSync('openid'));
-    // 热门服务
-    wx.request({
-      url: 'https://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址
-      method:'GET',
-      data: {
-        flag: 'wx',
-        mid: 24,
-        type_a : 'list_a' ,
-        openid : wx.getStorageSync('openid')
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success: function (res) {
-        e.setData({ //此时OK
-          serviceItem: res.data
-        })
-        // console.log(res.data)
-      }
-    });
-  //最新服务列表 全部
+      // 热门服务
+      wx.request({
+        url: 'https://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址
+        method: 'GET',
+        data: {
+          flag: 'wx',
+          mid: 24,
+          type_a: 'list_a',
+          openid: wx.getStorageSync('openid')
+        },
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          e.setData({ //此时OK
+            serviceItem: res.data
+          })
+
+          // console.log(res.data)
+        }
+      });
+    //最新服务列表 全部
     wx.request({
       url: 'https://mall.zdcom.net.cn/api/weixin/mall.php', //仅为示例，并非真实的接口地址
       data: {
@@ -129,9 +130,8 @@ Page({
         mid: 24,
         order: 'edittime',
         type_a: 'all',
-        pagesize : 4,
-        openid: wx.getStorageSync('openid')
-  
+        pagesize: 4
+
       },
       header: {
         'content-type': 'application/json' // 默认值
@@ -140,7 +140,7 @@ Page({
         e.setData({ //此时OK
           serviceList: res.data
         })
-        console.log(res.data)
+        // console.log(res.data)
       }
     });
   },
@@ -148,48 +148,48 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 
