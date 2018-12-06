@@ -1,7 +1,7 @@
 <!--pages/login/login.wxml-->
 <view wx:if="{{canIUse}}">
     <view class='header'>
-        <image src='/image/weixin_login.jpg'></image>
+        <image src='{{avatarUrl}}'></image>
     </view>
  
     <view class='content'>

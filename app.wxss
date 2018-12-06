@@ -112,6 +112,7 @@ page {
 
 .cate-tab {
   white-space: nowrap;
+  height: 60rpx;
 }
 
 .cate-tab-item {
