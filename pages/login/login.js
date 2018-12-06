@@ -14,13 +14,11 @@ Page({
    */
   onLoad: function (options) {
     var is_login = wx.getStorageSync('is_login');
-    // 用完后删除 2018.9.25
     if (is_login == 1){
       wx.switchTab({
         url: '/pages/index/index'
       })
     }
-// end
   },
   //授权申请
   bindGetUserInfo: function (e) {
