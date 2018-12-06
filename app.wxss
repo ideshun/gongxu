@@ -55,7 +55,6 @@ page {
 .cate-line .cate-item image {
   width: 80rpx;
   height: 80rpx;
-  margin-bottom: 10rpx;
 }
 
 .cate-line .cate-item text {
