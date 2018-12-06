@@ -62,24 +62,26 @@ Page({
     })
   },
   is_fav:function(e){
-    console.log(common.url_mall)
+    // console.log(e);
+    // return false;
+    var tab_data = e.currentTarget.dataset;
+    console.log(tab_data.fav_status);
     wx.request({
       url: common.url_mall, //仅为示例，并非真实的接口地址
       method: 'GET',
       data: {
-        // flag: 'wx',
-        mid: 24,
-        type_a: 'list_a______'
+        flag: 'wx',
+        itemid: tab_data.itemid,
+        mid: tab_data.mid,
+        type_a: 'is_fav',
+        openid:wx.getStorageSync('openid'),
+        fav_status: tab_data.fav_status,
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        e.setData({ //此时OK
-          serviceItem: res.data
-        })
-
-        // console.log(res.data)
+    console.log(res)
       }
     })
     
@@ -106,7 +108,8 @@ Page({
       data: {
         flag: 'wx',
         mid: 24,
-        type_a : 'list_a' 
+        type_a : 'list_a' ,
+        openid : wx.getStorageSync('openid')
       },
       header: {
         'content-type': 'application/json' // 默认值
