@@ -62,10 +62,10 @@ Page({
     })
   },
   is_fav: function (e) {
-    // console.log(e);
-    // return false;
+    console.log(e);
+    return false;
     var tab_data = e.currentTarget.dataset;
-    // console.log(tab_data.fav_status);
+    console.log(tab_data.fav_status);
     wx.request({
       url: common.url_mall, //仅为示例，并非真实的接口地址
       method: 'GET',
@@ -96,7 +96,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(wx.getStorageSync('openid'));
     var e = this;
     e.setData({
       is_login: wx.getStorageSync('is_login')
