@@ -1,7 +1,8 @@
 // page/component/new-pages/cart/cart.js
 // 默认请求第一页
 var numbers = 1;
-var bool = true;
+var bool = true; 
+const app = getApp();
 Page({
   data: {
     show_edit: "block",
@@ -331,6 +332,103 @@ Page({
       content: '合计金额-' + that.data.totalPrice + "暂未开发",
     })
   },
+  pay: function (res) {
+    var order = res.currentTarget.dataset;
+    // console.log(app.globalData);
+    // kaishi
+    var that = this;
+    wx.request({
+      url: 'https://mall.zdcom.net.cn/api/weixin/mall16.php',
+      method: 'GET',
+      data: {
+        flag: 'wx',
+        mid: 16,
+        itemid: order.itemid,
+        type_a: 'wx_pay_car',
+        addr: app.globalData.City,
+        price: order.price,
+        title: '购物车支付',
+        truename: app.globalData.Nickname,
+        //note: order.note,
+       // mobile: order.mobile,
+        a: 1,
+        openid: app.globalData.Openid,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        //  console.log(res.data);      
+        //end
+        //订单生成成功 未支付
+        //aaaaaaaa
+        wx.request({
+          url: 'https://mall.zdcom.net.cn/api/weixin/mall16.php',
+          dataType: "json",
+          method: "get",
+          data: {
+            flag: 'wx',
+            mid: 16,
+            type_a: 'getSign',
+            'package': "prepay_id=" + res.data.prepay_id,
+
+          },
+          success: function (resa) {
+            var signData = resa.data;
+            // console.log(resa.data);
+            //bbbbbb
+            wx.requestPayment({
+              'timeStamp': signData.timeStamp,
+              'nonceStr': signData.nonceStr,
+              'package': signData.package,
+              'signType': 'MD5',
+              'paySign': signData.sign,
+              'success': function (successret) {
+                //console.log('支付成功1111');
+                //获取支付用户的信息
+                // wx.getStorage({
+                //   key: 'userInfo',
+                //   success: function (getuser) {
+                //加入订单表做记录
+                wx.request({
+                  url: 'https://mall.zdcom.net.cn/api/weixin/mall16.php',
+                  data: {
+                    flag: 'wx',
+                    "type_a": "success_order",
+                    "orderid": res.data.orderid
+                  },
+                  success: function (lastreturn) {
+                    if (lastreturn.data == '1') {
+                      wx.showToast({
+                        // title: res.data.msg,
+                        title: '下单成功',
+                        icon: 'success',
+                        duration: 1500
+                      })
+                      setTimeout(function () {
+                        wx.hideToast()
+                      }, 2000)
+                      wx.navigateTo({
+                        url: '/pages/personal/A-order/index'
+                      })
+
+                    }
+                    //   }
+                    // })
+                  },
+                })
+              }, 'fail': function (res) {
+                console.log(res);
+              }
+            })
+          }
+        })  //cccc
+
+      }
+    })
+    //end
+
+  },
   // 收藏
   btn_collert: function (event) {
     console.log(event.target.dataset.mid);
@@ -393,21 +491,24 @@ Page({
   count_price:function() {
     // 获取商品列表数据
     let list = this.data.list;
-    console.log("++++++++++++++++++++++++++");
     console.log(list);
     // 声明一个变量接收数组列表price
     let total = 0;
+    let itemid='';
     // 循环列表得到每个数据
     for (let i = 0; i < list.length; i++) {
       // 判断选中计算价格
       if (list[i].selected) {
         // 所有价格加起来 count_money
         total += 1 * list[i].price;
+        itemid += list[i].itemid+",";
       }
     }
+   // console.log(itemid);
     // 最后赋值到data中渲染到页面
    this.setData({
-     totalPrice: total
+     totalPrice: total.toFixed(2),
+     itemid: itemid
     });
   },
   // 下拉刷新

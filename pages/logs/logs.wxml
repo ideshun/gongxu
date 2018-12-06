@@ -60,7 +60,7 @@
       <!-- 合计金额 -->
       <lable class="count_price">合计：<text>￥{{totalPrice}}</text></lable>
       <!-- 提交订单 -->
-      <label class='submit' bindtap='btn_submit_order'>提交订单</label>
+      <label class='submit' bindtap='pay' data-price="{{totalPrice}}" data-itemid="{{itemid}}">提交订单</label>
       </view>
      
   </view>
