@@ -38,7 +38,7 @@ Page({
     serviceItem: [],//热门服务
     cateTabItem: [
       // '人才招聘',
-      '热产品',
+      '热们产品',
       '供需服务',
     ],
     serviceList: [], //全部
@@ -62,10 +62,12 @@ Page({
     })
   },
   is_fav: function (e) {
-    console.log(e);
-    return false;
+    let that = this;
+    // console.log(e);
+    // return false;
     var tab_data = e.currentTarget.dataset;
-    console.log(tab_data.fav_status);
+    console.log(tab_data);
+    // console.log(tab_data.fav_status);
     wx.request({
       url: common.url_mall, //仅为示例，并非真实的接口地址
       method: 'GET',
@@ -81,7 +83,7 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log(res)
+        console.log(res);
       }
     })
 

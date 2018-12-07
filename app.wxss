@@ -185,8 +185,12 @@ page {
 }
 
 .like-num {
-  color: #fd2926;
   margin-left: 10rpx;
+  color: #707070;
+  font-size: 13px;
+}
+.like-num.on{
+  color: #fd2926;
 }
 
 .product-info {

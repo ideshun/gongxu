@@ -12,7 +12,7 @@
   </block>
 </swiper>
 <view class='cate-line'>
-  <view class='cate-item' wx:for="{{topCate}}" >
+  <view class='cate-item' wx:for="{{topCate}}" wx:key="*this">
     <navigator url='{{item.cateUrl}}?mid={{item.mid}}'>
       <image src='{{item.cateIcon}}'></image>
       <text>{{item.text}}</text>
@@ -31,14 +31,14 @@
     </view>
   </view>
 </scroll-view>
-<view wx:for="{{serviceList}}" class='cate-list {{tabActive==index?"show":"hidden"}}' >
-  <view class='cate-list-item' wx:for="{{item}}" wx:for-item="items" wx:key="*this">
+<view wx:for="{{serviceList}}" class='cate-list {{tabActive==index?"show":"hidden"}}' wx:key="*this">
+  <view class='cate-list-item' wx:for="{{item}}" wx:for-item="items" data-current="{{index}}" wx:key="{{index}}">
     <view class='user-info'>
       <image class='user-logo' src="{{items.logo}}https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1788562038,3472846301&fm=27&gp=0.jpg"></image>
       <text class='user-name'>{{items.editor}}</text>
       <view class='like-box-fr'>
-        <image class='user-like' src='https://mall.zdcom.net.cn/file/upload/icons/like.png' bindtap='is_fav' data-mid='{{items.moduleid}}' data-itemid='{{items.itemid}}' data-fav_status='{{items.is_fav}}'></image>
-        <text class='like-num'>{{items.hits}}</text>
+        <image class='user-like' src='https://mall.zdcom.net.cn/file/upload/icons/{{items.is_fav?"like_on":"like"}}.png' bindtap='is_fav' data-mid='{{items.moduleid}}' data-itemid='{{items.itemid}}' data-fav_status='{{items.is_fav}}'></image>
+        <text class='like-num{{items.is_fav?" on":""}}'>{{items.hits}}</text>
       </view>
     </view>
     <view class='product-info'>
