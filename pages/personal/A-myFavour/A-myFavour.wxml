@@ -2,7 +2,7 @@
 <view class='page_container'>
   <view class='fav-list' wx:for="{{favList}}" >
     <view class='fav-item'>
-      <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3266320382,1596044228&fm=200&gp=0.jpg' class='fav-img' mode='aspectFull' />
+      <image src='{{item.thumb}}' class='fav-img' mode='aspectFull' />
       <view class='fav-info'>
         <view class='fav-titele'>{{item.title}}</view>
         <view class='fav-sum'>{{item.introduce}}</view>
