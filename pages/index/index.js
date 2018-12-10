@@ -38,7 +38,7 @@ Page({
     serviceItem: [],//热门服务
     cateTabItem: [
       // '人才招聘',
-      '热们产品',
+      '热门产品',
       '供需服务',
     ],
     serviceList: [], //全部
